@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Carlito:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body { margin: 0; background: #f6f3ed; font-family: Calibri, Carlito, "Segoe UI", system-ui, sans-serif; }
+    a { color: inherit; text-decoration: none; transition: color .15s; }
+    a:hover { color: #3f5c46; }
+    ::selection { background: #3f5c4633; }
+  </style>
+  <script src="lightbox.js"></script>
+</helmet>
+
+<div style="max-width: 1160px; margin: 0 auto; padding: 0 48px 140px; color: #17181a;">
+
+  <nav style="display: flex; align-items: center; justify-content: space-between; padding: 40px 0 80px;">
+    <a href="index.html" style="font-size: 14px; font-weight: 500; color: #5b5b57;">← Yeshan Qiu</a>
+    <div style="display: flex; gap: 32px; font-size: 14px; font-weight: 500; color: #5b5b57;">
+      <a href="index.html#work">Work</a>
+      <a href="index.html#design">Design</a>
+      <a href="index.html#publications">Publications</a>
+      <a href="index.html#contact">Contact</a>
+    </div>
+  </nav>
+
+  <header style="max-width: 900px;">
+    <div style="font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; color: #3f5c46; margin-bottom: 20px;">In development</div>
+    <h1 style="font-size: 72px; line-height: 1.02; letter-spacing: -0.035em; font-weight: 700; margin: 0 0 32px; max-width: 18ch;">Graph-based models</h1>
+    <p style="font-size: 22px; line-height: 1.55; color: #2b2b28; margin: 0; max-width: 54ch; text-wrap: pretty;">I am developing graph-based models that read a city as a network of connected green, grey, and blue spaces rather than a set of separate metrics, and relate that structure to the bird communities it supports.</p>
+  </header>
+
+  <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; margin: 72px 0 96px; padding: 28px 0; border-top: 1px solid #ded6c4; border-bottom: 1px solid #ded6c4; font-size: 13px; line-height: 1.6;">
+    <div><div style="color: #8a8a84; margin-bottom: 6px;">Collaborators</div>Yue Zhu (University of Macau), Pengyuan Liu (University of Glasgow), Binyu Lei (University of Birmingham Dubai)</div>
+    <div><div style="color: #8a8a84; margin-bottom: 6px;">Methods</div>Graph representation of urban connectivity, graph neural networks</div>
+    <div><div style="color: #8a8a84; margin-bottom: 6px;">Status</div>In development</div>
+  </div>
+
+  <figure style="margin: 0 0 100px;">
+    <a href="assets/gnn-architecture.png" target="_blank" style="display: block; background: #0f141b; border: 1px solid #e7e1d4; cursor: zoom-in;"><img src="assets/gnn-architecture.png" alt="Hexagon panel with a connectivity prediction module" style="width: 100%; height: auto; display: block;"></a>
+    <figcaption style="font-size: 13px; line-height: 1.6; color: #5b5b57; margin-top: 12px; max-width: 66ch;">From urban space to a graph, to a graph neural network, to predicted community response. The hexagon panel reads a city as connected cells, and the connectivity module below it turns a green-space edit into a predicted richness response by feeding guild. In development. <a href="assets/gnn-architecture.png" target="_blank" style="color: #3f5c46; border-bottom: 1px solid #3f5c46;">View full size</a></figcaption>
+  </figure>
+
+  <section style="margin-bottom: 100px;">
+    <div style="max-width: 62ch; margin-bottom: 40px;">
+      <h2 style="font-size: 30px; line-height: 1.15; letter-spacing: -0.02em; font-weight: 700; margin: 0 0 20px;">Why a graph</h2>
+      <p style="font-size: 17px; line-height: 1.7; color: #2b2b28; margin: 0 0 18px; text-wrap: pretty;">Landscape metrics summarise a place one variable at a time, and lose the relations between patches that birds actually move through. A graph keeps those relations, so connectivity, adjacency, and structure enter the model directly.</p>
+      <p style="font-size: 17px; line-height: 1.7; color: #2b2b28; margin: 0; text-wrap: pretty;">The aim is to move from isolated landscape metrics toward models of connected grey, green, and blue systems and the bird communities that respond to them, and to test how green space configuration in redevelopment would change predicted biodiversity.</p>
+    </div>
+    <figure style="margin: 0;">
+      <a href="assets/gnn-dashboard-wireframe.png" target="_blank" style="display: block; background: #faf8f2; border: 1px solid #e7e1d4; padding: 20px; cursor: zoom-in;"><img src="assets/gnn-dashboard-wireframe.png" alt="Urban Connectivity Dashboard prototype" style="width: 100%; height: auto; display: block;"></a>
+      <figcaption style="font-size: 13px; line-height: 1.6; color: #5b5b57; margin-top: 12px; max-width: 66ch;">A prototype interface for testing green-space scenarios: pick a city, set a scenario, and read the predicted richness response by guild. In development. <a href="assets/gnn-dashboard-wireframe.png" target="_blank" style="color: #3f5c46; border-bottom: 1px solid #3f5c46;">View full size</a></figcaption>
+    </figure>
+  </section>
+
+  <div style="display: flex; justify-content: space-between; align-items: center; padding-top: 40px; border-top: 1px solid #ded6c4; font-size: 15px;">
+    <a href="index.html#work" style="color: #5b5b57;">← All work</a>
+    <a href="landscape-perception.html" style="color: #3f5c46; border-bottom: 1px solid #3f5c46;">Next: Landscape perception</a>
+  </div>
+</div>
+</x-dc>
+</body>
+</html>

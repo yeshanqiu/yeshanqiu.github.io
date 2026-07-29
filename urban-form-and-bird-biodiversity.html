@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Carlito:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    html, body { margin: 0; height: 100%; background: #f6f3ed; font-family: Calibri, Carlito, "Segoe UI", system-ui, sans-serif; color: #17181a; }
+    a { color: inherit; text-decoration: none; }
+    ::selection { background: #3f5c4633; }
+    @keyframes nudge { 0%, 100% { transform: translateX(0); opacity: .55; } 50% { transform: translateX(10px); opacity: 1; } }
+    .track { scrollbar-width: none; -ms-overflow-style: none; }
+    .track::-webkit-scrollbar { display: none; }
+    .panel { flex: 0 0 100%; height: 100%; scroll-snap-align: start; box-sizing: border-box; overflow-y: auto; scrollbar-width: thin; }
+    .panel::-webkit-scrollbar { width: 6px; }
+    .panel::-webkit-scrollbar-thumb { background: #ded6c4; }
+    .inner { max-width: 1120px; margin: 0 auto; padding: clamp(64px, 9vh, 96px) 56px 108px; }
+    .num { font-size: 11.5px; letter-spacing: 0.12em; text-transform: uppercase; color: #a8562f; font-weight: 700; margin-bottom: 10px; }
+    .h2 { font-size: clamp(22px, 2vw + 0.6vh, 32px); line-height: 1.1; letter-spacing: -0.025em; font-weight: 700; margin: 0 0 16px; }
+    .body { font-size: clamp(14px, 0.7vw + 0.55vh, 16px); line-height: 1.5; color: #2b2b28; margin: 0 0 12px; text-wrap: pretty; }
+    .take { font-size: clamp(15px, 1vw + 0.5vh, 18px); line-height: 1.4; font-weight: 700; color: #3f5c46; margin: 20px 0 0; text-wrap: pretty; }
+    .fig { background: #fff; border: 1px solid #e7e1d4; padding: 10px; }
+    .fig img { width: 100%; max-height: 46vh; object-fit: contain; display: block; cursor: zoom-in; }
+    .cap { font-size: 12.5px; line-height: 1.5; color: #5b5b57; margin-top: 10px; max-width: 82ch; }
+    #dots > * { pointer-events: auto; }
+    .dot { width: 7px; height: 7px; border-radius: 50%; background: #cfc7b4; border: none; padding: 0; cursor: pointer; transition: background .2s, transform .2s; }
+    .dot.on { background: #3f5c46; transform: scale(1.5); }
+  </style>
+  <script src="lightbox.js"></script>
+</helmet>
+
+<div style="position: fixed; inset: 0; overflow: hidden; background: #f6f3ed;">
+
+  <div style="position: absolute; top: 0; left: 0; right: 0; z-index: 20; display: flex; align-items: baseline; justify-content: space-between; padding: 26px 56px; pointer-events: none; background: linear-gradient(180deg, #f6f3ed 58%, rgba(246,243,237,0));">
+    <div style="display: flex; align-items: baseline; gap: 22px; pointer-events: auto;">
+      <a href="index.html" style="font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: #8a8a84;">← Yeshan Qiu</a>
+      <span style="font-size: 13px; letter-spacing: 0.14em; text-transform: uppercase; color: #3f5c46; font-weight: 700;">Urban form and bird biodiversity</span>
+    </div>
+  </div>
+
+  <div id="dots" style="position: absolute; bottom: 22px; left: 0; right: 0; z-index: 25; display: flex; justify-content: center; align-items: center; gap: 12px; pointer-events: none;"></div>
+
+  <div class="track" style="position: absolute; inset: 0; display: flex; overflow-x: auto; overflow-y: hidden; scroll-snap-type: x mandatory; scroll-behavior: smooth;">
+
+    <section class="panel" data-label="Title" style="padding: 0;">
+      <div style="display: grid; grid-template-columns: 1fr 0.92fr; min-height: 100vh; height: 100%;">
+        <div style="display: flex; flex-direction: column; justify-content: center; padding: clamp(56px, 8vh, 92px) 56px clamp(44px, 7vh, 64px) 56px; box-sizing: border-box; max-width: 640px; margin-left: auto;">
+          <div style="font-size: 11.5px; letter-spacing: 0.12em; text-transform: uppercase; color: #3f5c46; margin-bottom: 16px;">Doctoral research</div>
+          <h1 style="font-size: clamp(30px, 2.4vw + 3.2vh, 56px); line-height: 1.03; letter-spacing: -0.035em; font-weight: 700; margin: 0 0 22px; max-width: 18ch;">Urban form and bird biodiversity</h1>
+          <p style="font-size: clamp(14px, 0.7vw + 0.7vh, 17px); line-height: 1.5; color: #2b2b28; margin: 0 0 clamp(16px, 3vh, 28px); max-width: 48ch;">Cities are living systems where people, buildings, and nature interact, and birds are a good mirror of that balance. My doctoral research asks how the form of a city shapes its bird life, and why the answer differs so much from one city to another.</p>
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: clamp(10px, 2vh, 16px) 32px; padding: clamp(12px, 2.4vh, 20px) 0; border-top: 1px solid #ded6c4; border-bottom: 1px solid #ded6c4; font-size: 12px; line-height: 1.4;">
+            <div><div style="color: #8a8a84; margin-bottom: 3px;">Programme</div>Comparative Ecology of Cities, FCL Global</div>
+            <div><div style="color: #8a8a84; margin-bottom: 3px;">Scope</div>Sixty-eight cities worldwide</div>
+            <div><div style="color: #8a8a84; margin-bottom: 3px;">Data</div>Citizen-science bird records, remote sensing, LiDAR canopy, land use</div>
+            <div><div style="color: #8a8a84; margin-bottom: 3px;">Volume</div><a href="https://doi.org/10.5281/zenodo.18282050" style="color: #3f5c46; border-bottom: 1px solid #3f5c46;">10.5281/zenodo.18282050</a></div>
+          </div>
+          <div style="display: flex; align-items: center; gap: 14px; margin-top: clamp(16px, 3vh, 28px); animation: nudge 2.4s ease-in-out infinite;">
+            <span style="font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: #8a8a84;">Scroll or press &rarr;</span>
+            <svg width="72" height="8" viewBox="0 0 72 8" fill="none" aria-hidden="true"><path d="M0 4 H64" stroke="#3f5c46" stroke-width="1"></path><path d="M60 1 L67 4 L60 7" stroke="#3f5c46" stroke-width="1" fill="none"></path></svg>
+          </div>
+        </div>
+        <div style="position: relative; overflow: hidden; background: #17181a;">
+          <img src="assets/sydney-ibis-collage.jpg" alt="Sydney harbour, planted verge, bird sign, and an Australian white ibis on a kerb" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+          <div style="position: absolute; left: 26px; bottom: 24px; font-size: 12px; line-height: 1.5; color: rgba(255,255,255,.92); max-width: 34ch; text-shadow: 0 2px 16px rgba(0,0,0,.9);">Sydney: harbour edge, planted verge, a sign asking people not to feed the birds, and an Australian white ibis working the kerb. The same city, four different habitats.</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel" data-label="01">
+      <div class="inner">
+        <div style="max-width: 62ch; margin-bottom: 26px;">
+          <div class="num">01</div>
+          <h2 class="h2">Three questions, one line of inquiry</h2>
+          <p class="body">My research answers one question in three steps. What do we already know about how urban form relates to bird life, does the way we measure it change what we find, and how far do those patterns hold from one city to another.</p>
+          <p class="body" style="margin: 0;">The three steps run as a conceptual synthesis, a methodological evaluation, and a cross-city comparison, held together by the Pattern-Process-Function framework adapted to urban ecosystems.</p>
+        </div>
+        <figure style="margin: 0;">
+          <a href="assets/cec-ppf-framework.png" target="_blank" class="fig" style="display: block;"><img src="assets/cec-ppf-framework.png" alt="Framework of the three studies"></a>
+          <figcaption class="cap">A systematic review, a test of how spatial units shape results, and a comparison across cities.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="panel" data-label="02">
+      <div class="inner">
+        <div style="max-width: 62ch; margin-bottom: 26px;">
+          <div class="num">02 &middot; Evidence audit</div>
+          <h2 class="h2">The field has accumulated the easiest evidence, not the most complete evidence</h2>
+          <p class="body">Before adding new evidence, I audited what the field had already gathered by sorting every study by which urban component it measured, at what scale, and against which bird response. The audit revealed a structural concentration on what is easiest to map and record. This is the low-hanging fruit problem that Mark McDonnell and Amy Hahs describe in urban ecology: research keeps selecting the accessible variables, and the accessible responses.</p>
+          <p class="body" style="margin: 0;">The bias runs through four linked dimensions, and the consequence is a large body of pattern-response correlations sitting on a much smaller body of evidence able to explain why those relationships occur, or whether they transfer anywhere else.</p>
+        </div>
+        <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: #ded6c4;">
+          <div style="background: #fff; padding: 24px 22px;">
+            <div style="font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: #3f5c46; font-weight: 700; margin-bottom: 12px;">Components</div>
+            <div style="font-size: 34px; font-weight: 700; letter-spacing: -0.03em; line-height: 1;">48%</div>
+            <p style="font-size: 14px; line-height: 1.55; color: #5b5b57; margin: 8px 0 0;">of all evidence is green space. Water is 7.5 percent, though its pooled association is no weaker. Only 10 percent measure green, grey, and blue together.</p>
+          </div>
+          <div style="background: #fff; padding: 24px 22px;">
+            <div style="font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: #3f5c46; font-weight: 700; margin-bottom: 12px;">Scales</div>
+            <div style="font-size: 34px; font-weight: 700; letter-spacing: -0.03em; line-height: 1;">62%</div>
+            <p style="font-size: 14px; line-height: 1.55; color: #5b5b57; margin: 8px 0 0;">is measured below 500 metres, at site or plot level. Landscape and regional processes stay underrepresented, so findings depend heavily on the immediate local setting.</p>
+          </div>
+          <div style="background: #fff; padding: 24px 22px;">
+            <div style="font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: #3f5c46; font-weight: 700; margin-bottom: 12px;">Responses</div>
+            <div style="font-size: 34px; font-weight: 700; letter-spacing: -0.03em; line-height: 1;">80%</div>
+            <p style="font-size: 14px; line-height: 1.55; color: #5b5b57; margin: 8px 0 0;">counts species, individuals, or presence. Functional diversity is 5.6 percent and phylogenetic diversity 1 percent, though both sit closer to how a community actually works.</p>
+          </div>
+          <div style="background: #fff; padding: 24px 22px;">
+            <div style="font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: #3f5c46; font-weight: 700; margin-bottom: 12px;">Processes</div>
+            <div style="font-size: 34px; font-weight: 700; letter-spacing: -0.03em; line-height: 1;">7%</div>
+            <p style="font-size: 14px; line-height: 1.55; color: #5b5b57; margin: 8px 0 0;">measures an ecological process directly. Resource-access pathways account for about 2 percent, and 21 of 55 metric groups have no direct process test at all.</p>
+          </div>
+        </div>
+        <p class="take">Low-hanging fruit: the field has accumulated the easiest evidence, not the most complete evidence.</p>
+      </div>
+    </section>
+
+    <section class="panel" data-label="02 figure">
+      <div class="inner">
+        <div style="max-width: 76ch; margin-bottom: 22px;">
+          <div class="num">02 &middot; Figure</div>
+          <h2 class="h2" style="font-size: clamp(24px, 2.2vw, 30px);">Where the field has concentrated</h2>
+          <p class="body" style="margin: 0;">Every study in the review, sorted by what it measured, how large an area it looked at, and what it counted about the birds. The thick bands are where the field has concentrated; the thin ones are the gaps. Green space dominates, water is barely covered, and very few studies watch an ecological process such as nesting or dispersal directly.</p>
+        </div>
+        <figure style="margin: 0;">
+          <a href="assets/cec-sankey.png" target="_blank" class="fig" style="display: block;"><img src="assets/cec-sankey.png" alt="Evidence flows sorted by measure, scale, and bird response" style="max-height: 66vh;"></a>
+          <figcaption class="cap"><a href="assets/cec-sankey.png" target="_blank" style="color: #3f5c46; border-bottom: 1px solid #3f5c46;">View full size</a></figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="panel" data-label="03">
+      <div class="inner">
+        <div class="num">03</div>
+        <h2 class="h2" style="max-width: 30ch;">Green area matters, but it explains only part of the bird response</h2>
+        <div style="display: grid; grid-template-columns: 0.82fr 1.18fr; gap: 44px; align-items: start; margin-top: 22px;">
+          <div>
+            <p class="body">Green patch size is one of the most frequently measured variables in the literature, yet its pooled mean effect is comparatively modest, around 0.1. Area-related metrics are most informative for habitat availability and species counts, where the classical species-area relationship still holds. The limit is interpretive: area tells us how much habitat is present, and much less about the internal condition of that habitat or the functional make-up of the community living in it.</p>
+            <p class="body">The additional information comes from quality and vertical structure. Canopy height and vertical structural heterogeneity show stronger associations with functional diversity, and plant diversity correlates positively with community structure, because these capture niche differentiation, vegetation maturity, and resource variety that planar area cannot represent. Configuration contributes a different kind of information again, and remains necessary once the question concerns dispersal.</p>
+            <p class="take">Area captures habitat availability. Quality, vertical structure, and configuration are what add ecological interpretation.</p>
+          </div>
+          <figure style="margin: 0;">
+            <a href="assets/cec-pooled-effect.png" target="_blank" class="fig" style="display: block;"><img src="assets/cec-pooled-effect.png" alt="Pooled effect sizes for greenery metrics" style="max-height: 66vh;"></a>
+            <figcaption class="cap">Each row is one way of measuring greenery; marker position shows how strongly it relates to bird life once all studies are combined. Right of the line is helpful, left is harmful. Patch size, the most measured variable, sits close to the line. <a href="assets/cec-pooled-effect.png" target="_blank" style="color: #3f5c46; border-bottom: 1px solid #3f5c46;">View full size</a></figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel" data-label="04">
+      <div class="inner">
+        <div style="max-width: 62ch; margin-bottom: 26px;">
+          <div class="num">04</div>
+          <h2 class="h2">The same feature can act through different processes</h2>
+          <p class="body">One reason published results disagree is that a single measurement has no fixed meaning. A feature can help a bird do one thing and stop it doing another. Tree canopy helps birds find food and raise young, and helps them move around even more. Urban intensity helps them find food, mostly because people leave food behind, but works against them nesting successfully. So the same street can suit one kind of bird and fail another.</p>
+          <p class="body" style="margin: 0;">Built-up measures behave more consistently. Building area, impervious surface, and anthropogenic disturbance are generally negatively associated with bird diversity, wherever they correspond to habitat loss, fragmentation, noise, or collision risk.</p>
+        </div>
+        <figure style="margin: 0;">
+          <a href="assets/effect-heterogeneity.png" target="_blank" class="fig" style="display: block;"><img src="assets/effect-heterogeneity.png" alt="Ecological effect heterogeneity by process" style="max-height: 52vh;"></a>
+          <figcaption class="cap">The same city feature judged against three different things birds need: finding food, moving between places, and raising young. Colours are those three needs, position shows helpful to the right and harmful to the left, and marker size shows how much evidence sits behind it. <a href="assets/effect-heterogeneity.png" target="_blank" style="color: #3f5c46; border-bottom: 1px solid #3f5c46;">View full size</a></figcaption>
+        </figure>
+        <p class="take">A metric has no single fixed meaning. Which process you ask about decides whether the same feature reads as a benefit or a cost.</p>
+      </div>
+    </section>
+
+    <section class="panel" data-label="05">
+      <div class="inner">
+        <div style="max-width: 62ch; margin-bottom: 26px;">
+          <div class="num">05 &middot; Spatial representation</div>
+          <h2 class="h2">Spatial units are not neutral containers</h2>
+          <p class="body">Using Singapore as a study site, I compared buffer-based, grid-based, and Local Climate Zone approaches on the same high-resolution urban pattern data and the same citizen-science bird records. The unit did not simply repackage the data. It altered the landscape signal itself, changed which predictors emerged as important, and reshaped how scale and nonlinear ecological thresholds were interpreted.</p>
+          <p class="body">Morphology-preserving LCZ units retained more structural heterogeneity, while grids and buffers imposed stronger smoothing and boundary-related distortion, most severely for configuration-sensitive metrics. A small set of accessibility-related predictors, particularly proximity to canopy and to water, stayed relatively stable across all three frameworks, whereas many configuration metrics were strongly unit-dependent. The effects were also guild-specific.</p>
+          <p class="body" style="font-weight: 700; color: #17181a; margin: 0;">Methodological representation is part of ecological inference, not a technical preprocessing step that can be settled before the analysis begins.</p>
+        </div>
+        <figure style="margin: 0;">
+          <a href="assets/spatial-unit-framework.png" target="_blank" class="fig" style="display: block;"><img src="assets/spatial-unit-framework.png" alt="Grid, LCZ, and buffer units feeding driver identification, threshold detection, and scale optimisation" style="max-height: 48vh;"></a>
+          <figcaption class="cap">Three honest ways to divide a city up: square grid cells, zones that share a built character, and circles drawn around each bird sighting. Whichever is chosen then feeds the same three questions: which features matter, where the tipping points lie, and at what size the pattern is clearest. <a href="assets/spatial-unit-framework.png" target="_blank" style="color: #3f5c46; border-bottom: 1px solid #3f5c46;">View full size</a></figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="panel" data-label="05 test">
+      <div class="inner">
+        <div style="max-width: 76ch; margin-bottom: 22px;">
+          <div class="num">05 &middot; One question, three answers</div>
+          <h2 class="h2" style="max-width: 40ch;">Do fruit-eating birds do better where trees are taller?</h2>
+          <p class="body" style="margin: 0;">Same city, same records, same guild. What changes is the unit the city is divided into, and with it the response the model can express. In every panel the horizontal axis is canopy height in metres and the shaded band is the 95 percent confidence interval around the fitted curve, so a wide band means the model is unsure there. What the vertical axis counts is not the same in all three, and that is the point.</p>
+        </div>
+        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px;">
+          <figure style="margin: 0;">
+            <a href="assets/gam-fru-grid.png" target="_blank" style="display: block; background: #fff; border: 1px solid #e7e1d4; padding: 12px;"><img src="assets/gam-fru-grid.png" alt="Canopy height response for fruit-eating birds, square grid cells" style="width: 100%; max-height: 32vh; object-fit: contain; display: block; cursor: zoom-in;"></a>
+            <div style="font-size: 12px; letter-spacing: 0.06em; text-transform: uppercase; color: #6b6b5f; margin: 14px 0 4px;">Square grid cells</div>
+            <div style="font-size: 16px; font-weight: 700; margin-bottom: 4px;">Steadily rising, no ceiling</div>
+            <p style="font-size: 13.5px; line-height: 1.6; color: #5b5b57; margin: 0;">The city is cut into equal squares and each square is asked how many fruit-eating species it holds. The vertical axis is predicted species richness for a square; taller canopy keeps adding species and the curve is still climbing at the tallest squares. Fitted from the 2000 m grid model, the grain the frugivore models settled at. Read on its own it says: keep growing trees taller.</p>
+          </figure>
+          <figure style="margin: 0;">
+            <a href="assets/gam-fru-lcz.png" target="_blank" style="display: block; background: #fff; border: 1px solid #e7e1d4; padding: 12px;"><img src="assets/gam-fru-lcz.png" alt="Canopy height response for fruit-eating birds, morphological zones" style="width: 100%; max-height: 32vh; object-fit: contain; display: block; cursor: zoom-in;"></a>
+            <div style="font-size: 12px; letter-spacing: 0.06em; text-transform: uppercase; color: #6b6b5f; margin: 14px 0 4px;">Morphological zones</div>
+            <div style="font-size: 16px; font-weight: 700; margin-bottom: 4px;">Rising, then levelling off</div>
+            <p style="font-size: 13.5px; line-height: 1.6; color: #5b5b57; margin: 0;">Now the city is cut along real built character instead of arbitrary squares, so a low-rise neighbourhood and a tower district are never averaged together. The vertical axis is again predicted richness per zone, and the gain flattens above roughly twenty-five metres. These curves are smoother than the grid ones, with fewer sharp kinks, because the unit already groups ground that behaves alike. Taller still helps, with diminishing returns.</p>
+          </figure>
+          <figure style="margin: 0;">
+            <a href="assets/gam-fru-buffer.png" target="_blank" style="display: block; background: #fff; border: 1px solid #e7e1d4; padding: 12px;"><img src="assets/gam-fru-buffer.png" alt="Canopy height response for fruit-eating birds, circles around each sighting" style="width: 100%; max-height: 32vh; object-fit: contain; display: block; cursor: zoom-in;"></a>
+            <div style="font-size: 12px; letter-spacing: 0.06em; text-transform: uppercase; color: #6b6b5f; margin: 14px 0 4px;">Circles around each sighting</div>
+            <div style="font-size: 16px; font-weight: 700; margin-bottom: 4px;">A clear peak, then decline</div>
+            <p style="font-size: 13.5px; line-height: 1.6; color: #5b5b57; margin: 0;">Here the question changes: a circle is drawn around each sighting and the model asks how likely fruit-eaters are to turn up at all, not how many species live there. The vertical axis is that likelihood. Faint dots behind the line are the actual observations, and the dashed vertical line marks the peak the model finds, near twenty-five metres, after which the likelihood falls. Read on its own it says: an optimum, not a maximum.</p>
+          </figure>
+        </div>
+        <div style="font-size: 11.5px; letter-spacing: 0.1em; text-transform: uppercase; color: #a8562f; font-weight: 700; margin: 34px 0 12px;">How these curves were fitted</div>
+        <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: #ded6c4; margin: 0 0 4px;">
+          <div style="background: #fff; padding: 16px 18px;">
+            <div style="font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: #3f5c46; font-weight: 700; margin-bottom: 7px;">Data</div>
+            <p style="font-size: 12.5px; line-height: 1.5; color: #5b5b57; margin: 0;">Singapore. Citizen-science occurrence records with high-resolution urban pattern data; sampling effort carried as a model offset.</p>
+          </div>
+          <div style="background: #fff; padding: 16px 18px;">
+            <div style="font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: #3f5c46; font-weight: 700; margin-bottom: 7px;">Grid and LCZ</div>
+            <p style="font-size: 12.5px; line-height: 1.5; color: #5b5b57; margin: 0;">Species richness per unit, modelled with Random Forest, negative binomial GLM, and Poisson GAM response curves. Grid grains from 500 to 5000 m; 2000 to 2500 m was the most balanced window.</p>
+          </div>
+          <div style="background: #fff; padding: 16px 18px;">
+            <div style="font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: #3f5c46; font-weight: 700; margin-bottom: 7px;">Buffer</div>
+            <p style="font-size: 12.5px; line-height: 1.5; color: #5b5b57; margin: 0;">Guild occurrence as a binary response against generated background samples, modelled with logistic regression and GAM partial effects.</p>
+          </div>
+          <div style="background: #fff; padding: 16px 18px;">
+            <div style="font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: #3f5c46; font-weight: 700; margin-bottom: 7px;">Fitting</div>
+            <p style="font-size: 12.5px; line-height: 1.5; color: #5b5b57; margin: 0;">GAMs fitted in R with mgcv (Wood, 2017); predictors as smooth terms, coordinates controlling broad-scale spatial structure. Selected by fivefold cross-validation, checked on deviance explained, McFadden R², and residual spatial autocorrelation.</p>
+          </div>
+        </div>
+        <p class="body" style="margin: 26px 0 0; max-width: 96ch;">The direction is robust: fruit-eating birds need tall trees, and all three units say so. What differs is the functional form, and the form is what a planting brief has to commit to. Rising without a ceiling argues for maximising height; a plateau argues for reaching a threshold and spending the rest of the budget elsewhere; a peak near twenty-five metres argues for a target rather than a maximum. All three fits are sound on their own terms, with comparable deviance explained and smooth terms that stay within their confidence bands, so the divergence is not a fitting artefact. It comes from the unit: grid cells average canopy over a fixed footprint, morphological zones group ground that already shares a built character, and buffers weight whatever happens to sit near a sighting. The buffer curve also answers a slightly different question, the probability that the guild is present rather than how many species a unit holds, which is itself part of what the unit decides.</p>
+        <p class="take">The analytical unit is part of the finding. Report it with the result, and compare units before comparing conclusions.</p>
+      </div>
+    </section>
+
+    <section class="panel" data-label="06">
+      <div class="inner">
+        <div style="max-width: 62ch; margin-bottom: 26px;">
+          <div class="num">06 &middot; Cross-city comparison</div>
+          <h2 class="h2">No local metric is a universally transferable rule</h2>
+          <p class="body">Across sixty-eight cities, bird species richness was repeatedly associated with vegetation structure, built-form intensity, water-related variables, selected configuration metrics, and vertical morphology. But the direction, magnitude, and response shape of those relationships varied substantially from city to city, so no single local metric behaved as a rule that transfers.</p>
+          <p class="body">What explains the variation is context above the city. Regional ecological buffering, especially surrounding forest context and vegetation heterogeneity, gave the strongest explanation for why local pattern effects differ. Metropolitan structure contributed mainly in combination with that buffering, and urban developmental trajectory received weaker support. Vertical morphology improved model fit in a subset of cities, particularly where canopy structure was relatively weak and built dominance stronger, but it produced no universal gain.</p>
+          <p class="body" style="font-weight: 700; color: #17181a; margin: 0;">The useful output is not one optimal urban form. It is a transferable analytical logic: read local habitat units as embedded in wider grey-green-blue structures across scales.</p>
+        </div>
+        <figure style="margin: 0;">
+          <a href="assets/cross-city-matrix-v2.png" target="_blank" class="fig" style="display: block;"><img src="assets/cross-city-matrix-v2.png" alt="Cross-city effect matrix" style="max-height: 52vh;"></a>
+          <figcaption class="cap">Every city across the top, every measured feature down the side. A blue dot means more bird species where that feature is higher, red means fewer, and a bigger dot means a stronger relationship. Blank means the relationship was not clear enough to report. Reading across a row shows how little agreement there is between cities for most features. <a href="assets/cross-city-matrix-v2.png" target="_blank" style="color: #3f5c46; border-bottom: 1px solid #3f5c46;">View full size</a></figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="panel" data-label="06 map">
+      <div class="inner">
+        <div style="max-width: 76ch; margin-bottom: 22px;">
+          <div class="num">06 &middot; Figure</div>
+          <h2 class="h2" style="font-size: clamp(24px, 2.2vw, 30px);">The canopy effect is positive almost everywhere, but not equally</h2>
+          <p class="body" style="margin: 0;">Each circle is one city: blue means bird species richness rises with canopy structure, red means it falls, and bigger circles mean a stronger relationship. European cities show the strongest and most consistently positive response, more so than several South American cities, which likely reflects differences in climate and vegetation context along with local traditions of planting and vegetation management.</p>
+        </div>
+        <figure style="margin: 0;">
+          <a href="assets/map-canopy-partial-corr.png" target="_blank" class="fig" style="display: block;"><img src="assets/map-canopy-partial-corr.png" alt="Global map of the canopy structure effect on bird species richness" style="max-height: 56vh;"></a>
+          <figcaption class="cap"><a href="assets/map-canopy-partial-corr.png" target="_blank" style="color: #3f5c46; border-bottom: 1px solid #3f5c46;">View full size</a></figcaption>
+        </figure>
+        <p class="take">Regional ecological buffering, not city size or development history, is what decides whether a local greening measure works.</p>
+      </div>
+    </section>
+
+    <section class="panel" data-label="Synthesis" style="background: #24382a; color: #f6f3ed;">
+      <div class="inner" style="display: flex; flex-direction: column; justify-content: center; min-height: 100vh; box-sizing: border-box; padding-bottom: 120px;">
+        <div style="font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: #a9c0a9; font-weight: 700; margin-bottom: 18px;">What it adds up to</div>
+        <h2 style="font-size: clamp(30px, 3.4vw, 44px); line-height: 1.14; letter-spacing: -0.025em; font-weight: 700; margin: 0 0 24px; max-width: 32ch;">Urban bird diversity is multidimensional, nonlinear, and context-dependent, not a function of green area</h2>
+        <p style="font-size: 17px; line-height: 1.7; color: #dfe6dd; margin: 0 0 16px; max-width: 74ch;">Habitat quality and structural complexity, particularly vertical vegetation structure, plant diversity, and mature or remnant habitat, exert stronger and more consistent effects than habitat area alone. Built environments are not background disturbance but active ecological filters, excluding sensitive species while favouring more adaptable guilds.</p>
+        <p style="font-size: 17px; line-height: 1.7; color: #dfe6dd; margin: 0 0 36px; max-width: 74ch;">This supports biodiversity-sensitive planning that moves past planar greening targets, and it points to what urban ecology still needs: three-dimensional metrics, organism-centred scale, matrix interactions, and cities outside the temperate Northern Hemisphere.</p>
+        <div style="display: flex; gap: 28px; align-items: baseline;">
+          <a href="index.html#work" style="font-size: 14px; color: #a9c0a9; border-bottom: 1px solid #4c6b52; padding-bottom: 3px;">← All work</a>
+          <a href="urban-pattern-database.html" style="font-size: 14px; color: #f6f3ed; border-bottom: 1px solid #f6f3ed; padding-bottom: 3px;">Next: Urban Pattern Database and Explorer</a>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  componentDidMount() {
+    const track = document.querySelector('.track');
+    const dots = document.getElementById('dots');
+    if (!track || !dots) return;
+    const panels = Array.from(track.querySelectorAll('.panel'));
+
+    dots.innerHTML = '';
+    panels.forEach((p, i) => {
+      const b = document.createElement('button');
+      b.className = 'dot' + (i === 0 ? ' on' : '');
+      b.title = p.getAttribute('data-label') || String(i + 1);
+      b.setAttribute('aria-label', 'Go to ' + b.title);
+      b.onclick = () => { track.scrollLeft = i * track.clientWidth; };
+      dots.appendChild(b);
+    });
+
+    this._sync = () => {
+      const i = Math.round(track.scrollLeft / track.clientWidth);
+      Array.from(dots.children).forEach((d, k) => d.classList.toggle('on', k === i));
+    };
+    this._wheel = (e) => {
+      const panel = e.target.closest ? e.target.closest('.panel') : null;
+      if (panel && panel.scrollHeight - panel.clientHeight > 8) {
+        const atTop = panel.scrollTop <= 0;
+        const atBottom = panel.scrollTop + panel.clientHeight >= panel.scrollHeight - 1;
+        if (!(atTop && e.deltaY < 0) && !(atBottom && e.deltaY > 0)) return;
+      }
+      if (Math.abs(e.deltaY) > Math.abs(e.deltaX)) {
+        track.scrollLeft += e.deltaY * 1.15;
+        e.preventDefault();
+      }
+    };
+    this._keys = (e) => {
+      if (e.key === 'ArrowRight' || e.key === 'PageDown') { track.scrollLeft += track.clientWidth; e.preventDefault(); }
+      if (e.key === 'ArrowLeft' || e.key === 'PageUp') { track.scrollLeft -= track.clientWidth; e.preventDefault(); }
+    };
+    track.addEventListener('wheel', this._wheel, { passive: false });
+    track.addEventListener('scroll', this._sync);
+    window.addEventListener('keydown', this._keys);
+  }
+  componentWillUnmount() {
+    const track = document.querySelector('.track');
+    if (track) {
+      if (this._wheel) track.removeEventListener('wheel', this._wheel);
+      if (this._sync) track.removeEventListener('scroll', this._sync);
+    }
+    if (this._keys) window.removeEventListener('keydown', this._keys);
+  }
+  renderVals() { return {}; }
+}
+</script>
+</body>
+</html>

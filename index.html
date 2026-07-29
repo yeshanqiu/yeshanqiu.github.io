@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Carlito:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body { margin: 0; background: #f6f3ed; font-family: Calibri, Carlito, "Segoe UI", system-ui, sans-serif; }
+    a { color: inherit; text-decoration: none; transition: color .15s; }
+    a:hover { color: #3f5c46; }
+    ::selection { background: #3f5c4633; }
+  </style>
+</helmet>
+
+<div style="max-width: 1160px; margin: 0 auto; padding: 0 48px 120px; color: #17181a;">
+
+  <nav style="display: flex; align-items: center; justify-content: space-between; padding: 40px 0 64px;">
+    <a href="index.html" style="font-size: 18px; font-weight: 700; letter-spacing: -0.02em;">Yeshan Qiu</a>
+    <div style="display: flex; gap: 32px; font-size: 14px; font-weight: 500; color: #5b5b57;">
+      <a href="#work">Work</a>
+      <a href="#talks">Talks</a>
+      <a href="#design">Design</a>
+      <a href="#publications">Publications</a>
+      <a href="assets/Yeshan-Qiu-CV.pdf">CV</a>
+      <a href="stray-birds.html">Stray Birds</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+
+  <section style="display: grid; grid-template-columns: 1.3fr 0.9fr; gap: 56px; align-items: center; padding-top: 64px;">
+    <div>
+      <div style="font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; color: #3f5c46; margin-bottom: 6px;">PhD Candidate, NUS Department of Architecture</div>
+      <div style="font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; color: #3f5c46; margin-bottom: 20px;">PhD Researcher, Singapore-ETH Centre, Future Cities Laboratory</div>
+      <h1 style="font-size: 64px; line-height: 1.03; letter-spacing: -0.03em; font-weight: 700; margin: 0 0 28px; max-width: 12ch;">How cities shape the birds that live in them</h1>
+      <p style="font-size: 19px; line-height: 1.6; max-width: 46ch; color: #2b2b28; margin: 0 0 36px; text-wrap: pretty;">I am a landscape ecology researcher with a background in landscape architecture. I study how the form of a city shapes the biodiversity it can support, using citizen-science records, remote sensing, and spatial models, and I care about turning those findings into decisions that planners and designers can use.</p>
+      <div style="display: flex; gap: 20px; align-items: center;">
+        <a href="urban-grid-explorer.html" style="display: inline-flex; align-items: center; gap: 8px; background: #3f5c46; color: #f6f3ed; font-size: 15px; font-weight: 500; padding: 14px 24px; border-radius: 2px;">Open the Urban Grid Explorer</a>
+        <a href="assets/Yeshan-Qiu-CV.pdf" style="font-size: 15px; font-weight: 500; border-bottom: 1px solid #17181a; padding-bottom: 2px;">Download CV</a>
+      </div>
+      <div style="font-size: 14px; line-height: 1.7; color: #5b5b57; margin-top: 24px; max-width: 52ch;">Landscape ecology &middot; urban green space &middot; urban biodiversity &middot; avian ecology &middot; macroecology &middot; spatial modelling &middot; 3D vegetation structure &middot; landscape pattern metrics &middot; GIS and remote sensing &middot; ecological aesthetics &middot; cultural ecosystem services</div>
+    </div>
+    <div style="aspect-ratio: 4/5; overflow: hidden; background: #e7e1d4;">
+      <img src="assets/yeshan.jpg?v=2" alt="Yeshan Qiu" style="width: 100%; height: 100%; object-fit: cover; filter: saturate(0.85) contrast(1.02) brightness(1.05) sepia(0.06);">
+    </div>
+  </section>
+
+  <section id="work" style="padding-top: 140px;">
+    <div style="font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; color: #3f5c46; margin-bottom: 40px;">Work</div>
+
+    <a href="urban-form-and-bird-biodiversity.html" style="display: grid; grid-template-columns: 300px 1fr; gap: 40px; align-items: start; padding: 36px 0; border-top: 1px solid #ded6c4;">
+      <div style="height: 200px; background: #fff; border: 1px solid #e7e1d4; overflow: hidden;"><img src="assets/sydney-ibis-collage.jpg" alt="Sydney harbour, planted verge, and an Australian white ibis on a kerb" style="width: 100%; height: 100%; object-fit: cover; object-position: center;"></div>
+      <div>
+        <div style="font-size: 12px; letter-spacing: 0.06em; text-transform: uppercase; color: #6b6b5f; margin-bottom: 8px;">Doctoral research &middot; Comparative Ecology of Cities</div>
+        <h3 style="font-size: 27px; font-weight: 700; letter-spacing: -0.01em; line-height: 1.2; margin: 0 0 10px; max-width: 38ch;">Urban form and bird biodiversity</h3>
+        <p style="font-size: 16px; line-height: 1.6; color: #2b2b28; margin: 0 0 16px; max-width: 56ch; text-wrap: pretty;">A comparative framework across sixty-eight cities, linking open data on bird records, vegetation, building and canopy structure, and land use to how many bird species a place supports.</p>
+        <span style="font-size: 13px; color: #3f5c46; border-bottom: 1px solid #3f5c46;">Read the project</span>
+      </div>
+    </a>
+
+    <a href="urban-pattern-database.html" style="display: grid; grid-template-columns: 300px 1fr; gap: 40px; align-items: start; padding: 36px 0; border-top: 1px solid #ded6c4;">
+      <div style="height: 200px; background: #0f141b; border: 1px solid #e7e1d4; overflow: hidden;"><img src="assets/hexagon-panel-reference.png" alt="Urban Grid Explorer preview" style="width: 100%; height: 100%; object-fit: cover; object-position: center;"></div>
+      <div>
+        <div style="font-size: 12px; letter-spacing: 0.06em; text-transform: uppercase; color: #6b6b5f; margin-bottom: 8px;">Ongoing &middot; interactive tool</div>
+        <h3 style="font-size: 27px; font-weight: 700; letter-spacing: -0.01em; line-height: 1.2; margin: 0 0 10px; max-width: 38ch;">Urban Pattern Database and Explorer</h3>
+        <p style="font-size: 16px; line-height: 1.6; color: #2b2b28; margin: 0 0 16px; max-width: 56ch; text-wrap: pretty;">A database of urban pattern metrics for cities worldwide, with an interactive explorer for comparing landscape structure and bird biodiversity metrics city by city.</p>
+        <span style="font-size: 13px; color: #3f5c46; border-bottom: 1px solid #3f5c46;">Read the project</span>
+      </div>
+    </a>
+
+    <a href="landscape-perception.html" style="display: grid; grid-template-columns: 300px 1fr; gap: 40px; align-items: start; padding: 36px 0; border-top: 1px solid #ded6c4;">
+      <div style="height: 200px; background: #e7e1d4; overflow: hidden;"><img src="assets/eyetrack-triptych.png" alt="CNN segmentation, gaze heatmap, and areas of interest" style="width: 100%; height: 100%; object-fit: cover;"></div>
+      <div>
+        <div style="font-size: 12px; letter-spacing: 0.06em; text-transform: uppercase; color: #6b6b5f; margin-bottom: 8px;">Ecological Indicators, 2023 &middot; first author</div>
+        <h3 style="font-size: 27px; font-weight: 700; letter-spacing: -0.01em; line-height: 1.2; margin: 0 0 10px; max-width: 38ch;">Landscape perception: eye-tracking and deep learning</h3>
+        <p style="font-size: 16px; line-height: 1.6; color: #2b2b28; margin: 0 0 16px; max-width: 56ch; text-wrap: pretty;">Eye-tracking experiments, interviews, and a convolutional neural network, modelled with a Bayesian network to show how people perceive ecological aesthetics.</p>
+        <span style="font-size: 13px; color: #3f5c46; border-bottom: 1px solid #3f5c46;">Read the project</span>
+      </div>
+    </a>
+
+    <a href="naturalistic-roadside-green-space.html" style="display: grid; grid-template-columns: 300px 1fr; gap: 40px; align-items: start; padding: 36px 0; border-top: 1px solid #ded6c4;">
+      <div style="height: 200px; background: #e7e1d4; overflow: hidden;"><img src="assets/road-site.jpg" alt="Roadside green space, Shanghai field survey" style="width: 100%; height: 100%; object-fit: cover;"></div>
+      <div>
+        <div style="font-size: 12px; letter-spacing: 0.06em; text-transform: uppercase; color: #6b6b5f; margin-bottom: 8px;">Landscape Architecture, 2022 &middot; first author</div>
+        <h3 style="font-size: 27px; font-weight: 700; letter-spacing: -0.01em; line-height: 1.2; margin: 0 0 10px; max-width: 38ch;">Naturalistic roadside green space</h3>
+        <p style="font-size: 16px; line-height: 1.6; color: #2b2b28; margin: 0 0 16px; max-width: 56ch; text-wrap: pretty;">Planting configurations that raise ecological quality while keeping public aesthetic appeal.</p>
+        <span style="font-size: 13px; color: #3f5c46; border-bottom: 1px solid #3f5c46;">Read the project</span>
+      </div>
+    </a>
+
+
+    <a href="graph-based-models.html" style="display: grid; grid-template-columns: 300px 1fr; gap: 40px; align-items: start; padding: 36px 0; border-top: 1px solid #ded6c4; border-bottom: 1px solid #ded6c4;">
+      <div style="height: 200px; background: #f0ece2; border: 1px solid #e7e1d4; overflow: hidden;"><img src="assets/gnn-dashboard-wireframe.png" alt="Urban Connectivity Dashboard prototype" style="width: 100%; height: 100%; object-fit: cover; object-position: center;"></div>
+      <div>
+        <div style="font-size: 12px; letter-spacing: 0.06em; text-transform: uppercase; color: #6b6b5f; margin-bottom: 8px;">In development</div>
+        <h3 style="font-size: 27px; font-weight: 700; letter-spacing: -0.01em; line-height: 1.2; margin: 0 0 10px; max-width: 38ch;">Graph-based models</h3>
+        <p style="font-size: 16px; line-height: 1.6; color: #2b2b28; margin: 0 0 16px; max-width: 56ch; text-wrap: pretty;">Reading a city as a network of connected green, grey, and blue spaces rather than a set of separate metrics, and relating that structure to the bird communities it supports.</p>
+        <span style="font-size: 13px; color: #3f5c46; border-bottom: 1px solid #3f5c46;">Read the project</span>
+      </div>
+    </a>
+  </section>
+
+  <section id="talks" style="padding-top: 120px;">
+    <div style="font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; color: #3f5c46; margin-bottom: 40px;">Talks &amp; conferences</div>
+    <a href="conferences-and-talks.html" style="display: grid; grid-template-columns: 300px 1fr; gap: 40px; align-items: start; padding: 36px 0; border-top: 1px solid #ded6c4; border-bottom: 1px solid #ded6c4;">
+      <div style="height: 200px; background: #e7e1d4; overflow: hidden;"><img src="assets/conf-talk-create.jpg" alt="Presenting at the CREATE Smart Cities symposium, Singapore" style="width: 100%; height: 100%; object-fit: cover;"></div>
+      <div>
+        <div style="font-size: 12px; letter-spacing: 0.06em; text-transform: uppercase; color: #6b6b5f; margin-bottom: 8px;">2024 to 2025 &middot; conferences</div>
+        <h3 style="font-size: 27px; font-weight: 700; letter-spacing: -0.01em; line-height: 1.2; margin: 0 0 10px; max-width: 38ch;">Conferences and talks</h3>
+        <p style="font-size: 16px; line-height: 1.6; color: #2b2b28; margin: 0 0 16px; max-width: 56ch; text-wrap: pretty;">Posters at BES 2025, AGU 2024, and ESA 2024, and a talk at the CREATE Smart Cities symposium in Singapore.</p>
+        <span style="font-size: 13px; color: #3f5c46; border-bottom: 1px solid #3f5c46;">Read the project</span>
+      </div>
+    </a>
+  </section>
+
+  <section id="design" style="padding-top: 120px;">
+    <div style="font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; color: #3f5c46; margin-bottom: 40px;">Design</div>
+
+
+
+    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; padding-top: 4px; border-top: 1px solid #ded6c4; align-items: stretch;">
+      <a href="ecological-design-competitions.html" style="display: flex; flex-direction: column; padding-top: 28px; height: 100%;">
+        <div style="aspect-ratio: 4 / 3; background: #e7e1d4; overflow: hidden;"><img src="assets/chsla-award.jpg" alt="Bird-priority estuary green space design board" style="width: 100%; height: 100%; object-fit: cover;"></div>
+        <div style="font-size: 12px; letter-spacing: 0.06em; text-transform: uppercase; color: #6b6b5f; margin: 14px 0 6px;">2019 &middot; CHSLA national competition</div>
+        <h3 style="font-size: 21px; font-weight: 700; letter-spacing: -0.015em; margin: 0 0 8px; line-height: 1.2;">Birds Advance, People Retreat</h3>
+        <p style="font-size: 15px; line-height: 1.6; color: #2b2b28; margin: 0 0 10px;">A bird-priority green space for the Huangpu River cross-confluence estuary, organised around habitat and low disturbance zoning. Third Prize, graduate group.</p>
+        <span style="font-size: 13px; color: #3f5c46; border-bottom: 1px solid #3f5c46; align-self: flex-start; margin-top: auto;">Read the project</span>
+      </a>
+      <a href="ecological-design-competitions.html" style="display: flex; flex-direction: column; padding-top: 28px; height: 100%;">
+        <div style="aspect-ratio: 4 / 3; background: #e7e1d4; overflow: hidden;"><img src="assets/bulgaria-board-1.jpg" alt="Master plan of the China and Central and Eastern Europe agricultural cooperation park, Bulgaria" style="width: 100%; height: 100%; object-fit: cover;"></div>
+        <div style="font-size: 12px; letter-spacing: 0.06em; text-transform: uppercase; color: #6b6b5f; margin: 14px 0 6px;">2018 &middot; social practice, team leader</div>
+        <h3 style="font-size: 21px; font-weight: 700; letter-spacing: -0.015em; margin: 0 0 8px; line-height: 1.2;">China and Central and Eastern Europe Agricultural Cooperation Park, Bulgaria</h3>
+        <p style="font-size: 15px; line-height: 1.6; color: #2b2b28; margin: 0 0 10px;">A visiting route linking twenty nodes across a working agricultural demonstration park. Second Prize, Shanghai social practice.</p>
+        <span style="font-size: 13px; color: #3f5c46; border-bottom: 1px solid #3f5c46; align-self: flex-start; margin-top: auto;">Read the project</span>
+      </a>
+      <a href="ecological-design-competitions.html" style="display: flex; flex-direction: column; padding-top: 28px; height: 100%;">
+        <div style="aspect-ratio: 4 / 3; background: #e7e1d4; overflow: hidden;"><img src="assets/work-1.jpg" alt="Green Cradle container architecture design" style="width: 100%; height: 100%; object-fit: cover;"></div>
+        <div style="font-size: 12px; letter-spacing: 0.06em; text-transform: uppercase; color: #6b6b5f; margin: 14px 0 6px;">2018 &middot; container competition, SJTU</div>
+        <h3 style="font-size: 21px; font-weight: 700; letter-spacing: -0.015em; margin: 0 0 8px; line-height: 1.2;">Green Cradle</h3>
+        <p style="font-size: 15px; line-height: 1.6; color: #2b2b28; margin: 0 0 10px;">A stacked planted structure growing an ecological green space out of a reusable industrial frame. With Jiayi Zhu.</p>
+        <span style="font-size: 13px; color: #3f5c46; border-bottom: 1px solid #3f5c46; align-self: flex-start; margin-top: auto;">Read the project</span>
+      </a>
+    </div>
+  </section>
+
+  <section style="padding-top: 120px;">
+    <a href="stray-birds.html" style="display: grid; grid-template-columns: 300px 1fr; gap: 40px; align-items: start; padding: 36px 0; border-top: 1px solid #ded6c4; border-bottom: 1px solid #ded6c4;">
+      <div style="height: 200px; background: #e7e1d4; overflow: hidden;"><img src="assets/bird-roller.jpg" alt="Lilac-breasted roller, Kenya" style="width: 100%; height: 100%; object-fit: cover;"></div>
+      <div>
+        <div style="font-size: 12px; letter-spacing: 0.06em; text-transform: uppercase; color: #6b6b5f; margin-bottom: 8px;">Field notebook &middot; ongoing</div>
+        <h3 style="font-size: 27px; font-weight: 700; letter-spacing: -0.01em; line-height: 1.2; margin: 0 0 10px; max-width: 38ch;">Stray Birds</h3>
+        <p style="font-size: 16px; line-height: 1.6; color: #2b2b28; margin: 0 0 16px; max-width: 56ch; text-wrap: pretty;">A gallery kept for its own sake, named after Tagore. Birds met on a temple wall, a gravestone, a basalt column, a thorn tree, a tidal flat.</p>
+        <span style="font-size: 13px; color: #3f5c46; border-bottom: 1px solid #3f5c46;">Open the gallery</span>
+      </div>
+    </a>
+  </section>
+
+  <section id="publications" style="padding-top: 120px;">
+    <h3 style="font-size: 26px; font-weight: 700; letter-spacing: -0.02em; margin: 0 0 8px;">Selected publications</h3>
+    <p style="font-size: 15px; color: #5b5b57; margin: 0 0 40px;">First-author work. Full list on <a href="assets/Yeshan-Qiu-CV.pdf" style="border-bottom: 1px solid #5b5b57;">CV</a></p>
+    <div style="display: flex; flex-direction: column;">
+      <div style="display: grid; grid-template-columns: 78px 1fr 132px; gap: 24px; padding: 20px 0; border-top: 1px solid #ded6c4; align-items: baseline;">
+        <span style="font-size: 13px; color: #8a8a84;">2026</span>
+        <span style="font-size: 15.5px; line-height: 1.6; color: #2b2b28;"><span style="font-weight: 500; color: #17181a;">Qiu, Y.</span>, Chi, D., Hahs, A. K., Richards, D. R., Yang, J., Meili, N., Zhu, Y., Wang, J., Lin, B. B., Manoli, G., Zhang, Y., Burlando, P., McDonnell, M. J., &amp; Tan, P. Y. (2026). <span style="font-style: italic;">Systematic review of the relationships between multidimensional urban patterns and avian biodiversity: A meta-analysis</span> [Manuscript under review].</span>
+        <span style="font-size: 12px; letter-spacing: 0.04em; text-transform: uppercase; color: #3f5c46; text-align: right;">Under review</span>
+      </div>
+      <div style="display: grid; grid-template-columns: 78px 1fr 132px; gap: 24px; padding: 20px 0; border-top: 1px solid #ded6c4; align-items: baseline;">
+        <span style="font-size: 13px; color: #8a8a84;">2026</span>
+        <span style="font-size: 15.5px; line-height: 1.6; color: #2b2b28;"><span style="font-weight: 500; color: #17181a;">Qiu, Y.</span>, Chi, D., Hahs, A. K., Richards, D. R., Yang, J., Meili, N., Zhu, Y., Wang, J., Lin, B. B., Manoli, G., Zhang, Y., Burlando, P., McDonnell, M. J., &amp; Tan, P. Y. (2026). <span style="font-style: italic;">Mapping methods matter: Influence of spatial analytical units on urban avian biodiversity assessment: A meta-analysis</span> [Manuscript under review].</span>
+        <span style="font-size: 12px; letter-spacing: 0.04em; text-transform: uppercase; color: #3f5c46; text-align: right;">Under review</span>
+      </div>
+      <div style="display: grid; grid-template-columns: 78px 1fr 132px; gap: 24px; padding: 20px 0; border-top: 1px solid #ded6c4; align-items: baseline;">
+        <span style="font-size: 13px; color: #8a8a84;">2026</span>
+        <span style="font-size: 15.5px; line-height: 1.6; color: #2b2b28;"><span style="font-weight: 500; color: #17181a;">Qiu, Y.</span>, Chi, D., Hahs, A. K., Richards, D. R., Yang, J., Meili, N., Zhu, Y., Wang, J., Lin, B. B., Manoli, G., Zhang, Y., Burlando, P., McDonnell, M. J., &amp; Tan, P. Y. (2026). <span style="font-style: italic;">Assessing urban pattern effects on bird species richness across 68 cities</span> [Manuscript in preparation].</span>
+        <span style="font-size: 12px; letter-spacing: 0.04em; text-transform: uppercase; color: #3f5c46; text-align: right;">In preparation</span>
+      </div>
+        <span style="font-size: 13px; color: #8a8a84;">2023</span>
+        <span style="font-size: 15.5px; line-height: 1.6; color: #2b2b28;"><span style="font-weight: 500; color: #17181a;">Qiu, Y.</span>, Pan, H., Kalantari, Z., Giusti, M., &amp; Che, S. (2023). The natural focus: Combining deep learning and eye-tracking to understand public perceptions of urban ecosystem aesthetics. <span style="font-style: italic;">Ecological Indicators, 156</span>, 111181.</span>
+        <span style="font-size: 12px; letter-spacing: 0.04em; text-transform: uppercase; color: #8a8a84; text-align: right;">Published</span>
+      </div>
+      <div style="display: grid; grid-template-columns: 78px 1fr 132px; gap: 24px; padding: 20px 0; border-top: 1px solid #ded6c4; align-items: baseline;">
+        <span style="font-size: 13px; color: #8a8a84;">2022</span>
+        <span style="font-size: 15.5px; line-height: 1.6; color: #2b2b28;"><span style="font-weight: 500; color: #17181a;">Qiu, Y.</span>, &amp; Che, S. (2022). Construction strategies for urban ecological green space based on ecological aesthetics. <span style="font-style: italic;">Landscape Architecture, 29</span>(7), 37&ndash;43. (in Chinese)</span>
+        <span style="font-size: 12px; letter-spacing: 0.04em; text-transform: uppercase; color: #8a8a84; text-align: right;">Published</span>
+      </div>
+      <div style="display: grid; grid-template-columns: 78px 1fr 132px; gap: 24px; padding: 20px 0; border-top: 1px solid #ded6c4; border-bottom: 1px solid #ded6c4; align-items: baseline;">
+        <span style="font-size: 13px; color: #8a8a84;">2021</span>
+        <span style="font-size: 15.5px; line-height: 1.6; color: #2b2b28;"><span style="font-weight: 500; color: #17181a;">Qiu, Y.</span>, Xie, C., Pan, H., &amp; Che, S. (2021). Study of urban street-scene and landscape aesthetic public perception based on deep learning: The case of Shanghai. <span style="font-style: italic;">Chinese Landscape Architecture, 37</span>(6), 77&ndash;81. (in Chinese)</span>
+        <span style="font-size: 12px; letter-spacing: 0.04em; text-transform: uppercase; color: #8a8a84; text-align: right;">Published</span>
+      </div>
+    </div>
+    <a href="collaborative-research.html" style="display: grid; grid-template-columns: 1fr auto; gap: 32px; align-items: center; margin-top: 32px; padding: 26px 30px; background: #efeadf; border: 1px solid #e2dbca;">
+      <div>
+        <div style="font-size: 12px; letter-spacing: 0.06em; text-transform: uppercase; color: #6b6b5f; margin-bottom: 6px;">Co-authored work</div>
+        <div style="font-size: 19px; font-weight: 700; letter-spacing: -0.01em; margin-bottom: 6px;">Collaborative research</div>
+        <p style="font-size: 15px; line-height: 1.6; color: #5b5b57; margin: 0; max-width: 62ch;">Seven co-authored papers with the Future Cities Laboratory Global team, in The Lancet Planetary Health, npj Urban Sustainability, and Journal of Advances in Modeling Earth Systems, on canopy configuration and mortality, urban form and hazard risk, and vegetation effects on building energy.</p>
+      </div>
+      <span style="font-size: 14px; color: #3f5c46; border-bottom: 1px solid #3f5c46; white-space: nowrap;">See all co-authored work</span>
+    </a>
+    <p style="font-size: 15px; line-height: 1.7; color: #5b5b57; margin: 28px 0 0; max-width: 70ch;">Conference presentations at the British Ecological Society Annual Meeting (2025), the AGU Fall Meeting (2024), and the Ecological Society of America Annual Meeting (2024). <a href="conferences-and-talks.html" style="color: #3f5c46; border-bottom: 1px solid #3f5c46;">See the posters</a></p>
+  </section>
+
+  <footer id="contact" style="margin-top: 120px; padding-top: 48px; border-top: 1px solid #ded6c4; display: grid; grid-template-columns: 1.4fr 1fr 1fr; gap: 40px;">
+    <div>
+      <h3 style="font-size: 22px; font-weight: 700; letter-spacing: -0.02em; margin: 0 0 12px;">Get in touch</h3>
+      <p style="font-size: 15px; line-height: 1.65; color: #5b5b57; margin: 0 0 12px; max-width: 36ch;">I am looking for postdoctoral positions in urban ecology, landscape ecology, and spatial data science.</p>
+      <div style="display: flex; flex-direction: column; gap: 8px;">
+        <a href="mailto:yeshan.qiu@sec.ethz.ch" style="font-size: 16px; border-bottom: 1px solid #17181a; align-self: flex-start;">yeshan.qiu@sec.ethz.ch</a>
+        <a href="mailto:qiuyeshan@u.nus.edu" style="font-size: 15px; color: #5b5b57; border-bottom: 1px solid #ded6c4; align-self: flex-start;">qiuyeshan@u.nus.edu</a>
+      </div>
+
+    </div>
+    <div style="font-size: 14px; line-height: 1.8; color: #5b5b57;">
+      National University of Singapore<br>
+      Singapore-ETH Centre<br>
+      Future Cities Laboratory Global<br>
+      <a href="https://www.comparative-ecology-of-cities.com/" style="color: #3f5c46;">Comparative Ecology of Cities</a>
+    </div>
+    <div style="font-size: 14px; display: flex; flex-direction: column; gap: 12px;">
+      <a href="https://scholar.google.com/citations?hl=zh-CN&user=h5OLup4AAAAJ" style="display: flex; align-items: center; gap: 10px;"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 24a7 7 0 1 1 0-14 7 7 0 0 1 0 14zm0-24L0 9.5l4.838 3.94A8 8 0 0 1 12 9a8 8 0 0 1 7.162 4.44L24 9.5z"></path></svg>Google Scholar</a>
+      <a href="https://orcid.org/0009-0008-1750-0868" style="display: flex; align-items: center; gap: 10px;"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zM7.369 4.378c.897 0 1.62.724 1.62 1.62 0 .898-.723 1.62-1.62 1.62-.898 0-1.622-.722-1.622-1.62 0-.896.724-1.62 1.622-1.62zm-1.34 5.335h2.68v10.86h-2.68V9.713zm4.573 0h4.325c4.126 0 6.062 2.83 6.062 5.44 0 2.895-2.312 5.42-6.033 5.42h-4.354V9.713zm2.68 2.325v6.202h1.427c2.581 0 3.582-1.85 3.582-3.117 0-1.685-1.079-3.085-3.582-3.085h-1.427z"></path></svg>ORCID</a>
+      <a href="https://www.linkedin.com/in/yeshan-qiu-6064b91a9/" style="display: flex; align-items: center; gap: 10px;"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"></path></svg>LinkedIn</a>
+      <a href="https://www.instagram.com/qiu.dami/" style="display: flex; align-items: center; gap: 10px;"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zm0 10.162a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"></path></svg>Instagram</a>
+    </div>
+  </footer>
+</div>
+</x-dc>
+</body>
+</html>

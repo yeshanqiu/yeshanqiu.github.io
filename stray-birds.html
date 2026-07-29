@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    html, body { margin: 0; height: 100%; background: #0d0e0c; font-family: Calibri, Carlito, "Segoe UI", system-ui, sans-serif; }
+    a { color: inherit; text-decoration: none; }
+    ::selection { background: rgba(255,255,255,.18); }
+    .track { scrollbar-width: none; -ms-overflow-style: none; }
+    .track::-webkit-scrollbar { display: none; }
+    #dots > * { pointer-events: auto; }
+    .dot { width: 7px; height: 7px; border-radius: 50%; background: rgba(242,239,232,.28); border: none; padding: 0; cursor: pointer; transition: background .2s, transform .2s; }
+    .dot.on { background: #c3a07f; transform: scale(1.5); }
+    .plate img { transition: transform 1.4s cubic-bezier(.16,.84,.3,1), opacity .9s ease; }
+    .plate:hover img { transform: scale(1.03); }
+    @keyframes nudge { 0%, 100% { transform: translateX(0); opacity: .55; } 50% { transform: translateX(10px); opacity: 1; } }
+    .plate .meta { transition: opacity .6s ease, transform .6s ease; }
+  </style>
+</helmet>
+
+<div style="position: fixed; inset: 0; overflow: hidden; background: #0d0e0c; color: #f2efe8;">
+
+  <div style="position: absolute; top: 0; left: 0; right: 0; z-index: 20; display: flex; align-items: baseline; justify-content: space-between; padding: 30px 44px; pointer-events: none;">
+    <div style="display: flex; align-items: baseline; gap: 22px; pointer-events: auto;">
+      <a href="index.html" style="font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(242,239,232,.55);">← Yeshan Qiu</a>
+      <span style="font-size: 15px; font-weight: 400; letter-spacing: 0.18em; text-transform: uppercase; color: rgba(242,239,232,.9);">Stray Birds</span>
+    </div>
+    <div style="font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(242,239,232,.35);">Scroll sideways</div>
+  </div>
+
+  <div id="dots" style="position: absolute; bottom: 22px; left: 0; right: 0; z-index: 25; display: flex; justify-content: center; align-items: center; gap: 11px; pointer-events: none;"></div>
+
+  <div class="track" style="position: absolute; inset: 0; display: flex; overflow-x: auto; overflow-y: hidden; scroll-snap-type: x mandatory; scroll-behavior: smooth;">
+
+    <section style="flex: 0 0 100%; height: 100%; scroll-snap-align: center; display: flex; flex-direction: column; justify-content: center; padding: 112px 44px 48px; box-sizing: border-box; overflow-y: auto;">
+      <div style="max-width: 30ch;">
+        <h1 style="font-size: clamp(44px, 7vw, 96px); line-height: 0.94; letter-spacing: -0.05em; font-weight: 300; margin: 0 0 24px;">Stray<br>Birds</h1>
+        <p style="font-size: 17px; line-height: 1.7; font-weight: 300; color: rgba(242,239,232,.72); margin: 0 0 18px;">A gallery kept for its own sake, named after Tagore. Birds met while travelling, on a temple wall, a gravestone, a basalt column, a thorn tree, a tidal flat.</p>
+        <p style="font-size: 15px; line-height: 1.7; font-weight: 300; color: rgba(242,239,232,.45); margin: 0;">A sparrow on a gilded robe in Bagan and a robin on a cemetery statue in Edinburgh are doing the same thing, living in the gaps we leave. Street corner or mountain forest, the bird is equally at home. New sightings get added as I go.</p>
+      <div style="display: flex; align-items: center; gap: 14px; margin-top: 44px; animation: nudge 2.4s ease-in-out infinite;">
+        <span style="font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: rgba(242,239,232,.45);">Scroll or press &rarr;</span>
+        <svg width="72" height="8" viewBox="0 0 72 8" fill="none" aria-hidden="true"><path d="M0 4 H64" stroke="rgba(242,239,232,.7)" stroke-width="1"></path><path d="M60 1 L67 4 L60 7" stroke="rgba(242,239,232,.7)" stroke-width="1" fill="none"></path></svg>
+      </div>
+
+      </div>
+    </section>
+
+    <section class="plate" style="flex: 0 0 82%; height: 100%; scroll-snap-align: center; position: relative; overflow: hidden;">
+      <img src="assets/bird-weaver-nest.jpg" alt="Weaver hanging beneath its woven nest, Kenya" style="width: 100%; height: 100%; object-fit: cover; object-position: center 60%; display: block; opacity: .92;">
+      <div class="meta" style="position: absolute; left: 44px; bottom: 48px; max-width: 34ch; text-shadow: 0 2px 24px rgba(0,0,0,.85);">
+        <div style="font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: rgba(242,239,232,.6); margin-bottom: 8px;">Kenya</div>
+        <div style="font-size: 30px; font-weight: 300; letter-spacing: -0.02em; line-height: 1.1;">Weaver at its nest</div>
+        <div style="font-size: 14px; font-style: italic; color: rgba(242,239,232,.62); margin-top: 4px;">Ploceus sp.</div>
+        <p style="font-size: 14px; line-height: 1.65; font-weight: 300; color: rgba(242,239,232,.7); margin: 12px 0 0;">Woven from grass, slung from an acacia thorn, entered from below so nothing can reach in from above. The best architecture on this whole site is not mine.</p>
+      </div>
+    </section>
+
+    <section class="plate" style="flex: 0 0 62%; height: 100%; scroll-snap-align: center; position: relative; overflow: hidden;">
+      <img src="assets/bird-sparrow-robe.jpg" alt="Sparrow on a gilded robe, Bagan" style="width: 100%; height: 100%; object-fit: cover; object-position: 62% 45%; display: block; opacity: .94;">
+      <div class="meta" style="position: absolute; left: 40px; bottom: 48px; max-width: 30ch; text-shadow: 0 2px 24px rgba(0,0,0,.85);">
+        <div style="font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: rgba(242,239,232,.6); margin-bottom: 8px;">Bagan, Myanmar</div>
+        <div style="font-size: 26px; font-weight: 300; letter-spacing: -0.02em; line-height: 1.15;">House Sparrow</div>
+        <div style="font-size: 14px; font-style: italic; color: rgba(242,239,232,.62); margin-top: 4px;">Passer domesticus</div>
+        <p style="font-size: 14px; line-height: 1.65; font-weight: 300; color: rgba(242,239,232,.7); margin: 12px 0 0;">On the silk hem of a Buddha's robe, entirely unimpressed by the gold.</p>
+      </div>
+    </section>
+
+    <section class="plate" style="flex: 0 0 72%; height: 100%; scroll-snap-align: center; position: relative; overflow: hidden;">
+      <img src="assets/bird-sparrow-arch.jpg" alt="Sparrows in a temple arch, Bagan" style="width: 100%; height: 100%; object-fit: cover; object-position: center 40%; display: block; opacity: .94;">
+      <div class="meta" style="position: absolute; left: 40px; bottom: 48px; max-width: 30ch; text-shadow: 0 2px 24px rgba(0,0,0,.85);">
+        <div style="font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: rgba(242,239,232,.6); margin-bottom: 8px;">Bagan, Myanmar</div>
+        <div style="font-size: 26px; font-weight: 300; letter-spacing: -0.02em; line-height: 1.15;">Nesting in the vault</div>
+        <div style="font-size: 14px; font-style: italic; color: rgba(242,239,232,.62); margin-top: 4px;">Passer domesticus</div>
+        <p style="font-size: 14px; line-height: 1.65; font-weight: 300; color: rgba(242,239,232,.7); margin: 12px 0 0;">An eight-hundred-year-old brick arch. The temple is the cliff face they were always going to use.</p>
+      </div>
+    </section>
+
+    <section class="plate" style="flex: 0 0 58%; height: 100%; scroll-snap-align: center; position: relative; overflow: hidden;">
+      <img src="assets/bird-heron-perch.jpg" alt="Grey heron on a tidal flat, Edinburgh" style="width: 100%; height: 100%; object-fit: cover; object-position: center 52%; display: block; opacity: .9;">
+      <div class="meta" style="position: absolute; left: 40px; bottom: 48px; max-width: 28ch; text-shadow: 0 2px 24px rgba(0,0,0,.85);">
+        <div style="font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: rgba(242,239,232,.6); margin-bottom: 8px;">Edinburgh, Scotland</div>
+        <div style="font-size: 26px; font-weight: 300; letter-spacing: -0.02em; line-height: 1.15;">Grey Heron</div>
+        <div style="font-size: 14px; font-style: italic; color: rgba(242,239,232,.62); margin-top: 4px;">Ardea cinerea</div>
+        <p style="font-size: 14px; line-height: 1.65; font-weight: 300; color: rgba(242,239,232,.7); margin: 12px 0 0;">Waiting out the tide on a weed bank, still enough to be mistaken for a rock.</p>
+      </div>
+    </section>
+
+    <section class="plate" style="flex: 0 0 58%; height: 100%; scroll-snap-align: center; position: relative; overflow: hidden;">
+      <img src="assets/bird-heron-flight.jpg" alt="Grey heron taking off, Edinburgh" style="width: 100%; height: 100%; object-fit: cover; object-position: center 52%; display: block; opacity: .9;">
+      <div class="meta" style="position: absolute; left: 40px; bottom: 48px; max-width: 28ch; text-shadow: 0 2px 24px rgba(0,0,0,.85);">
+        <div style="font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: rgba(242,239,232,.6); margin-bottom: 8px;">Edinburgh, Scotland</div>
+        <div style="font-size: 26px; font-weight: 300; letter-spacing: -0.02em; line-height: 1.15;">One second later</div>
+        <div style="font-size: 14px; font-style: italic; color: rgba(242,239,232,.62); margin-top: 4px;">Ardea cinerea</div>
+        <p style="font-size: 14px; line-height: 1.65; font-weight: 300; color: rgba(242,239,232,.7); margin: 12px 0 0;">Two metres of wing out of a bird that had looked like nothing at all.</p>
+      </div>
+    </section>
+
+    <section class="plate" style="flex: 0 0 56%; height: 100%; scroll-snap-align: center; position: relative; overflow: hidden;">
+      <img src="assets/bird-robin-cemetery.jpg" alt="European robin on a cemetery statue, Edinburgh" style="width: 100%; height: 100%; object-fit: cover; object-position: center 48%; display: block; opacity: .95;">
+      <div class="meta" style="position: absolute; left: 40px; bottom: 48px; max-width: 30ch; text-shadow: 0 2px 24px rgba(0,0,0,.85);">
+        <div style="font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: rgba(242,239,232,.6); margin-bottom: 8px;">Edinburgh, Scotland</div>
+        <div style="font-size: 26px; font-weight: 300; letter-spacing: -0.02em; line-height: 1.15;">European Robin</div>
+        <div style="font-size: 14px; font-style: italic; color: rgba(242,239,232,.62); margin-top: 4px;">Erithacus rubecula</div>
+        <p style="font-size: 14px; line-height: 1.65; font-weight: 300; color: rgba(242,239,232,.7); margin: 12px 0 0;">On a weathered statue in an old burial ground. Cemeteries are some of the best habitat a dense city has, because nobody tidies them.</p>
+      </div>
+    </section>
+
+    <section class="plate" style="flex: 0 0 60%; height: 100%; scroll-snap-align: center; position: relative; overflow: hidden;">
+      <img src="assets/bird-shag-basalt.jpg" alt="European shag on basalt columns" style="width: 100%; height: 100%; object-fit: cover; object-position: center 55%; display: block; opacity: .95;">
+      <div class="meta" style="position: absolute; left: 40px; bottom: 48px; max-width: 30ch; text-shadow: 0 2px 24px rgba(0,0,0,.85);">
+        <div style="font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: rgba(242,239,232,.6); margin-bottom: 8px;">Giant's Causeway</div>
+        <div style="font-size: 26px; font-weight: 300; letter-spacing: -0.02em; line-height: 1.15;">European Shag</div>
+        <div style="font-size: 14px; font-style: italic; color: rgba(242,239,232,.62); margin-top: 4px;">Gulosus aristotelis</div>
+        <p style="font-size: 14px; line-height: 1.65; font-weight: 300; color: rgba(242,239,232,.7); margin: 12px 0 0;">Drying its wings on hexagonal basalt. The rock got there first, but a ledge is a ledge.</p>
+      </div>
+    </section>
+
+    <section class="plate" style="flex: 0 0 64%; height: 100%; scroll-snap-align: center; position: relative; overflow: hidden;">
+      <img src="assets/bird-roller.jpg" alt="Lilac-breasted roller, Kenya" style="width: 100%; height: 100%; object-fit: cover; object-position: center 42%; display: block; opacity: .96;">
+      <div class="meta" style="position: absolute; left: 40px; bottom: 48px; max-width: 30ch; text-shadow: 0 2px 24px rgba(0,0,0,.85);">
+        <div style="font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: rgba(242,239,232,.6); margin-bottom: 8px;">Kenya</div>
+        <div style="font-size: 26px; font-weight: 300; letter-spacing: -0.02em; line-height: 1.15;">Lilac-breasted Roller</div>
+        <div style="font-size: 14px; font-style: italic; color: rgba(242,239,232,.62); margin-top: 4px;">Coracias caudatus</div>
+        <p style="font-size: 14px; line-height: 1.65; font-weight: 300; color: rgba(242,239,232,.7); margin: 12px 0 0;">Turquoise, violet and lilac on a dead thorn branch, waiting to drop on something below.</p>
+      </div>
+    </section>
+
+    <section class="plate" style="flex: 0 0 64%; height: 100%; scroll-snap-align: center; position: relative; overflow: hidden;">
+      <img src="assets/bird-weaver-colony.jpg" alt="Weaver colony nests in an acacia, Kenya" style="width: 100%; height: 100%; object-fit: cover; object-position: center 30%; display: block; opacity: .95;">
+      <div class="meta" style="position: absolute; left: 40px; bottom: 48px; max-width: 30ch; text-shadow: 0 2px 24px rgba(0,0,0,.85);">
+        <div style="font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: rgba(242,239,232,.6); margin-bottom: 8px;">Kenya</div>
+        <div style="font-size: 26px; font-weight: 300; letter-spacing: -0.02em; line-height: 1.15;">A street of nests</div>
+        <div style="font-size: 14px; font-style: italic; color: rgba(242,239,232,.62); margin-top: 4px;">Ploceus sp.</div>
+        <p style="font-size: 14px; line-height: 1.65; font-weight: 300; color: rgba(242,239,232,.7); margin: 12px 0 0;">A whole colony in one acacia. Density is not automatically the enemy.</p>
+      </div>
+    </section>
+
+    <section class="plate" style="flex: 0 0 88%; height: 100%; scroll-snap-align: center; position: relative; overflow: hidden;">
+      <img src="assets/bird-pelican-flamingo.jpg" alt="Pelicans, flamingos, cormorants and geese on a Rift Valley lake shore" style="width: 100%; height: 100%; object-fit: cover; object-position: center 72%; display: block; opacity: .95;">
+      <div class="meta" style="position: absolute; left: 44px; bottom: 48px; max-width: 40ch; text-shadow: 0 2px 24px rgba(0,0,0,.85);">
+        <div style="font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: rgba(242,239,232,.6); margin-bottom: 8px;">Rift Valley lakes, Kenya</div>
+        <div style="font-size: 30px; font-weight: 300; letter-spacing: -0.02em; line-height: 1.1;">Fifty metres of shoreline</div>
+        <div style="font-size: 14px; font-style: italic; color: rgba(242,239,232,.62); margin-top: 4px;">Pelecanus onocrotalus, Phoeniconaias minor, Phalacrocorax carbo, Alopochen aegyptiaca</div>
+        <p style="font-size: 14px; line-height: 1.65; font-weight: 300; color: rgba(242,239,232,.7); margin: 12px 0 0;">Four species sharing one bank, each feeding at a different depth on a different thing. This is what a functional guild looks like before it becomes a variable in a model.</p>
+      </div>
+    </section>
+
+    <section style="flex: 0 0 60%; height: 100%; scroll-snap-align: center; display: flex; flex-direction: column; justify-content: center; padding: 0 60px; box-sizing: border-box;">
+      <div style="max-width: 34ch;">
+        <div style="font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: rgba(242,239,232,.45); margin-bottom: 16px;">Still to come</div>
+        <p style="font-size: 20px; line-height: 1.6; font-weight: 300; color: rgba(242,239,232,.8); margin: 0 0 24px;">Yellow-vented bulbul and the fire-eyed one in Singapore, an owl in Indonesia, street parrots and a small blue bird in Australia, flamingos in Bolivia, a black bird on a Washington sidewalk, and the green-billed ducks in Hyde Park.</p>
+        <a href="index.html" style="font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(242,239,232,.5); border-bottom: 1px solid rgba(242,239,232,.25); padding-bottom: 3px;">← Back to work</a>
+      </div>
+    </section>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  componentDidMount() {
+    const track = document.querySelector('.track');
+    if (!track) return;
+    const dots = document.getElementById('dots');
+    const panels = Array.from(track.children).filter(el => el.tagName === 'SECTION');
+    if (dots) {
+      dots.innerHTML = '';
+      panels.forEach((p, i) => {
+        const b = document.createElement('button');
+        b.className = 'dot' + (i === 0 ? ' on' : '');
+        b.setAttribute('aria-label', 'Go to panel ' + (i + 1));
+        b.onclick = () => { track.scrollLeft = p.offsetLeft; };
+        dots.appendChild(b);
+      });
+      this._sync = () => {
+        let best = 0, bd = Infinity;
+        panels.forEach((p, i) => { const d = Math.abs(p.offsetLeft - track.scrollLeft); if (d < bd) { bd = d; best = i; } });
+        Array.from(dots.children).forEach((d, k) => d.classList.toggle('on', k === best));
+      };
+      track.addEventListener('scroll', this._sync);
+    }
+    this._wheel = (e) => {
+      if (Math.abs(e.deltaY) > Math.abs(e.deltaX)) {
+        track.scrollLeft += e.deltaY * 1.1;
+        e.preventDefault();
+      }
+    };
+    this._keys = (e) => {
+      const step = track.clientWidth * 0.6;
+      if (e.key === 'ArrowRight') track.scrollLeft += step;
+      if (e.key === 'ArrowLeft') track.scrollLeft -= step;
+    };
+    track.addEventListener('wheel', this._wheel, { passive: false });
+    window.addEventListener('keydown', this._keys);
+  }
+  componentWillUnmount() {
+    const track = document.querySelector('.track');
+    if (track && this._wheel) track.removeEventListener('wheel', this._wheel);
+    if (track && this._sync) track.removeEventListener('scroll', this._sync);
+    if (this._keys) window.removeEventListener('keydown', this._keys);
+  }
+  renderVals() { return {}; }
+}
+</script>
+</body>
+</html>

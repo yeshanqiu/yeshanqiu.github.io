@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Carlito:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body { margin: 0; background: #f6f3ed; font-family: Calibri, Carlito, "Segoe UI", system-ui, sans-serif; }
+    a { color: inherit; text-decoration: none; transition: color .15s; }
+    a:hover { color: #3f5c46; }
+    ::selection { background: #3f5c4633; }
+  </style>
+  <script src="lightbox.js"></script>
+</helmet>
+
+<div style="max-width: 1160px; margin: 0 auto; padding: 0 48px 140px; color: #17181a;">
+
+  <nav style="display: flex; align-items: center; justify-content: space-between; padding: 40px 0 80px;">
+    <a href="index.html" style="font-size: 14px; font-weight: 500; color: #5b5b57;">← Yeshan Qiu</a>
+    <div style="display: flex; gap: 32px; font-size: 14px; font-weight: 500; color: #5b5b57;">
+      <a href="index.html#work">Work</a>
+      <a href="index.html#design">Design</a>
+      <a href="index.html#publications">Publications</a>
+      <a href="index.html#contact">Contact</a>
+    </div>
+  </nav>
+
+  <header style="max-width: 900px;">
+    <div style="font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; color: #3f5c46; margin-bottom: 20px;">Ecological Indicators, 2023, first author</div>
+    <h1 style="font-size: 68px; line-height: 1.03; letter-spacing: -0.035em; font-weight: 700; margin: 0 0 32px; max-width: 20ch;">Landscape perception: eye-tracking and deep learning</h1>
+    <p style="font-size: 22px; line-height: 1.55; color: #2b2b28; margin: 0; max-width: 54ch; text-wrap: pretty;">Master’s research at Shanghai Jiao Tong University, where I was already pairing data driven methods with ecological questions. The study builds a Public Ecosystem Aesthetics Perception model, which reads a street scene from its physical elements through to whether people like it.</p>
+  </header>
+
+  <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 32px; margin: 72px 0 96px; padding: 28px 0; border-top: 1px solid #ded6c4; border-bottom: 1px solid #ded6c4; font-size: 13px; line-height: 1.6;">
+    <div><div style="color: #8a8a84; margin-bottom: 6px;">Field site</div>Twenty roadside green space scenes, Shanghai, collected on foot in 2020</div>
+    <div><div style="color: #8a8a84; margin-bottom: 6px;">Methods</div>Convolutional neural network segmentation, eye-tracking, questionnaires, Bayesian network</div>
+    <div><div style="color: #8a8a84; margin-bottom: 6px;">Role</div>First author, master's research</div>
+    <div><div style="color: #8a8a84; margin-bottom: 6px;">Published</div>Ecological Indicators, 2023</div>
+  </div>
+
+  <section style="max-width: 66ch; margin-bottom: 56px;">
+    <h2 style="font-size: 30px; line-height: 1.15; letter-spacing: -0.02em; font-weight: 700; margin: 0 0 20px;">Why measure aesthetics at all</h2>
+    <p style="font-size: 17px; line-height: 1.7; color: #2b2b28; margin: 0 0 18px; text-wrap: pretty;">Ecologically richer planting is often read by the public as untidy, so schemes that are good for biodiversity get replaced with ones that are merely neat. If we want ecological quality to survive maintenance and politics, we need to know which visual properties carry public approval, and which ones do not.</p>
+    <p style="font-size: 17px; line-height: 1.7; color: #2b2b28; margin: 0; text-wrap: pretty;">The study treats perception as several stages rather than one judgement. Physical elements in a scene, such as trees, grass, earth, and walls, become measurable landscape features. Those features feed perceptual concepts such as naturalness, complexity, contrast, and imageability. Those concepts, together with where the eye actually goes, produce a like or dislike.</p>
+  </section>
+
+  <section style="margin-bottom: 100px;">
+    <figure style="margin: 0;">
+      <a href="assets/peap-workflow.png" target="_blank" style="display: block; background: #fff; border: 1px solid #e7e1d4; padding: 20px; cursor: zoom-in;"><img src="assets/peap-workflow.png" alt="The four steps of the Public Ecosystem Aesthetics Perception model" style="width: 100%; height: auto; display: block;"></a>
+      <figcaption style="font-size: 13px; line-height: 1.6; color: #5b5b57; margin-top: 12px; max-width: 68ch;">The four steps of the model. A convolutional neural network does the seeing: it segments every scene into elements and derives the landscape features, colour and visual entropy, sky view factor, green view ratio, and plant coverage. Eye-tracking records where attention actually goes. A Bayesian network then does the reasoning, learning how those measured features and that attention resolve into perceived naturalness, beauty, and ecological aesthetics. Deep learning measures, the Bayesian model explains. <a href="assets/peap-workflow.png" target="_blank" style="color: #3f5c46; border-bottom: 1px solid #3f5c46;">View full size</a></figcaption>
+    </figure>
+  </section>
+
+  <section style="margin-bottom: 100px;">
+    <figure style="margin: 0;">
+      <a href="assets/eyetrack-site-grid.jpg" target="_blank" style="display: block; background: #fff; border: 1px solid #e7e1d4; padding: 16px; cursor: zoom-in;"><img src="assets/eyetrack-site-grid.jpg" alt="Twenty roadside green space scenes surveyed in Shanghai" style="width: 100%; height: auto; display: block;"></a>
+      <figcaption style="font-size: 13px; line-height: 1.6; color: #5b5b57; margin-top: 12px; max-width: 66ch;">The twenty survey scenes, photographed on site rather than taken from street-view imagery, so that planting structure, maintenance state, and season were known. Rows are sites, columns are viewpoints. <a href="assets/eyetrack-site-grid.jpg" target="_blank" style="color: #3f5c46; border-bottom: 1px solid #3f5c46;">View full size</a></figcaption>
+    </figure>
+  </section>
+
+  <section style="margin-bottom: 100px;">
+    <div style="max-width: 62ch; margin-bottom: 40px;">
+      <div style="font-size: 12px; letter-spacing: 0.1em; color: #a8562f; font-weight: 700; margin-bottom: 14px;">01</div>
+      <h2 style="font-size: 38px; line-height: 1.12; letter-spacing: -0.025em; font-weight: 700; margin: 0 0 20px;">Reading the scene with a neural network</h2>
+      <p style="font-size: 17px; line-height: 1.7; color: #2b2b28; margin: 0; text-wrap: pretty;">A convolutional neural network segments every scene into its elements, so composition is measured rather than estimated by eye. From the segmentation I derive the landscape features the model needs, including green view ratio, plant coverage, sky view factor, and colour and visual entropy.</p>
+    </div>
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px;">
+      <figure style="margin: 0;">
+        <a href="assets/eyetrack-seg-1.png" target="_blank" style="display: block; background: #fff; border: 1px solid #e7e1d4; padding: 12px; cursor: zoom-in;"><img src="assets/eyetrack-seg-1.png" alt="Semantic segmentation of a park scene" style="width: 100%; height: auto; display: block;"></a>
+        <figcaption style="font-size: 13px; line-height: 1.6; color: #5b5b57; margin-top: 10px;">Segmentation of a layered planting scene: canopy, shrub, grass, water, and path separate cleanly.</figcaption>
+      </figure>
+      <figure style="margin: 0;">
+        <a href="assets/eyetrack-seg-2.png" target="_blank" style="display: block; background: #fff; border: 1px solid #e7e1d4; padding: 12px; cursor: zoom-in;"><img src="assets/eyetrack-seg-2.png" alt="Semantic segmentation of an open roadside scene" style="width: 100%; height: auto; display: block;"></a>
+        <figcaption style="font-size: 13px; line-height: 1.6; color: #5b5b57; margin-top: 10px;">An open roadside scene: little canopy, large sky and grass fractions, and built elements on the horizon.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section style="margin-bottom: 100px;">
+    <div style="max-width: 62ch; margin-bottom: 40px;">
+      <div style="font-size: 12px; letter-spacing: 0.1em; color: #a8562f; font-weight: 700; margin-bottom: 14px;">02</div>
+      <h2 style="font-size: 38px; line-height: 1.12; letter-spacing: -0.025em; font-weight: 700; margin: 0 0 20px;">Where people actually look</h2>
+      <p style="font-size: 17px; line-height: 1.7; color: #2b2b28; margin: 0; text-wrap: pretty;">Eye-tracking records fixations, saccades, and gaze paths while participants view each scene, and areas of interest are drawn on the segmented elements so attention can be attributed to what was being looked at. Semi-structured interviews and questionnaires then capture the perceptual concepts participants report.</p>
+    </div>
+    <figure style="margin: 0;">
+      <a href="assets/eyetrack-triptych.png" target="_blank" style="display: block; background: #fff; border: 1px solid #e7e1d4; padding: 16px; cursor: zoom-in;"><img src="assets/eyetrack-triptych.png" alt="Segmentation, gaze heatmap, and areas of interest for one scene" style="width: 100%; height: auto; display: block;"></a>
+      <figcaption style="font-size: 13px; line-height: 1.6; color: #5b5b57; margin-top: 12px; max-width: 66ch;">One scene, three readings: element segmentation, the gaze heatmap, and the fixation points assigned to areas of interest. <a href="assets/eyetrack-triptych.png" target="_blank" style="color: #3f5c46; border-bottom: 1px solid #3f5c46;">View full size</a></figcaption>
+    </figure>
+  </section>
+
+  <section style="margin-bottom: 100px;">
+    <div style="max-width: 62ch; margin-bottom: 40px;">
+      <div style="font-size: 12px; letter-spacing: 0.1em; color: #a8562f; font-weight: 700; margin-bottom: 14px;">03</div>
+      <h2 style="font-size: 38px; line-height: 1.12; letter-spacing: -0.025em; font-weight: 700; margin: 0 0 20px;">A Bayesian network from elements to liking</h2>
+      <p style="font-size: 17px; line-height: 1.7; color: #2b2b28; margin: 0; text-wrap: pretty;">A Bayesian network learns the dependencies between what is in the scene, how it is perceived, and whether it is liked. Naturalness carries most of the positive signal, and it is reached through complexity and contrast rather than directly. Walls and hard boundaries act against liking, while exposed earth reads as neglect in some scenes and as legible structure in others.</p>
+    </div>
+
+    <div style="background: #fff; border: 1px solid #e7e1d4; padding: 28px 28px 20px;">
+      <svg viewBox="0 0 1060 520" style="width: 100%; height: auto; display: block;" font-family="Calibri, Carlito, Segoe UI, system-ui, sans-serif">
+        <defs>
+          <marker id="pos" markerWidth="9" markerHeight="9" refX="7" refY="3.2" orient="auto"><path d="M0,0 L7,3.2 L0,6.4 z" fill="#c07050"></path></marker>
+          <marker id="neg" markerWidth="9" markerHeight="9" refX="7" refY="3.2" orient="auto"><path d="M0,0 L7,3.2 L0,6.4 z" fill="#4a6b78"></path></marker>
+        </defs>
+
+        <g stroke="#c07050" fill="none" marker-end="url(#pos)">
+          <path d="M160 48 H200 V122 H240" stroke-width="2.4"></path>
+          <path d="M160 208 H220 V122 H240" stroke-width="2.8"></path>
+          <path d="M160 128 H205 V242 H240" stroke-width="2.4"></path>
+          <path d="M160 300 H222 V242 H240" stroke-width="2"></path>
+          <path d="M160 120 V60 H620 V92 H640" stroke-width="3.4"></path>
+          <path d="M390 242 H420 V172 H450" stroke-width="2.6"></path>
+          <path d="M580 172 H610 V92 H640" stroke-width="2.6"></path>
+          <path d="M580 180 H610 V252 H640" stroke-width="2.4"></path>
+          <path d="M160 308 H600 V252 H640" stroke-width="1.8"></path>
+          <path d="M800 92 H840 V172 H860" stroke-width="3.6"></path>
+          <path d="M800 252 H840 V190 H860" stroke-width="2.4"></path>
+        </g>
+        <g stroke="#4a6b78" fill="none" marker-end="url(#neg)">
+          <path d="M160 36 V18 H940 V146" stroke-width="4"></path>
+          <path d="M390 122 H430 V132 H830 V172 H860" stroke-width="2.8"></path>
+        </g>
+
+        <g font-size="16" fill="#17181a">
+          <rect x="20" y="26" width="140" height="44" fill="#e6e4ee" rx="2"></rect><text x="90" y="54" text-anchor="middle">Wall</text>
+          <rect x="20" y="106" width="140" height="44" fill="#e6e4ee" rx="2"></rect><text x="90" y="134" text-anchor="middle">Tree</text>
+          <rect x="20" y="186" width="140" height="44" fill="#e6e4ee" rx="2"></rect><text x="90" y="214" text-anchor="middle">Building</text>
+          <rect x="20" y="278" width="140" height="44" fill="#e6e4ee" rx="2"></rect><text x="90" y="306" text-anchor="middle">Earth</text>
+
+          <rect x="240" y="98" width="150" height="48" fill="#f7e7d4" rx="2"></rect><text x="315" y="128" text-anchor="middle">Nuisance</text>
+          <rect x="240" y="218" width="150" height="48" fill="#f7e7d4" rx="2"></rect><text x="315" y="248" text-anchor="middle">Complexity</text>
+          <rect x="450" y="148" width="130" height="48" fill="#f7e7d4" rx="2"></rect><text x="515" y="178" text-anchor="middle">Contrast</text>
+          <rect x="640" y="68" width="160" height="48" fill="#f7e7d4" rx="2"></rect><text x="720" y="98" text-anchor="middle">Naturalness</text>
+          <rect x="640" y="228" width="160" height="48" fill="#f7e7d4" rx="2"></rect><text x="720" y="258" text-anchor="middle">Imageability</text>
+          <rect x="860" y="146" width="160" height="52" fill="#dbe7ee" rx="2"></rect><text x="940" y="178" text-anchor="middle" font-weight="700">Liking</text>
+        </g>
+
+        <g font-size="14" fill="#5b5b57">
+          <rect x="20" y="404" width="660" height="96" fill="none" stroke="#ded6c4" stroke-dasharray="4 4"></rect>
+          <rect x="40" y="424" width="20" height="14" fill="#e6e4ee"></rect><text x="70" y="436">Landscape element</text>
+          <rect x="40" y="452" width="20" height="14" fill="#f7e7d4"></rect><text x="70" y="464">Perceptual concept</text>
+          <rect x="40" y="474" width="20" height="14" fill="#dbe7ee"></rect><text x="70" y="486">Target concept</text>
+          <line x1="380" y1="431" x2="430" y2="431" stroke="#c07050" stroke-width="3"></line><text x="442" y="436">Positive dependency</text>
+          <line x1="380" y1="459" x2="430" y2="459" stroke="#4a6b78" stroke-width="3"></line><text x="442" y="464">Negative dependency</text>
+          <text x="380" y="486">Line weight shows strength</text>
+        </g>
+      </svg>
+      <div style="font-size: 13px; line-height: 1.6; color: #5b5b57; margin-top: 14px; max-width: 78ch;">Public perception of ecological aesthetics, redrawn from the Bayesian network. Physical elements on the left act on perceptual concepts in the middle, which resolve into liking on the right. Warm lines are positive dependencies, cool lines negative, and line weight shows strength.</div>
+    </div>
+  </section>
+
+  <section style="max-width: 66ch; margin-bottom: 100px;">
+    <h2 style="font-size: 30px; line-height: 1.15; letter-spacing: -0.02em; font-weight: 700; margin: 0 0 20px;">What it means for design</h2>
+    <p style="font-size: 17px; line-height: 1.7; color: #2b2b28; margin: 0; text-wrap: pretty;">Naturalness is not read from the amount of green alone. It is built from structure people can see, layered planting, visible depth, and contrast between elements, which means an ecologically richer scheme can also be the better liked one if its structure is legible. The same measurement chain, from segmentation to perceptual concept to preference, is what I later carried into the biodiversity work, where the outcome is bird communities rather than public approval.</p>
+  </section>
+
+  <section style="margin-bottom: 100px;">
+    <h2 style="font-size: 24px; line-height: 1.2; letter-spacing: -0.02em; font-weight: 700; margin: 0 0 24px;">Outputs from this work</h2>
+    <div style="display: flex; flex-direction: column;">
+      <div style="display: grid; grid-template-columns: 90px 1fr 150px; gap: 24px; padding: 20px 0; border-top: 1px solid #ded6c4; align-items: baseline; font-size: 16px; line-height: 1.5;">
+        <span style="font-size: 13px; color: #8a8a84;">2023</span>
+        <span>The natural focus: combining deep learning and eye-tracking to understand public perceptions of urban ecosystem aesthetics. <span style="color: #5b5b57;">Ecological Indicators, 156, 111181. With Pan, H., Kalantari, Z., Giusti, M., and Che, S. First author.</span></span>
+        <span style="font-size: 12px; letter-spacing: 0.04em; text-transform: uppercase; color: #8a8a84; text-align: right;">Journal article</span>
+      </div>
+      <div style="display: grid; grid-template-columns: 90px 1fr 150px; gap: 24px; padding: 20px 0; border-top: 1px solid #ded6c4; align-items: baseline; font-size: 16px; line-height: 1.5;">
+        <span style="font-size: 13px; color: #8a8a84;">2022</span>
+        <span>Construction strategies for urban ecological green space based on ecological aesthetic. <span style="color: #5b5b57;">Landscape Architecture, 29(7), 37&ndash;43. With Che, S. First author, in Chinese.</span></span>
+        <span style="font-size: 12px; letter-spacing: 0.04em; text-transform: uppercase; color: #8a8a84; text-align: right;">Journal article</span>
+      </div>
+      <div style="display: grid; grid-template-columns: 90px 1fr 150px; gap: 24px; padding: 20px 0; border-top: 1px solid #ded6c4; border-bottom: 1px solid #ded6c4; align-items: baseline; font-size: 16px; line-height: 1.5;">
+        <span style="font-size: 13px; color: #8a8a84;">2022</span>
+        <span>Presented at the European Geosciences Union General Assembly. <span style="color: #5b5b57;">Vienna.</span></span>
+        <span style="font-size: 12px; letter-spacing: 0.04em; text-transform: uppercase; color: #8a8a84; text-align: right;">Conference</span>
+      </div>
+    </div>
+  </section>
+
+  <div style="display: flex; justify-content: space-between; align-items: center; padding-top: 40px; border-top: 1px solid #ded6c4; font-size: 15px;">
+    <a href="index.html#work" style="color: #5b5b57;">← All work</a>
+    <a href="naturalistic-roadside-green-space.html" style="color: #3f5c46; border-bottom: 1px solid #3f5c46;">Next: Naturalistic roadside green space</a>
+  </div>
+</div>
+</x-dc>
+</body>
+</html>
