@@ -40,24 +40,59 @@
   <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 32px; margin: 72px 0 72px; padding: 28px 0; border-top: 1px solid #ded6c4; border-bottom: 1px solid #ded6c4; font-size: 13px; line-height: 1.6;">
     <div><div style="color: #8a8a84; margin-bottom: 6px;">Coverage</div>Sixty-eight cities worldwide</div>
     <div><div style="color: #8a8a84; margin-bottom: 6px;">Metrics</div>Bird richness and abundance by guild, canopy, building, and water structure</div>
-    <div><div style="color: #8a8a84; margin-bottom: 6px;">Role</div>Sole author: database design, data processing, and interface</div>
+    <div><div style="color: #8a8a84; margin-bottom: 6px;">Team</div>Compiled by Wang Jing and Dr. Yeshan Qiu, Comparative Ecology of Cities, Future Cities Laboratory Global</div>
     <div><div style="color: #8a8a84; margin-bottom: 6px;">Status</div>In development</div>
   </div>
 
-  <a href="urban-grid-explorer.html" style="display: block; background: #faf8f2; border: 1px solid #e7e1d4; padding: 24px; margin-bottom: 16px;"><img src="assets/explorer-preview.png" alt="Urban Grid Explorer interface" style="width: 100%; height: auto; display: block;"></a>
-  <p style="font-size: 13px; line-height: 1.6; color: #5b5b57; margin: 0 0 40px; max-width: 60ch;">An interactive platform that organises urban spatial data across cities for comparison. Data sources and acknowledgements are listed inside the panel.</p>
-
-  <a href="urban-grid-explorer.html" style="display: inline-flex; align-items: center; gap: 8px; background: #3f5c46; color: #f6f3ed; font-size: 15px; font-weight: 500; padding: 14px 26px; border-radius: 2px; margin-bottom: 100px;">Open the explorer</a>
+  <figure style="margin: 0 0 100px;">
+    <a href="assets/explorer-preview.png" target="_blank" style="display: block; background: #faf8f2; border: 1px solid #e7e1d4; padding: 24px; cursor: zoom-in;"><img src="assets/explorer-preview.png" alt="Urban Grid Explorer interface" style="width: 100%; height: auto; display: block;"></a>
+    <figcaption style="font-size: 13px; line-height: 1.6; color: #5b5b57; margin-top: 12px; max-width: 68ch;">The explorer interface: cities on the left, metric groups and variables in the panel, and the selected metric mapped on the shared grid. The full database and interactive explorer are being prepared for open release, and will be made publicly available once the associated study is published.</figcaption>
+  </figure>
 
   <section style="margin-bottom: 100px;">
     <div style="max-width: 62ch; margin-bottom: 40px;">
       <h2 style="font-size: 30px; line-height: 1.15; letter-spacing: -0.02em; font-weight: 700; margin: 0 0 20px;">What the database holds</h2>
-      <p style="font-size: 17px; line-height: 1.7; color: #2b2b28; margin: 0; text-wrap: pretty;">Every city is read on the same grid, so metrics are comparable across places rather than assembled from separate local studies. Each cell carries bird richness and abundance by feeding guild, canopy cover and height, building footprint and volume, water extent and configuration, and land-use composition.</p>
+      <p style="font-size: 17px; line-height: 1.7; color: #2b2b28; margin: 0 0 16px; text-wrap: pretty;">Every city is read on the same grid, so metrics are comparable across places rather than assembled from separate local studies. Each cell carries bird richness and abundance by feeding guild, canopy cover and height, building footprint and volume, water extent and configuration, and land-use composition.</p>
+      <p style="font-size: 17px; line-height: 1.7; color: #2b2b28; margin: 0; text-wrap: pretty;">The database is being prepared for open release, and will be made publicly available once the associated study is published, so that others can reuse it for their own urban ecology and planning work.</p>
     </div>
-    <figure style="margin: 0;">
-      <a href="assets/city-richness-montage.png" target="_blank" style="display: block; background: #0f141b; border: 1px solid #e7e1d4; cursor: zoom-in;"><img src="assets/city-richness-montage.png" alt="Bird species richness grids for eighteen cities" style="width: 100%; height: auto; display: block;"></a>
-      <figcaption style="font-size: 13px; line-height: 1.6; color: #5b5b57; margin-top: 12px; max-width: 66ch;">Total bird species richness per grid cell for eighteen of the sixty-eight cities, all read on the same grid and the same colour scale. Warmer cells hold more species. <a href="assets/city-richness-montage.png" target="_blank" style="color: #3f5c46; border-bottom: 1px solid #3f5c46;">View full size</a></figcaption>
-    </figure>
+    <div style="display: flex; flex-direction: column; gap: 46px;">
+      <figure style="margin: 0;">
+        <a href="assets/city-richness-montage.png" target="_blank" style="display: block; background: #0f141b; cursor: zoom-in;"><img src="assets/city-richness-montage.png" alt="Bird Species Richness (SR) across eighteen cities" style="width: 100%; height: auto; display: block;"></a>
+        <figcaption style="margin-top: 12px;">
+          <span style="display: block; font-size: 14px; font-weight: 700; color: #17181a;">Bird Species Richness (SR)</span>
+          <span style="display: block; font-size: 13px; line-height: 1.6; color: #5b5b57; margin-top: 3px; max-width: 72ch;">Total bird species recorded per grid cell. <a href="assets/city-richness-montage.png" target="_blank" style="color: #3f5c46; border-bottom: 1px solid #3f5c46;">View full size</a></span>
+        </figcaption>
+      </figure>
+      <figure style="margin: 0;">
+        <a href="assets/city-canopy-height-montage.png" target="_blank" style="display: block; background: #0f141b; cursor: zoom-in;"><img src="assets/city-canopy-height-montage.png" alt="Canopy Height (CH) across eighteen cities" style="width: 100%; height: auto; display: block;"></a>
+        <figcaption style="margin-top: 12px;">
+          <span style="display: block; font-size: 14px; font-weight: 700; color: #17181a;">Canopy Height (CH)</span>
+          <span style="display: block; font-size: 13px; line-height: 1.6; color: #5b5b57; margin-top: 3px; max-width: 72ch;">Mean height of the tree canopy per grid cell. <a href="assets/city-canopy-height-montage.png" target="_blank" style="color: #3f5c46; border-bottom: 1px solid #3f5c46;">View full size</a></span>
+        </figcaption>
+      </figure>
+      <figure style="margin: 0;">
+        <a href="assets/city-canopy-cover-montage.png" target="_blank" style="display: block; background: #0f141b; cursor: zoom-in;"><img src="assets/city-canopy-cover-montage.png" alt="Canopy Percentage of Landscape (C_pland) across eighteen cities" style="width: 100%; height: auto; display: block;"></a>
+        <figcaption style="margin-top: 12px;">
+          <span style="display: block; font-size: 14px; font-weight: 700; color: #17181a;">Canopy Percentage of Landscape (C_pland)</span>
+          <span style="display: block; font-size: 13px; line-height: 1.6; color: #5b5b57; margin-top: 3px; max-width: 72ch;">Share of each grid cell covered by tree canopy. <a href="assets/city-canopy-cover-montage.png" target="_blank" style="color: #3f5c46; border-bottom: 1px solid #3f5c46;">View full size</a></span>
+        </figcaption>
+      </figure>
+      <figure style="margin: 0;">
+        <a href="assets/city-canopy-iji-montage.png" target="_blank" style="display: block; background: #0f141b; cursor: zoom-in;"><img src="assets/city-canopy-iji-montage.png" alt="Canopy Interspersion and Juxtaposition Index (C_iji) across eighteen cities" style="width: 100%; height: auto; display: block;"></a>
+        <figcaption style="margin-top: 12px;">
+          <span style="display: block; font-size: 14px; font-weight: 700; color: #17181a;">Canopy Interspersion and Juxtaposition Index (C_iji)</span>
+          <span style="display: block; font-size: 13px; line-height: 1.6; color: #5b5b57; margin-top: 3px; max-width: 72ch;">How evenly canopy patches are interspersed with other cover types. <a href="assets/city-canopy-iji-montage.png" target="_blank" style="color: #3f5c46; border-bottom: 1px solid #3f5c46;">View full size</a></span>
+        </figcaption>
+      </figure>
+      <figure style="margin: 0;">
+        <a href="assets/city-building-volume-montage.png" target="_blank" style="display: block; background: #0f141b; cursor: zoom-in;"><img src="assets/city-building-volume-montage.png" alt="Building Volume (BV) across eighteen cities" style="width: 100%; height: auto; display: block;"></a>
+        <figcaption style="margin-top: 12px;">
+          <span style="display: block; font-size: 14px; font-weight: 700; color: #17181a;">Building Volume (BV)</span>
+          <span style="display: block; font-size: 13px; line-height: 1.6; color: #5b5b57; margin-top: 3px; max-width: 72ch;">Total built volume per grid cell, footprint area combined with building height. <a href="assets/city-building-volume-montage.png" target="_blank" style="color: #3f5c46; border-bottom: 1px solid #3f5c46;">View full size</a></span>
+        </figcaption>
+      </figure>
+    </div>
+    <p style="font-size: 15px; line-height: 1.7; color: #5b5b57; margin: 34px 0 0; max-width: 74ch; text-wrap: pretty;">Each panel shows one metric across the same eighteen cities, mapped the same way and on one shared colour scale so cities can be read side by side. Together they turn scattered urban form into a comparable, reusable record: how tall and how continuous the canopy is, how much of the ground it covers and how it is interspersed, and how much built volume a city carries. This is the raw material the comparative study is built on.</p>
   </section>
 
   <div style="display: flex; justify-content: space-between; align-items: center; padding-top: 40px; border-top: 1px solid #ded6c4; font-size: 15px;">

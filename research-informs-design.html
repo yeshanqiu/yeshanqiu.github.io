@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Carlito:wght@400;700&display=swap" rel="stylesheet">
+  <script src="lightbox.js"></script>
+  <style>
+    body { margin: 0; background: #f6f3ed; font-family: Calibri, Carlito, "Segoe UI", system-ui, sans-serif; }
+    a { color: inherit; text-decoration: none; transition: color .15s; }
+    a:hover { color: #3f5c46; }
+    ::selection { background: #3f5c4633; }
+  </style>
+</helmet>
+
+<div style="max-width: 1160px; margin: 0 auto; padding: 0 48px 140px; color: #17181a;">
+
+  <nav style="display: flex; align-items: center; justify-content: space-between; padding: 40px 0 80px;">
+    <a href="index.html" style="font-size: 14px; font-weight: 700; color: #5b5b57;">← Yeshan Qiu</a>
+    <div style="display: flex; gap: 32px; font-size: 14px; color: #5b5b57;">
+      <a href="index.html#work">Work</a>
+      <a href="index.html#design">Design</a>
+      <a href="index.html#talks">Talks</a>
+      <a href="index.html#publications">Publications</a>
+      <a href="index.html#contact">Contact</a>
+    </div>
+  </nav>
+
+  <header style="max-width: 940px;">
+    <div style="font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; color: #3f5c46; margin-bottom: 20px;">Research informs design</div>
+    <h1 style="font-size: 60px; line-height: 1.05; letter-spacing: -0.035em; font-weight: 700; margin: 0 0 32px; max-width: 22ch;">From research guidelines and prediction to the design studio</h1>
+    <p style="font-size: 21px; line-height: 1.55; color: #2b2b28; margin: 0; max-width: 56ch; text-wrap: pretty;">The first studies build two things: a set of guidelines for how urban form can support birds, and an ability to predict how a change in form would shift bird diversity. Both are only useful if they can enter the place where decisions about form are actually made. This last piece is an early attempt to do exactly that, inside a design studio.</p>
+  </header>
+
+  <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 32px; margin: 72px 0 80px; padding: 26px 0; border-top: 1px solid #ded6c4; border-bottom: 1px solid #ded6c4; font-size: 13px; line-height: 1.55;">
+    <div><div style="color: #8a8a84; margin-bottom: 5px;">Studio</div>Joint design studio, National University of Singapore and Tsinghua University</div>
+    <div><div style="color: #8a8a84; margin-bottom: 5px;">Led by</div>A/P Hwang Yun Hye and Prof. Tan Puay Yok (NUS), A/P Zhang Ye (Tsinghua)</div>
+    <div><div style="color: #8a8a84; margin-bottom: 5px;">Partner institution</div>A/P Huang Jianxiang, HKU Urban Planning</div>
+    <div><div style="color: #8a8a84; margin-bottom: 5px;">My contribution</div>Biodiversity guidelines drawn from the research, and the bird species richness prediction model</div>
+  </div>
+
+  <section style="margin-bottom: 96px;">
+    <p style="font-size: 17px; line-height: 1.7; color: #2b2b28; margin: 0 0 26px; max-width: 74ch; text-wrap: pretty;">In a joint design studio between the National University of Singapore and Tsinghua University, led by A/P Hwang Yun Hye and Prof. Tan Puay Yok (NUS) and A/P Zhang Ye (Tsinghua), with partner institution A/P Huang Jianxiang (HKU Urban Planning), we worked on real sites in Hong Kong. Each site is a one-kilometre grid with its own mix of woodland, water, housing, and industry, from woodland edges and mid-rise housing to riverfronts, brownfield, and industrial new towns.</p>
+    <figure style="margin: 0;">
+      <a href="assets/hongkong-sites.png" target="_blank" style="display: block; background: #fff; border: 1px solid #e7e1d4; padding: 20px; cursor: zoom-in;"><img src="assets/hongkong-sites.png" alt="Hong Kong study sites, land use and land cover with four one-kilometre sample plots" style="width: 100%; height: auto; display: block;"></a>
+      <figcaption style="font-size: 13px; line-height: 1.6; color: #5b5b57; margin-top: 12px; max-width: 76ch;">Four one-kilometre sample plots in Hong Kong, on a land-use and land-cover base. <a href="assets/hongkong-sites.png" target="_blank" style="color: #3f5c46; border-bottom: 1px solid #3f5c46;">View full size</a></figcaption>
+    </figure>
+  </section>
+
+  <section style="margin-bottom: 96px;">
+    <p style="font-size: 17px; line-height: 1.7; color: #2b2b28; margin: 0 0 16px; max-width: 74ch; text-wrap: pretty;">Our team built a decision dashboard that predicts how a site would perform across several urban ecosystem functions at once, including flood mitigation, land surface temperature, public health, local economy, and biodiversity. Students could adjust the two- and three-dimensional form of a site and read the predicted change it would bring, including the change in bird species richness.</p>
+    <p style="font-size: 17px; line-height: 1.7; color: #2b2b28; margin: 0 0 26px; max-width: 74ch; text-wrap: pretty;">On the biodiversity side, I did two things: I translated the research findings into a set of design guidelines for bird-friendly urban form, and I trained the model that turns a change in form into a predicted change in bird species richness.</p>
+    <figure style="margin: 0;">
+      <a href="assets/studio-dashboard-sites.png" target="_blank" style="display: block; background: #fff; border: 1px solid #e7e1d4; padding: 20px; cursor: zoom-in;"><img src="assets/studio-dashboard-sites.png" alt="Dashboard output for two studio sites, with predicted urban functions" style="width: 100%; height: auto; display: block;"></a>
+      <figcaption style="font-size: 13px; line-height: 1.6; color: #5b5b57; margin-top: 12px; max-width: 78ch;">Dashboard output for two studio sites: input layers, the site plan, normalised urban indicators, and the projected urban functions. Team outcome. The dashboard and model cover flood, health, temperature, and economic functions as well as biodiversity. My contribution is the biodiversity part: the design guidelines drawn from the research, and the prediction model behind them. <a href="assets/studio-dashboard-sites.png" target="_blank" style="color: #3f5c46; border-bottom: 1px solid #3f5c46;">View full size</a></figcaption>
+    </figure>
+  </section>
+
+  <section style="margin-bottom: 96px;">
+    <p style="font-size: 17px; line-height: 1.7; color: #2b2b28; margin: 0 0 26px; max-width: 74ch; text-wrap: pretty;">What happened next was interesting, and not simple. Students began to reason about design from an ecological angle they might not have reached on their own, testing how a shift in massing or green space would move the numbers.</p>
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 28px;">
+      <figure style="margin: 0;">
+        <a href="assets/studio-review-1.jpg" target="_blank" style="display: block; background: #fff; border: 1px solid #e7e1d4; padding: 12px; cursor: zoom-in;"><img src="assets/studio-review-1.jpg" alt="Student presenting a site fauna biodiversity analysis" style="width: 100%; height: 420px; object-fit: contain; display: block;"></a>
+        <figcaption style="font-size: 13px; line-height: 1.6; color: #5b5b57; margin-top: 10px;">Students presenting a site biodiversity survey, mapping recorded species against site structure.</figcaption>
+      </figure>
+      <figure style="margin: 0;">
+        <a href="assets/studio-review-2.jpg" target="_blank" style="display: block; background: #fff; border: 1px solid #e7e1d4; padding: 12px; cursor: zoom-in;"><img src="assets/studio-review-2.jpg" alt="Student presenting bird habitat scenarios with predicted outcomes" style="width: 100%; height: 420px; object-fit: contain; display: block;"></a>
+        <figcaption style="font-size: 13px; line-height: 1.6; color: #5b5b57; margin-top: 10px;">A proposal tested as three scenarios, each read back through the predicted change in habitat area and bird diversity.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section style="margin-bottom: 96px; max-width: 74ch;">
+    <h2 style="font-size: 28px; line-height: 1.15; letter-spacing: -0.02em; font-weight: 700; margin: 0 0 20px;">What the experiment showed</h2>
+    <p style="font-size: 17px; line-height: 1.7; color: #2b2b28; margin: 0 0 16px; text-wrap: pretty;">The experiment also showed its limits, and each limit pointed somewhere. A predicted number can narrow imagination as easily as it can open it, so a useful tool has to offer direction and trade-offs rather than a single answer. The questions students asked, why a change helped or hurt birds, showed that prediction alone is not enough without the processes behind it. And a real Hong Kong site is far messier than a standardized grid, which asks for models that can handle specific, complex places.</p>
+    <p style="font-size: 17px; line-height: 1.7; color: #2b2b28; margin: 0 0 16px; text-wrap: pretty;">We make no claim that the panel produced better designs. It was an exploratory experiment in how research findings might enter a design process. What it taught me is concrete: to inform design well, a model needs to be more mature, more process-aware, and able to speak to real sites. That is the work I am building toward next.</p>
+    <a href="graph-based-models.html" style="display: inline-block; font-size: 15px; color: #3f5c46; border-bottom: 1px solid #3f5c46; padding-bottom: 3px; margin-top: 8px;">Ongoing: graph-based, multi-city prediction →</a>
+  </section>
+
+  <div style="display: flex; justify-content: space-between; align-items: center; padding-top: 40px; border-top: 1px solid #ded6c4; font-size: 15px;">
+    <a href="index.html#work" style="color: #5b5b57;">← All work</a>
+    <a href="graph-based-models.html" style="color: #3f5c46; border-bottom: 1px solid #3f5c46;">Next: Graph-based models</a>
+  </div>
+</div>
+</x-dc>
+</body>
+</html>

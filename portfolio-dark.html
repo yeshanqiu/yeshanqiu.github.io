@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Carlito:wght@400;700&display=swap" rel="stylesheet">
+  <script src="lightbox.js"></script>
+  <style>
+    body { margin: 0; background: #0d0f0e; font-family: Calibri, Carlito, "Segoe UI", system-ui, sans-serif; color: #ece9e2; }
+    a { color: inherit; text-decoration: none; }
+    ::selection { background: rgba(236,233,226,.2); }
+    .wrap { max-width: 1180px; margin: 0 auto; padding: 0 64px; }
+    .kicker { font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: #8fa892; font-weight: 700; margin-bottom: 18px; }
+    .h1 { font-size: clamp(34px, 4vw, 52px); line-height: 1.08; letter-spacing: -0.03em; font-weight: 700; margin: 0 0 26px; max-width: 22ch; }
+    .lede { font-size: 19px; line-height: 1.65; color: rgba(236,233,226,.82); margin: 0 0 26px; max-width: 60ch; text-wrap: pretty; }
+    .body { font-size: 16.5px; line-height: 1.75; color: rgba(236,233,226,.72); margin: 0 0 18px; max-width: 68ch; text-wrap: pretty; }
+    .close { font-size: 17.5px; line-height: 1.65; color: #ece9e2; margin: 26px 0 0; max-width: 66ch; text-wrap: pretty; }
+    .cap { font-size: 13px; line-height: 1.6; color: rgba(236,233,226,.5); margin: 12px 0 0; max-width: 78ch; }
+    .plate { background: #fff; padding: 14px; display: block; }
+    .plate img { width: 100%; height: auto; display: block; cursor: zoom-in; }
+    .sec { padding: 110px 0; border-top: 1px solid rgba(236,233,226,.14); }
+    .light a { color: #3f5c46; }
+  </style>
+</helmet>
+
+<div style="background: #0d0f0e;">
+
+  <header style="min-height: 100vh; display: flex; flex-direction: column; justify-content: center; box-sizing: border-box; padding: 90px 0;">
+    <div class="wrap">
+      <div class="kicker">Research portfolio</div>
+      <h1 style="font-size: clamp(44px, 6vw, 84px); line-height: 1.0; letter-spacing: -0.04em; font-weight: 700; margin: 0 0 34px;">Yeshan Qiu</h1>
+      <p style="font-size: clamp(19px, 1.7vw, 24px); line-height: 1.55; color: rgba(236,233,226,.85); margin: 0 0 56px; max-width: 52ch; text-wrap: pretty;">I am a landscape ecology researcher with a background in landscape architecture. I study how the form of a city shapes the life it can hold, especially its birds, and how people perceive the green spaces they live with. I use citizen-science records, remote sensing, and spatial models to find patterns across many cities, and I care about turning those patterns into something planners and designers can actually use.</p>
+      <div style="display: grid; grid-template-columns: repeat(5, 1fr); gap: 1px; background: rgba(236,233,226,.14); border-top: 1px solid rgba(236,233,226,.14); border-bottom: 1px solid rgba(236,233,226,.14);">
+        <div style="background: #0d0f0e; padding: 22px 18px;"><div style="font-size: 11px; letter-spacing: 0.14em; color: #8fa892; font-weight: 700; margin-bottom: 8px;">01</div><div style="font-size: 14.5px; line-height: 1.45; color: rgba(236,233,226,.8);">What the field already knows</div></div>
+        <div style="background: #0d0f0e; padding: 22px 18px;"><div style="font-size: 11px; letter-spacing: 0.14em; color: #8fa892; font-weight: 700; margin-bottom: 8px;">02</div><div style="font-size: 14.5px; line-height: 1.45; color: rgba(236,233,226,.8);">How measurement shapes the answer</div></div>
+        <div style="background: #0d0f0e; padding: 22px 18px;"><div style="font-size: 11px; letter-spacing: 0.14em; color: #8fa892; font-weight: 700; margin-bottom: 8px;">03</div><div style="font-size: 14.5px; line-height: 1.45; color: rgba(236,233,226,.8);">How far patterns travel between cities</div></div>
+        <div style="background: #0d0f0e; padding: 22px 18px;"><div style="font-size: 11px; letter-spacing: 0.14em; color: #8fa892; font-weight: 700; margin-bottom: 8px;">04</div><div style="font-size: 14.5px; line-height: 1.45; color: rgba(236,233,226,.8);">How people see green space</div></div>
+        <div style="background: #0d0f0e; padding: 22px 18px;"><div style="font-size: 11px; letter-spacing: 0.14em; color: #8fa892; font-weight: 700; margin-bottom: 8px;">05</div><div style="font-size: 14.5px; line-height: 1.45; color: rgba(236,233,226,.8);">How research enters design</div></div>
+      </div>
+    </div>
+  </header>
+
+  <section class="sec">
+    <div class="wrap">
+      <div class="kicker">Part one &middot; Research</div>
+      <h2 class="h1">Cities shape bird life in more than one dimension</h2>
+      <p class="lede">How much green a city has is only the starting point. Whether birds thrive depends on what kind of green it is, how it is arranged, and what the built environment around it does to them.</p>
+
+      <figure style="margin: 56px 0 0;">
+        <a href="assets/cec-sankey.png" target="_blank" class="plate"><img src="assets/cec-sankey.png" alt="Evidence sorted by urban component, scale, and bird response"></a>
+        <figcaption class="cap">Most of what the field knows leans on one easy measure, the amount of green space. Water, vertical structure, and the processes behind these patterns are studied far less. Green amount is a baseline, not the whole story.</figcaption>
+      </figure>
+
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 26px; margin-top: 56px;">
+        <figure style="margin: 0;">
+          <a href="assets/guilds-diet.png" target="_blank" class="plate"><img src="assets/guilds-diet.png" alt="Effect of nature and urban stress features on bird diet guilds"></a>
+          <figcaption class="cap">(a) Diet guilds.</figcaption>
+        </figure>
+        <figure style="margin: 0;">
+          <a href="assets/guilds-nesting.png" target="_blank" class="plate"><img src="assets/guilds-nesting.png" alt="Effect of nature and urban stress features on bird nesting guilds"></a>
+          <figcaption class="cap">(b) Nesting guilds, same scale.</figcaption>
+        </figure>
+      </div>
+      <p class="cap" style="margin-top: 14px;">The built environment does not simply push biodiversity down. It sorts it. Glass and dense building help birds that nest on buildings, while the same features stress ground-nesting and forest birds, which noise suppresses further. Built form works as a filter, supporting some guilds and constraining others.</p>
+
+      <div style="display: grid; grid-template-columns: 0.9fr 1.1fr; gap: 48px; align-items: center; margin-top: 64px;">
+        <div>
+          <p class="body">Where green does help, the signal comes from its structure more than its extent. Taller and more varied canopies, standing deadwood, and how patches are aggregated matter more than coverage alone. The same feature can also act through different ecological processes, so its effect is not fixed. Tree canopy, for instance, supports resource access and reproduction, and helps dispersal even more.</p>
+          <p class="body" style="margin: 0;">Reading green in three dimensions and across its spatial pattern, and looking at the processes behind it, is what sustains diversity over the long run, in species, in function, and in evolutionary history.</p>
+        </div>
+        <figure style="margin: 0;">
+          <a href="assets/cec-pooled-effect.png" target="_blank" class="plate"><img src="assets/cec-pooled-effect.png" alt="Pooled effect by greenery dimension"></a>
+          <figcaption class="cap">Pooled effect of each greenery dimension across the reviewed evidence.</figcaption>
+        </figure>
+      </div>
+
+      <p class="close">Taken together, these findings argue for a multidimensional reading of urban biodiversity. Green amount sets the baseline, built form filters who can stay, and the structure and arrangement of green decide how much life a city can hold.</p>
+    </div>
+  </section>
+
+  <section class="sec">
+    <div class="wrap">
+      <div class="kicker">Part one &middot; Research</div>
+      <h2 class="h1">Different birds live at different scales</h2>
+      <p class="lede">Studying how urban pattern affects birds depends on two choices that are easy to overlook. One is scale, the distance at which each bird group responds to its surroundings. The other is spatial representation, the kind of unit we use to read the city. That unit can be geometric, like a buffer or a grid, or it can follow urban form, like morphological zones.</p>
+      <p class="body">Because a bird record is only a point, we always have to draw some unit around it to measure pattern, and whether that unit is geometric or morphology-based shapes how we read the link between pattern and biodiversity.</p>
+
+      <figure style="margin: 56px 0 0;">
+        <a href="assets/buffer-scale-by-guild.png" target="_blank" class="plate"><img src="assets/buffer-scale-by-guild.png" alt="Optimal buffer scale by feeding guild"></a>
+        <figcaption class="cap">When we measured the environment around each bird record, guilds reached their strongest response at very different distances. Granivores and piscivores responded most at fine scales, around 250 metres. Carnivores and omnivores needed much wider surroundings, up to 2000 to 2500 metres. Frugivores and insectivores sat in between. Each guild effectively senses the city at the size of its own living range.</figcaption>
+      </figure>
+
+      <figure style="margin: 56px 0 0;">
+        <a href="assets/cross-representation-guild-bubble.png" target="_blank" class="plate"><img src="assets/cross-representation-guild-bubble.png" alt="Top predictors by feeding guild under each spatial representation"></a>
+        <figcaption class="cap">Top predictors by feeding guild under each spatial representation. Blue is a positive association, red negative, and marker size is the strength of the association.</figcaption>
+      </figure>
+
+      <p class="body" style="margin-top: 40px;">The unit also changes which factors look important, and it does so differently for each guild. One thing stayed stable across all units: proximity to resources. Distance to water and distance to canopy mattered consistently, because how close a resource is does not depend on how we draw patch boundaries. Outside that stable core, each unit privileged a different kind of metric. Buffers elevated immediate resource context, such as the core area and largest patch of water nearby. Grids elevated patch geometry and spacing, such as building fractal dimension and the variation in distances between buildings. Morphological zones retained form-linked measures, such as building cohesion, canopy contiguity, and canopy-height variance. The reshuffling was strongest for carnivores and insectivores, while frugivores kept the most consistent core.</p>
+
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 48px; margin-top: 40px;">
+        <div>
+          <div class="kicker" style="margin-bottom: 12px;">For researchers</div>
+          <p class="body" style="margin: 0;">The practical rule is to match the spatial unit to the question. Use a buffer for local habitat use and scale of effect, a grid for standardized citywide mapping and comparison. Reporting the unit becomes as important as reporting the result, because a finding only travels if others know how the city was measured. One reassurance runs through all of this: resource accessibility, how close water and canopy are, stayed important no matter which unit we used, so proximity is a dependable signal to build on.</p>
+        </div>
+        <div>
+          <div class="kicker" style="margin-bottom: 12px;">For planners and policymakers</div>
+          <p class="body" style="margin: 0;">Morphological units such as Local Climate Zones are the most useful, because they are multidimensional. A single zone combines several spatial characteristics at once, high or low rise, green or grey dominant, compact or open, and its organic, form-following boundaries align well with how administrative and planning areas are actually drawn. This makes the morphological reading easy to carry directly into planning, where decisions are made in terms of urban form rather than abstract metrics.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec">
+    <div class="wrap">
+      <div class="kicker">Part one &middot; Research</div>
+      <h2 class="h1">The same ingredients, arranged differently in every city</h2>
+      <p class="lede">Once every city is measured the same way, a sharper question comes into view. Which links between urban form and bird life hold everywhere, and which depend on where the city is? Across sixty-eight cities placed on equal footing, a handful of features mattered almost everywhere. What differed was how they combined, which was rarely the same from one city to the next.</p>
+
+      <figure style="margin: 56px 0 0;">
+        <a href="assets/map-canopy-partial-corr.png" target="_blank" class="plate"><img src="assets/map-canopy-partial-corr.png" alt="Canopy height effect on bird species richness across cities"></a>
+        <figcaption class="cap">A small number of features carried most of the signal: canopy height and cover, building height and footprint, and how close water is. Their presence was consistent, but their behaviour was not. Canopy height is a good example. It did not help birds everywhere. In some cities taller canopy went with more bird species, in others with fewer, so its effect changed from one place to another rather than pointing the same way across the world. A feature that supported birds in one city could work against them in another.</figcaption>
+      </figure>
+
+      <figure style="margin: 56px 0 0;">
+        <a href="assets/regional-context-3cities.png" target="_blank" class="plate"><img src="assets/regional-context-3cities.png" alt="Regional green context around three cities"></a>
+        <figcaption class="cap">Some of this variation was not noise. It followed the wider setting each city sits in. How a city's internal pattern reads for birds depends in part on the regional context around it, not only on what happens inside its boundary. A pattern that looks good in one region cannot be assumed to behave the same way in another.</figcaption>
+      </figure>
+
+      <p class="close">For comparison across cities to mean anything, we cannot fall back on a single universal rule. The drivers recur, but how they act is context-dependent. Reading a city's bird life well means reading it together with the landscape it sits in.</p>
+    </div>
+  </section>
+
+  <section class="sec">
+    <div class="wrap">
+      <div class="kicker">Part one &middot; Data</div>
+      <h2 class="h1">68-City Urban Pattern Database</h2>
+      <p class="lede">Behind these comparisons sits a database. To place sixty-eight cities on equal footing, we compiled a consistent set of urban pattern metrics for each one, covering canopy, built form, water, and land use, all measured the same way. The database is being prepared for open release, and will be made publicly available once the associated study is published, so that others can reuse it for their own urban ecology and planning work.</p>
+
+      <div style="display: flex; flex-direction: column; gap: 44px; margin-top: 56px;">
+        <figure style="margin: 0;"><a href="assets/city-richness-montage.png" target="_blank" class="plate"><img src="assets/city-richness-montage.png" alt="Bird species richness across cities"></a><figcaption class="cap">Bird Species Richness (SR) across cities.</figcaption></figure>
+        <figure style="margin: 0;"><a href="assets/city-canopy-height-montage.png" target="_blank" class="plate"><img src="assets/city-canopy-height-montage.png" alt="Canopy height across cities"></a><figcaption class="cap">Canopy Height (CH) across cities.</figcaption></figure>
+        <figure style="margin: 0;"><a href="assets/city-canopy-cover-montage.png" target="_blank" class="plate"><img src="assets/city-canopy-cover-montage.png" alt="Canopy percentage of landscape across cities"></a><figcaption class="cap">Canopy Percentage of Landscape (C_pland) across cities.</figcaption></figure>
+        <figure style="margin: 0;"><a href="assets/city-canopy-iji-montage.png" target="_blank" class="plate"><img src="assets/city-canopy-iji-montage.png" alt="Canopy interspersion and juxtaposition across cities"></a><figcaption class="cap">Canopy Interspersion and Juxtaposition Index (C_iji) across cities.</figcaption></figure>
+        <figure style="margin: 0;"><a href="assets/city-building-volume-montage.png" target="_blank" class="plate"><img src="assets/city-building-volume-montage.png" alt="Building volume across cities"></a><figcaption class="cap">Building Volume (BV) across cities.</figcaption></figure>
+      </div>
+
+      <p class="body" style="margin-top: 44px;">Each panel shows one metric across a set of cities, mapped the same way so cities can be read side by side. Together they turn scattered urban form into a comparable, reusable record: how tall and how continuous the canopy is, how much of the ground it covers and how it is interspersed, and how much built volume a city carries. This is the raw material the comparative study is built on.</p>
+      <p class="cap">Compiled by Wang Jing and Dr. Yeshan Qiu, Comparative Ecology of Cities, Future Cities Laboratory Global.</p>
+    </div>
+  </section>
+
+  <section class="sec">
+    <div class="wrap">
+      <div class="kicker">Part one &middot; Research</div>
+      <h2 class="h1">People look for nature first</h2>
+      <p class="lede">The first three studies ask how the form of a city shapes its birds. This one turns to the people who live alongside them. When someone looks at an urban green space, what draws their eye, and does what draws the eye shape whether they find the place beautiful?</p>
+
+      <figure style="margin: 56px 0 0;">
+        <a href="assets/eyetrack-site-grid.jpg" target="_blank" class="plate"><img src="assets/eyetrack-site-grid.jpg" alt="Field survey scenes across Shanghai green spaces"></a>
+        <figcaption class="cap">Across fifty-four green spaces in Shanghai, from busy roadsides to quiet wooded paths, we photographed real scenes people encounter every day.</figcaption>
+      </figure>
+
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 26px; margin-top: 52px;">
+        <figure style="margin: 0;">
+          <a href="assets/eyetrack-seg-1.png" target="_blank" class="plate"><img src="assets/eyetrack-seg-1.png" alt="Convolutional neural network segmentation of a scene"></a>
+          <figcaption class="cap">Deep learning read each scene automatically, labelling its elements: canopy, grass, water, buildings, pavement. This turned a photograph into measurable landscape composition.</figcaption>
+        </figure>
+        <figure style="margin: 0;">
+          <a href="assets/eyetrack-heatmap.png" target="_blank" class="plate"><img src="assets/eyetrack-heatmap.png" alt="Gaze heatmap over a green space scene"></a>
+          <figcaption class="cap">Eye-tracking then recorded where people actually looked. Warm areas are where the gaze concentrated. Attention was not spread evenly. It clustered.</figcaption>
+        </figure>
+      </div>
+
+      <div style="display: grid; grid-template-columns: 1fr 1.15fr; gap: 40px; align-items: start; margin-top: 52px;">
+        <figure style="margin: 0;">
+          <a href="assets/eyetrack-aoi.png" target="_blank" class="plate"><img src="assets/eyetrack-aoi.png" alt="Areas of interest and gaze paths"></a>
+          <figcaption class="cap">Sorting attention by element, a clear pattern emerged. Natural elements, vegetation and water, drew significantly stronger visual focus than built ones such as pavement or structures. The eye settles on nature first.</figcaption>
+        </figure>
+        <figure style="margin: 0;">
+          <a href="assets/peap-workflow.png" target="_blank" class="plate"><img src="assets/peap-workflow.png" alt="Landscape elements, visual focus, and perception"></a>
+          <figcaption class="cap">And what people looked at did not shape their sense of beauty directly. Visual focus sat in between. Elements pulled the gaze, and how the gaze was distributed then shaped how beautiful and how ecologically sound the place felt. Attention is the hidden step between seeing a landscape and judging it.</figcaption>
+        </figure>
+      </div>
+
+      <p class="close">Together, eye-tracking and deep learning show that ecological quality and aesthetic appeal are not separate things. People are drawn to what is more natural, and tend to find it more beautiful. Designing greener, more ecologically sound spaces is, at the same time, designing spaces people are drawn to.</p>
+      <p class="cap">Ecological Indicators, 2023, first author. Master's research at Shanghai Jiao Tong University. PI Prof. Shengquan Che, co-PI Prof. Haozhi Pan.</p>
+    </div>
+  </section>
+
+  <section class="sec">
+    <div class="wrap">
+      <div class="kicker">Part one &middot; Studio</div>
+      <h2 class="h1">From research guidelines and prediction to the design studio</h2>
+      <p class="lede">The first studies build two things: a set of guidelines for how urban form can support birds, and an ability to predict how a change in form would shift bird diversity. Both are only useful if they can enter the place where decisions about form are actually made. This last piece is an early attempt to do exactly that, inside a design studio.</p>
+
+      <figure style="margin: 56px 0 0;">
+        <a href="assets/hongkong-sites.png" target="_blank" class="plate"><img src="assets/hongkong-sites.png" alt="Hong Kong studio sites with four one-kilometre sample plots"></a>
+        <figcaption class="cap">In a joint design studio between the National University of Singapore and Tsinghua University, led by A/P Hwang Yun Hye and Prof. Tan Puay Yok (NUS) and A/P Zhang Ye (Tsinghua), with partner institution A/P Huang Jianxiang (HKU Urban Planning), we worked on real sites in Hong Kong. Each site is a one-kilometre grid with its own mix of woodland, water, housing, and industry, from woodland edges and mid-rise housing to riverfronts, brownfield, and industrial new towns.</figcaption>
+      </figure>
+
+      <figure style="margin: 56px 0 0;">
+        <a href="assets/studio-dashboard-sites.png" target="_blank" class="plate"><img src="assets/studio-dashboard-sites.png" alt="Decision dashboard output for two studio sites"></a>
+        <figcaption class="cap">Our team built a decision dashboard that predicts how a site would perform across several urban ecosystem functions at once, including flood mitigation, land surface temperature, public health, local economy, and biodiversity. Students could adjust the two- and three-dimensional form of a site and read the predicted change it would bring, including the change in bird species richness. On the biodiversity side, I did two things: I translated the research findings into a set of design guidelines for bird-friendly urban form, and I trained the model that turns a change in form into a predicted change in bird species richness.</figcaption>
+      </figure>
+      <p class="cap" style="margin-top: 10px;">Team outcome. The dashboard and model cover flood, health, temperature, and economic functions as well as biodiversity. My contribution is the biodiversity part: the design guidelines drawn from the research, and the prediction model behind them.</p>
+
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 26px; margin-top: 52px;">
+        <figure style="margin: 0;"><a href="assets/studio-review-1.jpg" target="_blank" class="plate"><img src="assets/studio-review-1.jpg" alt="Students presenting a site biodiversity survey"></a></figure>
+        <figure style="margin: 0;"><a href="assets/studio-review-2.jpg" target="_blank" class="plate"><img src="assets/studio-review-2.jpg" alt="Students presenting bird habitat scenarios"></a></figure>
+      </div>
+      <p class="cap" style="margin-top: 14px;">What happened next was interesting, and not simple. Students began to reason about design from an ecological angle they might not have reached on their own, testing how a shift in massing or green space would move the numbers.</p>
+
+      <p class="body" style="margin-top: 44px;">The experiment also showed its limits, and each limit pointed somewhere. A predicted number can narrow imagination as easily as it can open it, so a useful tool has to offer direction and trade-offs rather than a single answer. The questions students asked, why a change helped or hurt birds, showed that prediction alone is not enough without the processes behind it. And a real Hong Kong site is far messier than a standardized grid, which asks for models that can handle specific, complex places. We make no claim that the panel produced better designs. It was an exploratory experiment in how research findings might enter a design process. What it taught me is concrete: to inform design well, a model needs to be more mature, more process-aware, and able to speak to real sites. That is the work I am building toward next.</p>
+
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 26px; margin-top: 52px;">
+        <figure style="margin: 0;"><a href="assets/gnn-architecture.png" target="_blank" class="plate"><img src="assets/gnn-architecture.png" alt="From urban space to a graph to a graph neural network"></a><figcaption class="cap">From urban space to a graph, to a graph neural network, to predicted community response. In development.</figcaption></figure>
+        <figure style="margin: 0;"><a href="assets/gnn-dashboard-wireframe.png" target="_blank" class="plate"><img src="assets/gnn-dashboard-wireframe.png" alt="Graph-based multi-city prediction panel"></a><figcaption class="cap">A graph-based, multi-city prediction panel. In development.</figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec">
+    <div class="wrap">
+      <div class="kicker">Part one &middot; Next</div>
+      <h2 class="h1">Future directions</h2>
+      <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 44px; margin-top: 20px;">
+        <div>
+          <div class="kicker" style="margin-bottom: 12px;">A living information base</div>
+          <p class="body" style="margin: 0; font-size: 15.5px;">These studies rely on biodiversity data that is scattered, uneven, and hard to compare across cities. A first direction is to change that: to mine and integrate biodiversity records into a consistent, living information base, one that can be updated as cities change rather than frozen at a single point in time. Building this data foundation is what makes everything after it possible.</p>
+        </div>
+        <div>
+          <div class="kicker" style="margin-bottom: 12px;">From pattern to process</div>
+          <p class="body" style="margin: 0; font-size: 15.5px;">On top of that base, I want to move from describing patterns to modelling the processes behind them: how urban form shapes the resources animals can reach, and the routes along which they move and disperse. Borrowing from the idea of a digital twin, the goal is a model that does not just record a city, but can simulate how changing its form would change the life it supports, and trace those effects through the connected system rather than one metric at a time. This is where my ongoing work begins, on graph-based, multi-city prediction.</p>
+        </div>
+        <div>
+          <div class="kicker" style="margin-bottom: 12px;">Governance and the wider picture</div>
+          <p class="body" style="margin: 0; font-size: 15.5px;">In the longer run, such a system could inform how cities are monitored and managed, turning ecological evidence into a dynamic tool for planning rather than a static report. Placed against the wider forces of climate change and land-use change, and read through the lens of macroecology, this work can help us understand how the way we build and use land shapes biodiversity far beyond any single city.</p>
+        </div>
+      </div>
+
+      <div class="kicker" style="margin: 64px 0 18px;">Research interests</div>
+      <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: rgba(236,233,226,.14); border: 1px solid rgba(236,233,226,.14);">
+        <div style="background: #0d0f0e; padding: 20px 18px;"><div style="font-size: 15px; font-weight: 700; margin-bottom: 6px;">Macroecology</div><div style="font-size: 13.5px; line-height: 1.5; color: rgba(236,233,226,.6);">Biodiversity under climate and land-use change</div></div>
+        <div style="background: #0d0f0e; padding: 20px 18px;"><div style="font-size: 15px; font-weight: 700; margin-bottom: 6px;">Landscape ecology</div><div style="font-size: 13.5px; line-height: 1.5; color: rgba(236,233,226,.6);">Urban pattern, process and function</div></div>
+        <div style="background: #0d0f0e; padding: 20px 18px;"><div style="font-size: 15px; font-weight: 700; margin-bottom: 6px;">Biological modelling</div><div style="font-size: 13.5px; line-height: 1.5; color: rgba(236,233,226,.6);">Species distribution, graph-based prediction</div></div>
+        <div style="background: #0d0f0e; padding: 20px 18px;"><div style="font-size: 15px; font-weight: 700; margin-bottom: 6px;">Biodiversity data</div><div style="font-size: 13.5px; line-height: 1.5; color: rgba(236,233,226,.6);">Data mining, integrated dynamic databases</div></div>
+        <div style="background: #0d0f0e; padding: 20px 18px;"><div style="font-size: 15px; font-weight: 700; margin-bottom: 6px;">Urban and landscape planning</div><div style="font-size: 13.5px; line-height: 1.5; color: rgba(236,233,226,.6);">Biodiversity-informed design guidelines</div></div>
+        <div style="background: #0d0f0e; padding: 20px 18px;"><div style="font-size: 15px; font-weight: 700; margin-bottom: 6px;">Aesthetic perception</div><div style="font-size: 13.5px; line-height: 1.5; color: rgba(236,233,226,.6);">Eye-tracking, human-nature interaction</div></div>
+        <div style="background: #0d0f0e; padding: 20px 18px;"><div style="font-size: 15px; font-weight: 700; margin-bottom: 6px;">Ecological design</div><div style="font-size: 13.5px; line-height: 1.5; color: rgba(236,233,226,.6);">Bird-friendly and multifunctional green space</div></div>
+        <div style="background: #0d0f0e; padding: 20px 18px;"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="light" style="background: #f6f3ed; color: #17181a; padding: 120px 0 0;">
+    <div class="wrap">
+      <div style="font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: #3f5c46; font-weight: 700; margin-bottom: 18px;">Part two &middot; Design</div>
+      <p style="font-size: clamp(21px, 2vw, 28px); line-height: 1.45; letter-spacing: -0.02em; margin: 0; max-width: 40ch; text-wrap: pretty;">Before the research, there was design. These two projects are where the questions started, on real sites, with real trade-offs between people and the life a place can hold.</p>
+    </div>
+
+    <div class="wrap" style="margin-top: 96px;">
+      <h2 style="font-size: clamp(32px, 3.6vw, 50px); line-height: 1.06; letter-spacing: -0.035em; font-weight: 700; margin: 0 0 12px;">Birds Advance, People Retreat</h2>
+      <p style="font-size: 19px; line-height: 1.5; color: #5b5b57; margin: 0 0 28px;">A bird-priority green space for the Huangpu River estuary</p>
+      <p style="font-size: 17px; line-height: 1.75; color: #2b2b28; margin: 0 0 16px; max-width: 68ch; text-wrap: pretty;">At the cross-confluence of the Huangpu River, we asked a simple question with hard consequences: what would a site look like if birds came first and people stepped back? The design organises the estuary around habitat, giving the core of the site to birds and holding human activity to its edges.</p>
+      <p style="font-size: 17px; line-height: 1.75; color: #2b2b28; margin: 0; max-width: 68ch; text-wrap: pretty;">Resilient, low-disturbance zones let the shoreline flood and recover, and the planting is built for shelter and food rather than display. It was a design argument that a city can choose to make room for other species, and it is the question the research later set out to answer.</p>
+    </div>
+    <figure style="margin: 44px 0 0;">
+      <a href="assets/chsla-award.jpg" target="_blank" style="display: block; cursor: zoom-in;"><img src="assets/chsla-award.jpg" alt="Bird-priority estuary green space design board" style="width: 100%; height: auto; display: block;"></a>
+    </figure>
+    <div class="wrap">
+      <p style="font-size: 13.5px; line-height: 1.6; color: #5b5b57; margin: 14px 0 0;">CHSLA National Student Landscape Architecture Design Competition, Third Prize (graduate group), 2019. Team: Niu Shuang, Qiu Yeshan, Zheng Chenlu, Hu.</p>
+    </div>
+
+    <div class="wrap" style="margin-top: 120px;">
+      <h2 style="font-size: clamp(32px, 3.6vw, 50px); line-height: 1.06; letter-spacing: -0.035em; font-weight: 700; margin: 0 0 12px;">Reading a City on Foot</h2>
+      <p style="font-size: 19px; line-height: 1.5; color: #5b5b57; margin: 0 0 28px;">Field research in Bulgaria, Shanghai social-practice programme</p>
+      <p style="font-size: 17px; line-height: 1.75; color: #2b2b28; margin: 0 0 16px; max-width: 68ch; text-wrap: pretty;">Leading a small team, I spent a field season reading a city the slow way, on foot, mapping how people use public space and how green and built fabric fit together. The work was less about proposing a plan than about learning to see a place on its own terms, through observation, documentation, and conversation.</p>
+      <p style="font-size: 17px; line-height: 1.75; color: #2b2b28; margin: 0; max-width: 68ch; text-wrap: pretty;">It shaped how I approach every site since: start by understanding what is already there before deciding what to change.</p>
+    </div>
+    <figure style="margin: 44px 0 0;">
+      <a href="assets/bulgaria-board-1.jpg" target="_blank" style="display: block; cursor: zoom-in;"><img src="assets/bulgaria-board-1.jpg" alt="Master plan of the agricultural cooperation park" style="width: 100%; height: auto; display: block;"></a>
+    </figure>
+    <figure style="margin: 26px 0 0;">
+      <a href="assets/bulgaria-board-2.jpg" target="_blank" style="display: block; cursor: zoom-in;"><img src="assets/bulgaria-board-2.jpg" alt="Circulation studies and site views" style="width: 100%; height: auto; display: block;"></a>
+    </figure>
+    <div class="wrap" style="padding-bottom: 120px;">
+      <p style="font-size: 13.5px; line-height: 1.6; color: #5b5b57; margin: 14px 0 0;">Shanghai social-practice programme, Second Prize, 2018. Team leader, with Jin Chuhan, Xie Hongli, and Long Zeyu. <a href="https://www.thepaper.cn/newsDetail_forward_4855895" style="border-bottom: 1px solid #3f5c46;">Press coverage</a></p>
+    </div>
+  </section>
+
+  <footer style="background: #0d0f0e; padding: 70px 0;">
+    <div class="wrap" style="display: flex; justify-content: space-between; align-items: baseline; gap: 32px; flex-wrap: wrap;">
+      <div style="font-size: 15px; color: rgba(236,233,226,.6);">Yeshan Qiu &middot; <a href="mailto:yeshan.qiu@sec.ethz.ch" style="border-bottom: 1px solid rgba(236,233,226,.35);">yeshan.qiu@sec.ethz.ch</a></div>
+      <a href="index.html" style="font-size: 14px; color: rgba(236,233,226,.6); border-bottom: 1px solid rgba(236,233,226,.35);">Website →</a>
+    </div>
+  </footer>
+</div>
+</x-dc>
+</body>
+</html>
