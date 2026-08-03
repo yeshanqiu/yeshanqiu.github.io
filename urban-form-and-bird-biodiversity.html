@@ -42,16 +42,19 @@
     .guild-figures { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 22px; }
     .guild-figures .figure-link { padding: 10px; }
     .guild-figures img { max-height: min(55vh, 520px); }
-    .method-heading { max-width: 44ch; margin-bottom: 18px; }
-    .method-layout { display: grid; grid-template-columns: minmax(340px, .82fr) minmax(0, 1.18fr); gap: 32px; align-items: start; }
+    .method-heading { max-width: 66ch; margin-bottom: 20px; }
+    .method-heading .h2 { margin-bottom: 10px; }
+    .method-heading .body { max-width: 62ch; margin: 0; }
+    .method-layout { display: grid; grid-template-columns: minmax(300px, .76fr) minmax(0, 1.24fr); gap: 46px; align-items: start; }
     .method-units-figure { margin: 0; }
-    .method-units-figure .figure-link { padding: 8px; }
-    .method-units-figure img { width: 100%; height: auto; display: block; }
-    .method-layout .method-notes { grid-template-columns: repeat(2, minmax(0, 1fr)); margin-top: 0; }
-    .method-notes { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1px; margin-top: 20px; background: #ded6c4; }
-    .method-note { background: #fff; padding: 16px 18px; }
-    .method-note h3 { font-size: 11px; letter-spacing: .08em; text-transform: uppercase; color: #3f5c46; font-weight: 700; margin: 0 0 7px; }
-    .method-note p { font-size: 12.5px; line-height: 1.5; color: #5b5b57; margin: 0; }
+    .method-units-figure .figure-link { display: inline-block; max-width: 100%; padding: 7px; }
+    .method-units-figure img { width: auto; max-width: 100%; height: min(54vh, 460px); max-height: none; display: block; }
+    .method-units-figure .cap { max-width: 56ch; }
+    .method-process { border-top: 1px solid #ded6c4; }
+    .method-process-row { display: grid; grid-template-columns: minmax(130px, .45fr) minmax(0, 1.55fr); gap: 18px; padding: 20px 0; border-bottom: 1px solid #ded6c4; }
+    .method-process-row h3 { margin: 0; color: #9a5638; font-size: 15px; font-weight: 700; line-height: 1.35; }
+    .method-process-row p { margin: 0; color: #3f3e3a; font-size: 14px; line-height: 1.5; }
+    .method-key { margin: 18px 0 0; max-width: 64ch; color: #615d56; font-size: 14px; line-height: 1.5; }
     .unit-tool { margin-top: 24px; border-top: 1px solid #ded6c4; }
     .unit-tool-head, .unit-tool-row { display: grid; grid-template-columns: minmax(260px, 1.1fr) minmax(150px, .58fr) minmax(260px, 1.08fr) minmax(260px, 1.08fr); }
     .unit-tool-head { background: #2c2c29; color: #f6f3ed; }
@@ -106,16 +109,19 @@
     #dots > * { pointer-events: auto; }
     .dot { width: 7px; height: 7px; border-radius: 50%; background: #8f8878; border: none; padding: 0; cursor: pointer; transition: background .2s, transform .2s; box-shadow: 0 0 0 3px rgba(246,243,237,.92); }
     .dot.on { background: #9a5638; transform: scale(1.5); }
-    .synthesis-panel { position: relative; overflow: hidden; background: #252525; }
+    .synthesis-panel { position: relative; overflow: hidden; background: #252525 url("assets/urban-wetland-birds.webp") right bottom / auto 100% no-repeat; }
+    .synthesis-panel::before { content: ""; position: absolute; inset: 0; background: rgba(23,24,26,.2); }
     .synthesis-panel .inner { position: relative; z-index: 1; }
     .reading-mode .track { display: block !important; overflow-x: hidden !important; overflow-y: auto !important; scroll-snap-type: none !important; }
     .reading-mode .panel { height: auto; min-height: 100vh; overflow: visible; }
     .reading-mode #dots { display: none !important; }
     @media (max-width: 800px) {
       .inner { padding: 82px 24px 76px; }
-      .split-figure-layout, .representation-layout, .guild-figures, .method-layout, .method-notes, .questions-layout, .cross-city-layout, .city-layout { grid-template-columns: 1fr; gap: 20px; }
-      .method-notes { background: transparent; }
-      .method-note { border: 1px solid #e7e1d4; }
+      .split-figure-layout, .representation-layout, .guild-figures, .method-layout, .questions-layout, .cross-city-layout, .city-layout { grid-template-columns: 1fr; gap: 20px; }
+      .method-units-figure .figure-link { display: block; }
+      .method-units-figure img { width: 100%; height: auto; }
+      .method-process-row { grid-template-columns: 1fr; gap: 6px; padding: 16px 0; }
+      .synthesis-panel { background-size: auto 50%; background-position: right bottom; }
       .unit-tool-head { display: none; }
       .unit-tool { border-top: 0; display: grid; gap: 12px; }
       .unit-tool-row { display: grid; grid-template-columns: 1fr; min-height: 0; border: 1px solid #ded6c4; }
@@ -357,35 +363,32 @@
       <div class="inner">
         <div class="method-heading">
           <div class="num">Study two &middot; method</div>
-          <h2 class="h2">Why three honest models give three different shapes</h2>
+          <h2 class="h2">One dataset, three readings</h2>
+          <p class="body">The evidence base stays constant. The spatial representation changes what is summarized, so it changes the functional form a model can recover.</p>
         </div>
 
         <div class="method-layout">
           <figure class="method-units-figure">
             <a href="assets/spatial-units-buffer-grid-lcz.png" target="_blank" rel="noreferrer" class="figure-link"><img src="assets/spatial-units-buffer-grid-lcz.png" alt="Comparison of buffer, grid, and Local Climate Zone spatial units for bird observations"></a>
-            <figcaption class="cap">Three spatial representations used in Study two. Buffer units draw a fixed-radius neighbourhood around each bird record and capture immediate surrounding habitat; fixed grids summarize observations and pattern metrics at one consistent grain across the study area; Local Climate Zones group places with similar built and land-cover characteristics. Black points are bird observations, green represents vegetation and grey represents the built environment. <a href="assets/spatial-units-buffer-grid-lcz.png" target="_blank" rel="noreferrer">View full size</a></figcaption>
+            <figcaption class="cap">Spatial footprints before fitting: a radius around observations, equal-area cells, and urban-form zones. Black points are observations; vegetation and built fabric are green and grey. <a href="assets/spatial-units-buffer-grid-lcz.png" target="_blank" rel="noreferrer">View full size</a></figcaption>
           </figure>
-          <div class="method-notes">
-            <section class="method-note">
-              <h3>Data</h3>
-              <p>Singapore citizen-science occurrence records with high-resolution urban pattern data; sampling effort carried as a model offset.</p>
-            </section>
-            <section class="method-note">
-              <h3>Grid and LCZ</h3>
-              <p>Species richness per unit, modelled with Random Forest, negative binomial GLM, and Poisson GAM response curves. Grid grains from 500 to 5000 m; 2000 to 2500 m was the most balanced window.</p>
-            </section>
-            <section class="method-note">
-              <h3>Buffer</h3>
-              <p>Guild occurrence as a binary response against generated background samples, modelled with logistic regression and GAM partial effects.</p>
-            </section>
-            <section class="method-note">
-              <h3>Fitting</h3>
-              <p>GAMs fitted in R with mgcv (Wood, 2017); predictors as smooth terms, coordinates controlling broad-scale spatial structure. Selected by fivefold cross-validation, checked on deviance explained, McFadden R², and residual spatial autocorrelation.</p>
-            </section>
+          <div>
+            <div class="method-process" aria-label="How the spatial representation enters the analysis">
+              <section class="method-process-row">
+                <h3>Keep evidence fixed</h3>
+                <p>Singapore citizen-science records and high-resolution pattern data enter every comparison, with sampling effort carried as an offset.</p>
+              </section>
+              <section class="method-process-row">
+                <h3>Let the unit define the response</h3>
+                <p>Buffers estimate guild occurrence against generated background records; grids and Local Climate Zones estimate richness per spatial unit.</p>
+              </section>
+              <section class="method-process-row">
+                <h3>Compare like with like</h3>
+                <p>Smooth models use the same predictor logic and spatial controls, then pass fivefold validation, fit and residual checks before their curves are interpreted.</p>
+              </section>
+            </div>
           </div>
         </div>
-        <p class="body" style="margin: 26px 0 0; max-width: 96ch;">The direction is robust: fruit-eating birds need tall trees, and all three units say so. What differs is the functional form, and the form is what a planting brief has to commit to. Rising without a ceiling argues for maximising height; a plateau argues for reaching a threshold and spending the rest of the budget elsewhere; a peak near twenty-five metres argues for a target rather than a maximum. All three fits are sound on their own terms, with comparable deviance explained and smooth terms that stay within their confidence bands, so the divergence is not a fitting artefact. It comes from the unit: grid cells average canopy over a fixed footprint, morphological zones group ground that already shares a built character, and buffers weight whatever happens to sit near a sighting. The buffer curve also answers a slightly different question, the probability that the guild is present rather than how many species a unit holds, which is itself part of what the unit decides.</p>
-        <p class="take">The analytical unit is part of the finding. Report it with the result, and compare units before comparing conclusions.</p>
       </div>
     </section>
 
