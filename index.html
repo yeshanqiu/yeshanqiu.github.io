@@ -30,6 +30,7 @@
       .interest-grid { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; }
       #publications > a { grid-template-columns: 1fr !important; gap: 18px !important; padding: 24px !important; }
       #publications > a > span { justify-self: start; }
+      footer#contact .website-qr { align-items: flex-start !important; }
       .publication-row { grid-template-columns: 54px minmax(0, 1fr); gap: 10px 16px; }
       .publication-status { grid-column: 2; justify-self: start; align-self: start; text-align: left !important; }
     }
@@ -283,7 +284,7 @@
     </div>
   </section>
 
-  <footer id="contact" style="margin-top: 120px; padding-top: 48px; border-top: 1px solid #ded6c4; display: grid; grid-template-columns: 1.4fr 1fr 1fr; gap: 40px;">
+  <footer id="contact" style="margin-top: 120px; padding-top: 48px; border-top: 1px solid #ded6c4; display: grid; grid-template-columns: 1.4fr 1fr 1fr auto; gap: 32px;">
     <div>
       <h3 style="font-size: 22px; font-weight: 700; letter-spacing: -0.02em; margin: 0 0 12px;">Get in touch</h3>
       <p style="font-size: 15px; line-height: 1.65; color: #5b5b57; margin: 0 0 12px; max-width: 36ch;">I am looking for postdoctoral positions in urban ecology, landscape ecology, and spatial data science.</p>
@@ -298,12 +299,18 @@
       Singapore-ETH Centre<br>
       Future Cities Laboratory Global<br>
       <a href="https://www.comparative-ecology-of-cities.com/" style="color: #3f5c46;">Comparative Ecology of Cities</a>
+      <a href="https://fcl.ethz.ch/" target="_blank" rel="noreferrer" style="display: inline-flex; margin-top: 16px; width: 156px;"><img src="assets/fcl-global-eth-logo.svg" alt="Future Cities Laboratory Global and ETH Zurich" style="width: 100%; height: auto; display: block;"></a>
     </div>
     <div style="font-size: 14px; display: flex; flex-direction: column; gap: 12px;">
       <a href="https://scholar.google.com/citations?hl=zh-CN&user=h5OLup4AAAAJ" style="display: flex; align-items: center; gap: 10px;"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 24a7 7 0 1 1 0-14 7 7 0 0 1 0 14zm0-24L0 9.5l4.838 3.94A8 8 0 0 1 12 9a8 8 0 0 1 7.162 4.44L24 9.5z"></path></svg>Google Scholar</a>
       <a href="https://orcid.org/0009-0008-1750-0868" style="display: flex; align-items: center; gap: 10px;"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zM7.369 4.378c.897 0 1.62.724 1.62 1.62 0 .898-.723 1.62-1.62 1.62-.898 0-1.622-.722-1.622-1.62 0-.896.724-1.62 1.622-1.62zm-1.34 5.335h2.68v10.86h-2.68V9.713zm4.573 0h4.325c4.126 0 6.062 2.83 6.062 5.44 0 2.895-2.312 5.42-6.033 5.42h-4.354V9.713zm2.68 2.325v6.202h1.427c2.581 0 3.582-1.85 3.582-3.117 0-1.685-1.079-3.085-3.582-3.085h-1.427z"></path></svg>ORCID</a>
-      <a href="https://www.linkedin.com/in/yeshan-qiu-6064b91a9/" style="display: flex; align-items: center; gap: 10px;"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"></path></svg>LinkedIn</a>
+      <a href="https://www.linkedin.com/in/yeshan-qiu-6064b91a9/" target="_blank" rel="noreferrer" style="display: flex; align-items: center; gap: 10px;"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"></path></svg>LinkedIn</a>
       <a href="https://www.instagram.com/qiu.dami/" style="display: flex; align-items: center; gap: 10px;"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zm0 10.162a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"></path></svg>Instagram</a>
+    </div>
+    <div class="website-qr" style="display: flex; align-items: flex-end; justify-content: flex-end;">
+      <a href="assets/yeshan-qiu-website-qr.png" download="Yeshan-Qiu-website-qr.png" title="Download website QR code" style="display: block; width: 76px; height: 76px; border: 1px solid #ded6c4; background: #f6f3ed;">
+        <img src="assets/yeshan-qiu-website-qr.png" alt="Download QR code linking to Yeshan Qiu's website" style="width: 100%; height: 100%; display: block;">
+      </a>
     </div>
   </footer>
 </div>
