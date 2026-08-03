@@ -15,6 +15,14 @@
     a { color: inherit; text-decoration: none; transition: color .15s; }
     a:hover { color: #3f5c46; }
     ::selection { background: #3f5c4633; }
+    .project-meta { display: grid; grid-template-columns: repeat(auto-fit, minmax(158px, 1fr)); gap: 28px; margin: 72px 0 96px; padding: 28px 0; border-top: 1px solid #ded6c4; border-bottom: 1px solid #ded6c4; font-size: 13px; line-height: 1.6; }
+    .project-output-row { display: grid; grid-template-columns: 90px minmax(0, 1fr) 150px; gap: 24px; padding: 20px 0; border-top: 1px solid #ded6c4; align-items: baseline; font-size: 16px; line-height: 1.5; }
+    .project-output-type { align-self: center; }
+    @media (max-width: 760px) {
+      .project-meta { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 22px 18px; margin: 48px 0 64px; }
+      .project-output-row { grid-template-columns: 54px minmax(0, 1fr); gap: 10px 16px; }
+      .project-output-type { grid-column: 2; justify-self: start; text-align: left !important; }
+    }
   </style>
   <script src="lightbox.js"></script>
 </helmet>
@@ -37,11 +45,12 @@
     <p style="font-size: 22px; line-height: 1.55; color: #2b2b28; margin: 0; max-width: 54ch; text-wrap: pretty;">Master’s research at Shanghai Jiao Tong University, where I was already pairing data driven methods with ecological questions. The study builds a Public Ecosystem Aesthetics Perception model, which reads a street scene from its physical elements through to whether people like it.</p>
   </header>
 
-  <div style="display: grid; grid-template-columns: repeat(5, 1fr); gap: 28px; margin: 72px 0 96px; padding: 28px 0; border-top: 1px solid #ded6c4; border-bottom: 1px solid #ded6c4; font-size: 13px; line-height: 1.6;">
+  <div class="project-meta">
     <div><div style="color: #8a8a84; margin-bottom: 6px;">Field site</div>Twenty roadside green space scenes, Shanghai, collected on foot in 2020</div>
     <div><div style="color: #8a8a84; margin-bottom: 6px;">Methods</div>Convolutional neural network segmentation, eye-tracking, questionnaires, Bayesian network</div>
     <div><div style="color: #8a8a84; margin-bottom: 6px;">Role</div>First author, master's research at Shanghai Jiao Tong University</div>
     <div><div style="color: #8a8a84; margin-bottom: 6px;">Supervision</div>PI Prof. Shengquan Che (SJTU), co-PI Prof. Haozhi Pan</div>
+    <div><div style="color: #8a8a84; margin-bottom: 6px;">Funding</div>National Natural Science Youth Fund Project</div>
     <div><div style="color: #8a8a84; margin-bottom: 6px;">Published</div>Ecological Indicators, 2023</div>
   </div>
 
@@ -163,20 +172,20 @@
   <section style="margin-bottom: 100px;">
     <h2 style="font-size: 24px; line-height: 1.2; letter-spacing: -0.02em; font-weight: 700; margin: 0 0 24px;">Outputs from this work</h2>
     <div style="display: flex; flex-direction: column;">
-      <div style="display: grid; grid-template-columns: 90px 1fr 150px; gap: 24px; padding: 20px 0; border-top: 1px solid #ded6c4; align-items: baseline; font-size: 16px; line-height: 1.5;">
+      <div class="project-output-row">
         <span style="font-size: 13px; color: #8a8a84;">2023</span>
         <span>The natural focus: combining deep learning and eye-tracking to understand public perceptions of urban ecosystem aesthetics. <span style="color: #5b5b57;">Ecological Indicators, 156, 111181. With Pan, H., Kalantari, Z., Giusti, M., and Che, S. First author.</span></span>
-        <span style="font-size: 12px; letter-spacing: 0.04em; text-transform: uppercase; color: #8a8a84; text-align: right;">Journal article</span>
+        <span class="project-output-type" style="font-size: 12px; letter-spacing: 0.04em; text-transform: uppercase; color: #8a8a84; text-align: right;">Journal article</span>
       </div>
-      <div style="display: grid; grid-template-columns: 90px 1fr 150px; gap: 24px; padding: 20px 0; border-top: 1px solid #ded6c4; align-items: baseline; font-size: 16px; line-height: 1.5;">
+      <div class="project-output-row">
         <span style="font-size: 13px; color: #8a8a84;">2022</span>
         <span>Construction strategies for urban ecological green space based on ecological aesthetic. <span style="color: #5b5b57;">Landscape Architecture, 29(7), 37&ndash;43. With Che, S. First author, in Chinese.</span></span>
-        <span style="font-size: 12px; letter-spacing: 0.04em; text-transform: uppercase; color: #8a8a84; text-align: right;">Journal article</span>
+        <span class="project-output-type" style="font-size: 12px; letter-spacing: 0.04em; text-transform: uppercase; color: #8a8a84; text-align: right;">Journal article</span>
       </div>
-      <div style="display: grid; grid-template-columns: 90px 1fr 150px; gap: 24px; padding: 20px 0; border-top: 1px solid #ded6c4; border-bottom: 1px solid #ded6c4; align-items: baseline; font-size: 16px; line-height: 1.5;">
+      <div class="project-output-row" style="border-bottom: 1px solid #ded6c4;">
         <span style="font-size: 13px; color: #8a8a84;">2022</span>
         <span>Presented at the European Geosciences Union General Assembly. <span style="color: #5b5b57;">Vienna.</span></span>
-        <span style="font-size: 12px; letter-spacing: 0.04em; text-transform: uppercase; color: #8a8a84; text-align: right;">Conference</span>
+        <span class="project-output-type" style="font-size: 12px; letter-spacing: 0.04em; text-transform: uppercase; color: #8a8a84; text-align: right;">Conference</span>
       </div>
     </div>
   </section>

@@ -31,6 +31,12 @@
     #dots > * { pointer-events: auto; }
     .dot { width: 7px; height: 7px; border-radius: 50%; background: #8f8878; border: none; padding: 0; cursor: pointer; transition: background .2s, transform .2s; box-shadow: 0 0 0 3px rgba(246,243,237,.92); }
     .dot.on { background: #3f5c46; transform: scale(1.5); }
+    .synthesis-panel { position: relative; overflow: hidden; background: #24382a; }
+    .synthesis-panel::before { content: ""; position: absolute; inset: 0 0 0 48%; background-image: linear-gradient(90deg, rgba(36,56,42,.94), rgba(36,56,42,.62)), url("assets/urban-wetland-birds.webp"); background-size: cover; background-position: center; background-blend-mode: multiply; filter: saturate(.82); mask-image: linear-gradient(90deg, transparent, #000 22%); }
+    .synthesis-panel .inner { position: relative; z-index: 1; }
+    .guilds-head { display: grid; grid-template-columns: 25ch minmax(0, 1fr); gap: 42px; align-items: start; margin-bottom: 24px; }
+    .guilds-figures { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px; }
+    @media (max-width: 800px) { .guilds-head, .guilds-figures { grid-template-columns: 1fr; gap: 20px; } }
   </style>
   <script src="lightbox.js"></script>
 </helmet>
@@ -113,24 +119,26 @@
 
     <section class="panel" data-label="Winners and losers">
       <div class="inner" style="max-width: 1480px;">
-        <div style="display: grid; grid-template-columns: 25ch 1fr; gap: 30px; align-items: start;">
+        <div class="guilds-head">
           <div>
             <div class="num">Study one &middot; core figure</div>
             <h2 class="h2" style="font-size: clamp(20px, 1.8vw + 0.6vh, 28px);">Built form works as a filter</h2>
+          </div>
+          <div>
             <p class="body">The built environment does not simply push biodiversity down. It sorts it. Glass and dense building help birds that nest on buildings, while the same features stress ground-nesting and forest birds, which noise suppresses further.</p>
             <p class="take" style="font-size: clamp(14px, 0.9vw + 0.5vh, 17px);">Built form supports some guilds and constrains others.</p>
             <p class="cap" style="margin-top: 18px;">Blue is a positive effect, red negative, marker size is effect size. Nature features left, urban and stress features right in each half.</p>
           </div>
-          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 22px;">
-            <figure style="margin: 0;">
-              <a href="assets/guilds-diet.png" target="_blank" style="display: block; background: #fff; border: 1px solid #e7e1d4; padding: 10px; cursor: zoom-in;"><img src="assets/guilds-diet.png" alt="Effect of nature and urban stress features on bird diet guilds" style="width: 100%; max-height: 74vh; object-fit: contain; display: block;"></a>
-              <figcaption class="cap" style="max-width: none;">(a) Diet guilds. <a href="assets/guilds-diet.png" target="_blank" style="color: #3f5c46; border-bottom: 1px solid #3f5c46;">Full size</a></figcaption>
-            </figure>
-            <figure style="margin: 0;">
-              <a href="assets/guilds-nesting.png" target="_blank" style="display: block; background: #fff; border: 1px solid #e7e1d4; padding: 10px; cursor: zoom-in;"><img src="assets/guilds-nesting.png" alt="Effect of nature and urban stress features on bird nesting guilds" style="width: 100%; max-height: 74vh; object-fit: contain; display: block;"></a>
-              <figcaption class="cap" style="max-width: none;">(b) Nesting guilds, same scale. <a href="assets/guilds-nesting.png" target="_blank" style="color: #3f5c46; border-bottom: 1px solid #3f5c46;">Full size</a></figcaption>
-            </figure>
-          </div>
+        </div>
+        <div class="guilds-figures">
+          <figure style="margin: 0;">
+            <a href="assets/guilds-diet.png" target="_blank" style="display: block; background: #fff; border: 1px solid #e7e1d4; padding: 10px; cursor: zoom-in;"><img src="assets/guilds-diet-cropped.png" alt="Effect of nature and urban stress features on bird diet guilds" style="width: 100%; display: block;"></a>
+            <figcaption class="cap" style="max-width: none;">(a) Diet guilds. <a href="assets/guilds-diet.png" target="_blank" style="color: #3f5c46; border-bottom: 1px solid #3f5c46;">Full size</a></figcaption>
+          </figure>
+          <figure style="margin: 0;">
+            <a href="assets/guilds-nesting.png" target="_blank" style="display: block; background: #fff; border: 1px solid #e7e1d4; padding: 10px; cursor: zoom-in;"><img src="assets/guilds-nesting-cropped.png" alt="Effect of nature and urban stress features on bird nesting guilds" style="width: 100%; display: block;"></a>
+            <figcaption class="cap" style="max-width: none;">(b) Nesting guilds, same scale. <a href="assets/guilds-nesting.png" target="_blank" style="color: #3f5c46; border-bottom: 1px solid #3f5c46;">Full size</a></figcaption>
+          </figure>
         </div>
       </div>
     </section>
@@ -299,7 +307,7 @@
       </div>
     </section>
 
-    <section class="panel" data-label="Synthesis" style="background: #24382a; color: #f6f3ed;">
+    <section class="panel synthesis-panel" data-label="Synthesis" style="color: #f6f3ed;">
       <div class="inner" style="display: flex; flex-direction: column; justify-content: center; min-height: 100vh; box-sizing: border-box; padding-bottom: 120px;">
         <div style="font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: #a9c0a9; font-weight: 700; margin-bottom: 18px;">What it adds up to</div>
         <h2 style="font-size: clamp(30px, 3.4vw, 44px); line-height: 1.14; letter-spacing: -0.025em; font-weight: 700; margin: 0 0 24px; max-width: 32ch;">Urban bird diversity is multidimensional, nonlinear, and context-dependent, not a function of green area</h2>
