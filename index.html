@@ -15,14 +15,6 @@
     a { color: inherit; text-decoration: none; transition: color .15s; }
     a:hover { color: #3f5c46; }
     ::selection { background: #3f5c4633; }
-    .home-hero { position: relative; isolation: isolate; }
-    .home-hero > :not(.home-art) { position: relative; z-index: 1; }
-    .home-art { position: absolute; z-index: 0; width: 520px; aspect-ratio: 3 / 4; pointer-events: none; object-fit: cover; mix-blend-mode: multiply; }
-    .home-art-left { left: -88px; top: -72px; opacity: 0.24; }
-    .home-art-right { display: none; }
-    .work-section { position: relative; isolation: isolate; overflow: hidden; }
-    .work-section > :not(.work-art) { position: relative; z-index: 1; }
-    .work-art { position: absolute; z-index: 0; width: 520px; aspect-ratio: 3 / 4; right: -212px; top: 42px; object-fit: cover; opacity: 0.12; mix-blend-mode: multiply; pointer-events: none; mask-image: radial-gradient(ellipse at center, #000 38%, transparent 76%); }
     .publication-list { display: flex; flex-direction: column; }
     .publication-row { display: grid; grid-template-columns: 78px minmax(0, 1fr) 132px; gap: 24px; padding: 20px 0; border-top: 1px solid #ded6c4; align-items: start; }
     .publication-year { padding-top: 3px; }
@@ -33,8 +25,6 @@
       .home-hero { grid-template-columns: 1fr !important; gap: 32px !important; padding-top: 24px !important; }
       .home-hero h1 { font-size: 48px !important; }
       .home-portrait { max-width: 420px; }
-      .home-art-left { left: -262px; top: -30px; opacity: 0.18; }
-      .work-art { display: none; }
       #work > a, #talks > a, .stray-birds-section > a { grid-template-columns: 1fr !important; gap: 18px !important; }
       .design-grid, .future-grid, footer#contact { grid-template-columns: 1fr !important; gap: 28px !important; }
       .interest-grid { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; }
@@ -44,6 +34,7 @@
       .publication-status { grid-column: 2; justify-self: start; align-self: start; text-align: left !important; }
     }
   </style>
+  <link rel="stylesheet" href="site.css">
 </helmet>
 
 <div style="max-width: 1160px; margin: 0 auto; padding: 0 48px 120px; color: #17181a;">
@@ -62,8 +53,6 @@
   </nav>
 
   <section class="home-hero" style="display: grid; grid-template-columns: 1.3fr 0.9fr; gap: 56px; align-items: center; padding-top: 64px;">
-    <img class="home-art home-art-left" src="assets/home-pond-detail.webp" alt="" aria-hidden="true">
-    <img class="home-art home-art-right" src="assets/home-pond-wide.webp" alt="" aria-hidden="true">
     <div class="home-hero-copy">
       <div style="font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; color: #3f5c46; margin-bottom: 6px;">PhD Candidate, NUS Department of Architecture</div>
       <div style="font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; color: #3f5c46; margin-bottom: 20px;">PhD Researcher, Singapore-ETH Centre, Future Cities Laboratory</div>
@@ -80,7 +69,6 @@
   </section>
 
   <section id="work" class="work-section" style="padding-top: 140px;">
-    <img class="work-art" src="assets/home-pond-wide.webp" alt="" aria-hidden="true">
     <div style="font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; color: #3f5c46; margin-bottom: 40px;">Work</div>
 
     <a href="urban-form-and-bird-biodiversity.html" style="display: grid; grid-template-columns: 300px 1fr; gap: 40px; align-items: start; padding: 36px 0; border-top: 1px solid #ded6c4;">

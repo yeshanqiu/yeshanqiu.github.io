@@ -28,26 +28,121 @@
     .fig { background: #fff; border: 1px solid #e7e1d4; padding: 10px; }
     .fig img { width: 100%; max-height: 46vh; object-fit: contain; display: block; cursor: zoom-in; }
     .cap { font-size: 12.5px; line-height: 1.5; color: #5b5b57; margin-top: 10px; max-width: 82ch; }
+    .cap a { color: #315b41; border-bottom: 1px solid currentColor; }
+    .header-command { pointer-events: auto; border: 0; border-bottom: 1px solid #9e988b; padding: 0 0 2px; background: transparent; color: #706c63; font: inherit; font-size: 10.5px; letter-spacing: .11em; text-transform: uppercase; cursor: pointer; }
+    .header-command:hover { color: #315b41; border-bottom-color: #315b41; }
+    .hero-caption { position: absolute; left: 26px; bottom: 58px; margin: 0; font-size: 12px; line-height: 1.5; color: rgba(255,255,255,.92); max-width: 34ch; text-shadow: 0 2px 16px rgba(0,0,0,.9); }
+    .figure-link { display: block; background: #fff; border: 1px solid #e7e1d4; padding: 10px; cursor: zoom-in; }
+    .figure-link img { width: 100%; display: block; object-fit: contain; }
+    .split-figure-layout { display: grid; grid-template-columns: minmax(190px, 23ch) minmax(0, 1fr); gap: 36px; align-items: start; }
+    .insight-rail { padding-top: 2px; }
+    .insight-rail .h2 { margin-bottom: 18px; }
+    .insight-rail .cap { margin-top: 20px; }
+    .guilds-panel .inner { max-width: 1500px; }
+    .guild-figures { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 22px; }
+    .guild-figures .figure-link { padding: 10px; }
+    .guild-figures img { max-height: min(55vh, 520px); }
+    .method-heading { max-width: 44ch; margin-bottom: 18px; }
+    .method-layout { display: grid; grid-template-columns: minmax(340px, .82fr) minmax(0, 1.18fr); gap: 32px; align-items: start; }
+    .method-units-figure { margin: 0; }
+    .method-units-figure .figure-link { padding: 8px; }
+    .method-units-figure img { width: 100%; height: auto; display: block; }
+    .method-layout .method-notes { grid-template-columns: repeat(2, minmax(0, 1fr)); margin-top: 0; }
+    .method-notes { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1px; margin-top: 20px; background: #ded6c4; }
+    .method-note { background: #fff; padding: 16px 18px; }
+    .method-note h3 { font-size: 11px; letter-spacing: .08em; text-transform: uppercase; color: #3f5c46; font-weight: 700; margin: 0 0 7px; }
+    .method-note p { font-size: 12.5px; line-height: 1.5; color: #5b5b57; margin: 0; }
+    .unit-tool { margin-top: 24px; border-top: 1px solid #ded6c4; }
+    .unit-tool-head, .unit-tool-row { display: grid; grid-template-columns: minmax(260px, 1.1fr) minmax(150px, .58fr) minmax(260px, 1.08fr) minmax(260px, 1.08fr); }
+    .unit-tool-head { background: #2c2c29; color: #f6f3ed; }
+    .unit-tool-head div { padding: 14px 18px; font-size: 12px; font-weight: 700; }
+    .unit-tool-row { min-height: 122px; border-bottom: 1px solid #ded6c4; }
+    .unit-tool-row > div { padding: 22px 18px; display: flex; align-items: center; font-size: 14px; line-height: 1.4; color: #2b2b28; }
+    .unit-question { position: relative; padding-right: 46px !important; font-size: 16px !important; font-weight: 700; }
+    .unit-question::before { content: ""; position: absolute; z-index: 1; right: -26px; top: calc(50% - 10px); width: 44px; height: 20px; border-top: 1.5px solid #b17a61; border-radius: 0 22px 0 0; transform: rotate(-3deg); }
+    .unit-question::after { content: ""; position: absolute; z-index: 1; right: -26px; top: calc(50% - 14px); width: 9px; height: 9px; border-top: 1.5px solid #b17a61; border-right: 1.5px solid #b17a61; transform: rotate(45deg); }
+    .unit-choice { justify-content: center; background: #eee9df; color: #9a5638 !important; font-family: Georgia, "Times New Roman", serif; font-size: clamp(24px, 2.2vw, 32px) !important; font-weight: 700; text-align: center; }
+    .unit-tool-intro { max-width: 76ch; margin: 16px 0 0; font-size: 14px; line-height: 1.5; color: #615d56; }
+    .unit-tool-take { margin: 12px 0 0; font-size: 16px; line-height: 1.45; font-weight: 700; color: #9a5638; }
+    .response-caption { margin-top: 10px; }
+    .response-unit { font-size: 12px; letter-spacing: .06em; text-transform: uppercase; color: #6b6b5f; margin: 0 0 3px; }
+    .response-title { font-size: 15px; font-weight: 700; margin: 0 0 4px; }
+    .response-caption p { font-size: 12.5px; line-height: 1.5; color: #5b5b57; margin: 0; }
+    .representation-panel .inner { max-width: 1500px; }
+    .representation-layout { display: grid; grid-template-columns: minmax(190px, 24ch) minmax(0, 1fr); gap: 38px; align-items: start; }
+    .representation-layout .figure-link { padding: 12px; }
+    .representation-layout .figure-link img { max-height: min(65vh, 640px); }
+    .figure-kicker { font-size: 12px; line-height: 1.45; color: #5b5b57; margin: 0 0 10px; }
+    .questions-layout { display: grid; grid-template-columns: minmax(250px, .74fr) minmax(0, 1.26fr); gap: 44px; align-items: center; }
+    .questions-layout .figure-link img { max-height: min(62vh, 560px); }
+    .rq-list { list-style: none; padding: 0; margin: 20px 0 0; border-top: 1px solid #ded6c4; }
+    .rq-list li { padding: 12px 0; border-bottom: 1px solid #ded6c4; font-size: 14px; line-height: 1.45; color: #2b2b28; }
+    .rq-list strong { display: block; margin-bottom: 2px; color: #315b41; font-size: 11px; letter-spacing: .08em; text-transform: uppercase; }
+    .cross-city-layout { display: grid; grid-template-columns: minmax(245px, .72fr) minmax(0, 1.28fr); gap: 44px; align-items: center; }
+    .workflow-figure { margin: 0; background: #fff; border: 1px solid #e7e1d4; padding: 8px; }
+    .workflow-figure img { width: 100%; height: auto; max-height: none; display: block; }
+    .workflow-figure figcaption { max-width: none; }
+    .hypothesis-figure { width: fit-content; max-width: 100%; margin: 0; justify-self: center; }
+    .hypothesis-figure .figure-link { width: fit-content; max-width: 100%; padding: 6px; }
+    .questions-layout .hypothesis-figure img { width: auto; max-width: 100%; height: min(68vh, 640px); max-height: none; }
+    .city-layout { display: grid; grid-template-columns: minmax(220px, .66fr) minmax(0, 1.34fr); gap: 44px; align-items: center; }
+    .cities-figure { margin: 0; }
+    .cities-figure img { width: 100%; height: auto; max-height: none; display: block; }
+    .city-list-button { display: inline-flex; align-items: center; gap: 8px; margin-top: 22px; padding: 9px 12px; border: 1px solid #252525; background: #252525; color: #fff; font: inherit; font-size: 12px; letter-spacing: .03em; cursor: pointer; }
+    .city-list-button:hover { background: #4d3428; border-color: #4d3428; }
+    .city-dialog { width: min(1020px, calc(100vw - 36px)); max-height: min(760px, calc(100vh - 36px)); box-sizing: border-box; border: 1px solid #d4cbb9; padding: 28px 32px 32px; background: #f6f3ed; color: #17181a; box-shadow: 0 18px 72px rgba(0,0,0,.24); }
+    .city-dialog::backdrop { background: rgba(23,24,26,.48); }
+    .city-dialog-header { display: flex; align-items: start; justify-content: space-between; gap: 20px; border-bottom: 1px solid #ded6c4; padding-bottom: 16px; }
+    .city-dialog-header h2 { font-size: 28px; line-height: 1.08; letter-spacing: -0.025em; margin: 0; }
+    .city-dialog-header p { font-size: 13px; line-height: 1.45; color: #5b5b57; margin: 6px 0 0; }
+    .dialog-close { width: 32px; height: 32px; border: 0; background: transparent; color: #315b41; font-size: 28px; line-height: 1; cursor: pointer; }
+    .dialog-close:hover { color: #17181a; }
+    .city-regions { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 22px 30px; margin-top: 22px; }
+    .city-region h3 { color: #315b41; font-size: 11px; letter-spacing: .09em; text-transform: uppercase; margin: 0 0 7px; }
+    .city-region p { color: #2b2b28; font-size: 13px; line-height: 1.55; margin: 0; }
+    .canopy-figure { margin: 24px 0 0; }
+    .canopy-figure .fig { padding: 14px; }
+    .canopy-figure img { width: 100%; max-height: min(60vh, 540px); object-fit: contain; display: block; }
     #dots > * { pointer-events: auto; }
     .dot { width: 7px; height: 7px; border-radius: 50%; background: #8f8878; border: none; padding: 0; cursor: pointer; transition: background .2s, transform .2s; box-shadow: 0 0 0 3px rgba(246,243,237,.92); }
-    .dot.on { background: #3f5c46; transform: scale(1.5); }
-    .synthesis-panel { position: relative; overflow: hidden; background: #24382a; }
-    .synthesis-panel::before { content: ""; position: absolute; inset: 0 0 0 48%; background-image: linear-gradient(90deg, rgba(36,56,42,.94), rgba(36,56,42,.62)), url("assets/urban-wetland-birds.webp"); background-size: cover; background-position: center; background-blend-mode: multiply; filter: saturate(.82); mask-image: linear-gradient(90deg, transparent, #000 22%); }
+    .dot.on { background: #9a5638; transform: scale(1.5); }
+    .synthesis-panel { position: relative; overflow: hidden; background: #252525; }
     .synthesis-panel .inner { position: relative; z-index: 1; }
-    .guilds-head { display: grid; grid-template-columns: 25ch minmax(0, 1fr); gap: 42px; align-items: start; margin-bottom: 24px; }
-    .guilds-figures { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px; }
-    @media (max-width: 800px) { .guilds-head, .guilds-figures { grid-template-columns: 1fr; gap: 20px; } }
+    .reading-mode .track { display: block !important; overflow-x: hidden !important; overflow-y: auto !important; scroll-snap-type: none !important; }
+    .reading-mode .panel { height: auto; min-height: 100vh; overflow: visible; }
+    .reading-mode #dots { display: none !important; }
+    @media (max-width: 800px) {
+      .inner { padding: 82px 24px 76px; }
+      .split-figure-layout, .representation-layout, .guild-figures, .method-layout, .method-notes, .questions-layout, .cross-city-layout, .city-layout { grid-template-columns: 1fr; gap: 20px; }
+      .method-notes { background: transparent; }
+      .method-note { border: 1px solid #e7e1d4; }
+      .unit-tool-head { display: none; }
+      .unit-tool { border-top: 0; display: grid; gap: 12px; }
+      .unit-tool-row { display: grid; grid-template-columns: 1fr; min-height: 0; border: 1px solid #ded6c4; }
+      .unit-tool-row > div { padding: 14px 16px; }
+      .unit-tool-row > [data-label] { align-items: flex-start; flex-direction: column; gap: 5px; }
+      .unit-tool-row > [data-label]::before { content: attr(data-label); color: #615d56; font-family: Arial, "Helvetica Neue", Helvetica, sans-serif; font-size: 12px; font-weight: 700; }
+      .unit-question { padding-right: 16px !important; }
+      .unit-question::before, .unit-question::after { display: none; }
+      .unit-choice { min-height: 62px; }
+      .city-dialog { width: calc(100vw - 24px); max-height: calc(100vh - 24px); padding: 22px 20px 24px; }
+      .city-dialog-header h2 { font-size: 24px; }
+      .city-regions { grid-template-columns: 1fr; gap: 18px; }
+      .hero-caption { right: 22px; left: 22px; bottom: 50px; }
+    }
   </style>
   <script src="lightbox.js"></script>
+  <link rel="stylesheet" href="site.css">
 </helmet>
 
-<div style="position: fixed; inset: 0; overflow: hidden; background: #f6f3ed;">
+<div id="page-root" style="position: fixed; inset: 0; overflow: hidden; background: #f6f3ed;">
 
   <div style="position: absolute; top: 0; left: 0; right: 0; z-index: 20; display: flex; align-items: baseline; justify-content: space-between; padding: 26px 56px; pointer-events: none; background: linear-gradient(180deg, #f6f3ed 58%, rgba(246,243,237,0));">
     <div style="display: flex; align-items: baseline; gap: 22px; pointer-events: auto;">
       <a href="index.html" style="font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: #8a8a84;">← Yeshan Qiu</a>
       <span style="font-size: 13px; letter-spacing: 0.14em; text-transform: uppercase; color: #3f5c46; font-weight: 700;">Urban form and bird biodiversity</span>
     </div>
+    <button id="reading-mode" class="header-command" type="button" aria-pressed="false">Read as one page</button>
   </div>
 
   <div id="dots" style="position: absolute; bottom: 22px; left: 0; right: 0; z-index: 25; display: flex; justify-content: center; align-items: center; gap: 12px; pointer-events: none;"></div>
@@ -72,8 +167,10 @@
           </div>
         </div>
         <div style="position: relative; overflow: hidden; background: #17181a;">
-          <img src="assets/sydney-ibis-collage.jpg" alt="Sydney harbour, planted verge, bird sign, and an Australian white ibis on a kerb" style="width: 100%; height: 100%; object-fit: cover; display: block;">
-          <div style="position: absolute; left: 26px; bottom: 58px; font-size: 12px; line-height: 1.5; color: rgba(255,255,255,.92); max-width: 34ch; text-shadow: 0 2px 16px rgba(0,0,0,.9);">Sydney: harbour edge, planted verge, a sign asking people not to feed the birds, and an Australian white ibis working the kerb. The same city, four different habitats.</div>
+          <figure style="margin: 0; width: 100%; height: 100%;">
+            <img src="assets/sydney-ibis-collage.jpg" alt="Sydney harbour, planted verge, bird sign, and an Australian white ibis on a kerb" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+            <figcaption class="hero-caption">Sydney: harbour edge, planted verge, a sign asking people not to feed the birds, and an Australian white ibis working the kerb. The same city, four different habitats.</figcaption>
+          </figure>
         </div>
       </div>
     </section>
@@ -89,7 +186,7 @@
         </div>
         <figure style="margin: 0 0 16px;">
           <a href="assets/cec-sankey.png" target="_blank" style="display: block; background: #fff; border: 1px solid #e7e1d4; padding: 10px; cursor: zoom-in;"><img src="assets/cec-sankey.png" alt="Evidence sorted by urban component, scale, and bird response" style="width: 100%; max-height: 34vh; object-fit: contain; display: block;"></a>
-          <figcaption class="cap" style="max-width: none;">Every study sorted by what it measured, at what scale, and what it counted about the birds. Most of what the field knows leans on one easy measure, the amount of green space. <a href="assets/cec-sankey.png" target="_blank" style="color: #3f5c46; border-bottom: 1px solid #3f5c46;">View full size</a></figcaption>
+          <figcaption class="cap" style="max-width: none;">Evidence map of the systematic review. Each pathway links an urban component, the spatial scale at which it was measured, and the bird response it was used to explain. The concentration of paths through green-space amount and fine scales makes the imbalance visible: water, vertical structure, ecological processes and functional diversity remain comparatively thin in the evidence base. <a href="assets/cec-sankey.png" target="_blank" style="color: #3f5c46; border-bottom: 1px solid #3f5c46;">View full size</a></figcaption>
         </figure>
         <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: #ded6c4;">
           <div style="background: #fff; padding: 14px 16px;">
@@ -117,28 +214,47 @@
       </div>
     </section>
 
-    <section class="panel" data-label="Winners and losers">
-      <div class="inner" style="max-width: 1480px;">
-        <div class="guilds-head">
+    <section class="panel" data-label="Study 1 · questions">
+      <div class="inner">
+        <div class="questions-layout">
           <div>
-            <div class="num">Study one &middot; core figure</div>
-            <h2 class="h2" style="font-size: clamp(20px, 1.8vw + 0.6vh, 28px);">Built form works as a filter</h2>
+            <div class="num">Study one &middot; research questions</div>
+            <h2 class="h2">What must an integrative evidence framework explain?</h2>
+            <p class="body">The Pattern-Process-Function framework links urban drivers to spatial pattern, ecological processes and biodiversity outcomes. It treats built-up, vegetation and water as interacting parts of one urban system rather than separate predictors.</p>
+            <ol class="rq-list">
+              <li><strong>RQ1</strong>How do urban landscape patterns drive urban avian biodiversity under the PPF framework, and to what extent are effects mediated by functional guilds and modulated by contextual factors?</li>
+              <li><strong>RQ2</strong>What knowledge gaps, limitations and biases characterize the current evidence?</li>
+              <li><strong>RQ3</strong>How can future research build an integrative framework for biodiversity-sensitive design?</li>
+            </ol>
           </div>
-          <div>
-            <p class="body">The built environment does not simply push biodiversity down. It sorts it. Glass and dense building help birds that nest on buildings, while the same features stress ground-nesting and forest birds, which noise suppresses further.</p>
-            <p class="take" style="font-size: clamp(14px, 0.9vw + 0.5vh, 17px);">Built form supports some guilds and constrains others.</p>
-            <p class="cap" style="margin-top: 18px;">Blue is a positive effect, red negative, marker size is effect size. Nature features left, urban and stress features right in each half.</p>
-          </div>
+          <figure style="margin: 0;">
+            <a href="assets/cec-ppf-framework.png" target="_blank" rel="noreferrer" class="figure-link"><img src="assets/cec-ppf-framework.png" alt="Pattern-Process-Function framework for urban avian biodiversity"></a>
+            <figcaption class="cap" style="max-width: none;">Pattern-Process-Function framework used to organize the review. Urban development drivers first shape the composition and configuration of built-up land, vegetation and water; those patterns regulate resource access, reproduction and dispersal, and then influence taxonomic, functional and phylogenetic bird diversity. The framework therefore connects a design variable to a plausible ecological pathway rather than treating it as an isolated correlation. <a href="assets/cec-ppf-framework.png" target="_blank" rel="noreferrer">View full size</a></figcaption>
+          </figure>
         </div>
-        <div class="guilds-figures">
-          <figure style="margin: 0;">
-            <a href="assets/guilds-diet.png" target="_blank" style="display: block; background: #fff; border: 1px solid #e7e1d4; padding: 10px; cursor: zoom-in;"><img src="assets/guilds-diet-cropped.png" alt="Effect of nature and urban stress features on bird diet guilds" style="width: 100%; display: block;"></a>
-            <figcaption class="cap" style="max-width: none;">(a) Diet guilds. <a href="assets/guilds-diet.png" target="_blank" style="color: #3f5c46; border-bottom: 1px solid #3f5c46;">Full size</a></figcaption>
-          </figure>
-          <figure style="margin: 0;">
-            <a href="assets/guilds-nesting.png" target="_blank" style="display: block; background: #fff; border: 1px solid #e7e1d4; padding: 10px; cursor: zoom-in;"><img src="assets/guilds-nesting-cropped.png" alt="Effect of nature and urban stress features on bird nesting guilds" style="width: 100%; display: block;"></a>
-            <figcaption class="cap" style="max-width: none;">(b) Nesting guilds, same scale. <a href="assets/guilds-nesting.png" target="_blank" style="color: #3f5c46; border-bottom: 1px solid #3f5c46;">Full size</a></figcaption>
-          </figure>
+      </div>
+    </section>
+
+    <section class="panel guilds-panel" data-label="Winners and losers">
+      <div class="inner">
+        <div class="split-figure-layout">
+          <aside class="insight-rail">
+            <div class="num">Study one &middot; core figure</div>
+            <h2 class="h2">Built form works as a filter</h2>
+            <p class="body">The built environment does not simply push biodiversity down. It sorts it. Glass and dense building help birds that nest on buildings, while the same features stress ground-nesting and forest birds, which noise suppresses further.</p>
+            <p class="take">Built form supports some guilds and constrains others.</p>
+            <p class="cap">Blue indicates a positive association, red a negative association, and marker size indicates effect magnitude. Nature features appear on the left of each panel; urban and stress features on the right.</p>
+          </aside>
+          <div class="guild-figures">
+            <figure style="margin: 0;">
+              <a href="assets/guilds-diet.png" target="_blank" rel="noreferrer" class="figure-link"><img src="assets/guilds-diet-cropped.png" alt="Effect of nature and urban stress features on bird diet guilds"></a>
+              <figcaption class="cap">(a) Diet guilds. Rows are urban nature or built/stress metrics and columns are feeding guilds. Blue circles indicate positive associations, red circles negative associations, and larger circles indicate stronger effects; the left half contains nature features and the right half built and stress features. <a href="assets/guilds-diet.png" target="_blank" rel="noreferrer">Full size</a></figcaption>
+            </figure>
+            <figure style="margin: 0;">
+              <a href="assets/guilds-nesting.png" target="_blank" rel="noreferrer" class="figure-link"><img src="assets/guilds-nesting.png" alt="Effect of nature and urban stress features on bird nesting guilds"></a>
+              <figcaption class="cap">(b) Nesting guilds. Full panel restored, on the same effect-size scale as panel (a), so the complete vertical range of nature and urban metrics can be read. Rows identify the metrics, columns identify nesting guilds, blue circles are positive associations, red circles are negative associations, and circle area indicates magnitude. <a href="assets/guilds-nesting.png" target="_blank" rel="noreferrer">Full size</a></figcaption>
+            </figure>
+          </div>
         </div>
       </div>
     </section>
@@ -150,12 +266,34 @@
         <div style="margin-top: 16px;">
           <figure style="float: right; width: 40%; margin: 4px 0 18px 38px;">
             <a href="assets/cec-pooled-effect.png" target="_blank" style="display: block; background: #fff; border: 1px solid #e7e1d4; padding: 10px; cursor: zoom-in;"><img src="assets/cec-pooled-effect.png" alt="Pooled effect sizes by greenery dimension" style="width: 100%; max-height: 44vh; object-fit: contain; display: block;"></a>
-            <figcaption class="cap">Pooled effect of each greenery dimension across the reviewed evidence. Right of the line is a positive association, left negative. <a href="assets/cec-pooled-effect.png" target="_blank" style="color: #3f5c46; border-bottom: 1px solid #3f5c46;">Full size</a></figcaption>
+            <figcaption class="cap">Pooled associations for distinct greenery dimensions across the reviewed studies. Estimates to the right of the zero line indicate positive relationships with bird diversity and estimates to the left indicate negative relationships; comparing rows shows why vertical and compositional attributes of vegetation cannot be reduced to green-space area alone. <a href="assets/cec-pooled-effect.png" target="_blank" style="color: #3f5c46; border-bottom: 1px solid #3f5c46;">Full size</a></figcaption>
           </figure>
-          <p class="body" style="text-align: justify;"><span style="float: left; font-size: 3.1em; line-height: 0.82; font-weight: 700; padding: 4px 10px 0 0; color: #3f5c46;">W</span>here green does help, the signal comes from its structure more than its extent. Taller and more varied canopies, standing deadwood, and how patches are aggregated matter more than coverage alone.</p>
+          <p class="body" style="text-align: justify;">Where green does help, the signal comes from its structure more than its extent. Taller and more varied canopies, standing deadwood, and how patches are aggregated matter more than coverage alone.</p>
           <p class="body" style="text-align: justify;">The same feature can also act through different ecological processes, so its effect is not fixed. Tree canopy, for instance, supports resource access and reproduction, and helps dispersal even more.</p>
           <p class="body" style="text-align: justify;">Reading green in three dimensions and across its spatial pattern, and looking at the processes behind it, is what sustains diversity over the long run, in species, in function, and in evolutionary history.</p>
           <p class="take" style="text-align: left;">Taken together, these findings argue for a multidimensional reading of urban biodiversity. Green amount sets the baseline, built form filters who can stay, and the structure and arrangement of green decide how much life a city can hold.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel" data-label="Study 2 · questions">
+      <div class="inner">
+        <div class="questions-layout">
+          <div>
+            <div class="num">Study two &middot; research questions</div>
+            <h2 class="h2">A spatial unit is an analytical choice, not a neutral container</h2>
+            <p class="body">The same bird records can be read through fixed grids, form-following Local Climate Zones, or buffers around sightings. Each representation changes which part of the city is measured and what kind of biodiversity response can be modelled.</p>
+            <ol class="rq-list">
+              <li><strong>RQ1</strong>How do spatial units shape the measurement of urban pattern?</li>
+              <li><strong>RQ2</strong>To what extent do spatial units alter the predictors that emerge as important for avian biodiversity, and are these shifts guild-dependent?</li>
+              <li><strong>RQ3</strong>How do scale dependence and model robustness vary across spatial representations?</li>
+              <li><strong>RQ4</strong>Do different spatial units reveal different ecological transitions and morphology-linked biodiversity gradients?</li>
+            </ol>
+          </div>
+          <figure style="margin: 0;">
+            <a href="assets/spatial-unit-framework.png" target="_blank" rel="noreferrer" class="figure-link"><img src="assets/spatial-unit-framework.png" alt="Workflow comparing grid units, Local Climate Zones and buffer zones for urban bird analysis"></a>
+            <figcaption class="cap" style="max-width: none;">Spatial-representation workflow for Study two. Fixed grids and Local Climate Zones aggregate records to model species richness per unit, whereas buffers describe occurrence in the immediate neighbourhood of an observation. All three representations then enter driver identification, scale optimization and threshold detection, making the spatial unit itself part of the ecological inference. <a href="assets/spatial-unit-framework.png" target="_blank" rel="noreferrer">View full size</a></figcaption>
+          </figure>
         </div>
       </div>
     </section>
@@ -173,7 +311,7 @@
           </div>
           <figure style="margin: 0;">
             <a href="assets/buffer-scale-by-guild.png" target="_blank" style="display: block; background: #fff; border: 1px solid #e7e1d4; padding: 12px; cursor: zoom-in;"><img src="assets/buffer-scale-by-guild.png" alt="Optimal buffer scale by feeding guild" style="width: 100%; max-height: 52vh; object-fit: contain; display: block;"></a>
-            <figcaption class="cap">Optimal buffer scale by feeding guild, in metres. Each guild shows a different scale fingerprint. <a href="assets/buffer-scale-by-guild.png" target="_blank" style="color: #3f5c46; border-bottom: 1px solid #3f5c46;">View full size</a></figcaption>
+            <figcaption class="cap">Optimal buffer scale by feeding guild, in metres. The preferred radius is the spatial extent at which each guild's response was best supported by the model: granivores and piscivores peak at fine scales, carnivores and omnivores at much wider surroundings, with frugivores and insectivores between them. These differences define each guild's scale fingerprint. <a href="assets/buffer-scale-by-guild.png" target="_blank" style="color: #3f5c46; border-bottom: 1px solid #3f5c46;">View full size</a></figcaption>
           </figure>
         </div>
       </div>
@@ -188,22 +326,28 @@
         </div>
         <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px;">
           <figure style="margin: 0;">
-            <a href="assets/gam-fru-grid.png" target="_blank" style="display: block; background: #fff; border: 1px solid #e7e1d4; padding: 12px;"><img src="assets/gam-fru-grid.png" alt="Canopy height response for fruit-eating birds, square grid cells" style="width: 100%; max-height: 26vh; object-fit: contain; display: block; cursor: zoom-in;"></a>
-            <div style="font-size: 12px; letter-spacing: 0.06em; text-transform: uppercase; color: #6b6b5f; margin: 10px 0 3px;">Square grid cells</div>
-            <div style="font-size: 15px; font-weight: 700; margin-bottom: 4px;">Steadily rising, no ceiling</div>
-            <p style="font-size: 12.5px; line-height: 1.5; color: #5b5b57; margin: 0;">Equal squares, each asked how many fruit-eating species it holds. The vertical axis is predicted richness per square, and the curve is still climbing at the tallest squares. Read alone it says: keep growing trees taller.</p>
+            <a href="assets/gam-fru-grid.png" target="_blank" rel="noreferrer" class="figure-link" style="padding: 12px;"><img src="assets/gam-fru-grid.png" alt="Canopy height response for fruit-eating birds, square grid cells" style="max-height: 26vh;"></a>
+            <figcaption class="response-caption">
+              <div class="response-unit">Square grid cells</div>
+              <div class="response-title">Steadily rising, no ceiling</div>
+              <p>Equal squares, each asked how many fruit-eating species it holds. The vertical axis is predicted richness per square, and the curve is still climbing at the tallest squares. Read alone it says: keep growing trees taller.</p>
+            </figcaption>
           </figure>
           <figure style="margin: 0;">
-            <a href="assets/gam-fru-lcz.png" target="_blank" style="display: block; background: #fff; border: 1px solid #e7e1d4; padding: 12px;"><img src="assets/gam-fru-lcz.png" alt="Canopy height response for fruit-eating birds, morphological zones" style="width: 100%; max-height: 26vh; object-fit: contain; display: block; cursor: zoom-in;"></a>
-            <div style="font-size: 12px; letter-spacing: 0.06em; text-transform: uppercase; color: #6b6b5f; margin: 10px 0 3px;">Morphological zones</div>
-            <div style="font-size: 15px; font-weight: 700; margin-bottom: 4px;">Rising, then levelling off</div>
-            <p style="font-size: 12.5px; line-height: 1.5; color: #5b5b57; margin: 0;">Cut along real built character, so a low-rise neighbourhood and a tower district are never averaged together. Predicted richness per zone flattens above roughly twenty-five metres. Taller still helps, with diminishing returns.</p>
+            <a href="assets/gam-fru-lcz.png" target="_blank" rel="noreferrer" class="figure-link" style="padding: 12px;"><img src="assets/gam-fru-lcz.png" alt="Canopy height response for fruit-eating birds, morphological zones" style="max-height: 26vh;"></a>
+            <figcaption class="response-caption">
+              <div class="response-unit">Morphological zones</div>
+              <div class="response-title">Rising, then levelling off</div>
+              <p>Cut along real built character, so a low-rise neighbourhood and a tower district are never averaged together. Predicted richness per zone flattens above roughly twenty-five metres. Taller still helps, with diminishing returns.</p>
+            </figcaption>
           </figure>
           <figure style="margin: 0;">
-            <a href="assets/gam-fru-buffer.png" target="_blank" style="display: block; background: #fff; border: 1px solid #e7e1d4; padding: 12px;"><img src="assets/gam-fru-buffer.png" alt="Canopy height response for fruit-eating birds, circles around each sighting" style="width: 100%; max-height: 26vh; object-fit: contain; display: block; cursor: zoom-in;"></a>
-            <div style="font-size: 12px; letter-spacing: 0.06em; text-transform: uppercase; color: #6b6b5f; margin: 10px 0 3px;">Circles around each sighting</div>
-            <div style="font-size: 15px; font-weight: 700; margin-bottom: 4px;">A clear peak, then decline</div>
-            <p style="font-size: 12.5px; line-height: 1.5; color: #5b5b57; margin: 0;">The question changes: a circle around each sighting, and the model asks how likely fruit-eaters are to appear at all. The dashed line marks the peak, near twenty-five metres, after which likelihood falls. An optimum, not a maximum.</p>
+            <a href="assets/gam-fru-buffer.png" target="_blank" rel="noreferrer" class="figure-link" style="padding: 12px;"><img src="assets/gam-fru-buffer.png" alt="Canopy height response for fruit-eating birds, circles around each sighting" style="max-height: 26vh;"></a>
+            <figcaption class="response-caption">
+              <div class="response-unit">Circles around each sighting</div>
+              <div class="response-title">A clear peak, then decline</div>
+              <p>The question changes: a circle around each sighting, and the model asks how likely fruit-eaters are to appear at all. The dashed line marks the peak, near twenty-five metres, after which likelihood falls. An optimum, not a maximum.</p>
+            </figcaption>
           </figure>
         </div>
       </div>
@@ -211,25 +355,33 @@
 
     <section class="panel" data-label="Study 2 &middot; how it was fitted">
       <div class="inner">
-        <div class="num">Study two &middot; method</div>
-        <h2 class="h2" style="max-width: 34ch;">Why three honest models give three different shapes</h2>
+        <div class="method-heading">
+          <div class="num">Study two &middot; method</div>
+          <h2 class="h2">Why three honest models give three different shapes</h2>
+        </div>
 
-        <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: #ded6c4; margin: 0 0 4px;">
-          <div style="background: #fff; padding: 16px 18px;">
-            <div style="font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: #3f5c46; font-weight: 700; margin-bottom: 7px;">Data</div>
-            <p style="font-size: 12.5px; line-height: 1.5; color: #5b5b57; margin: 0;">Singapore. Citizen-science occurrence records with high-resolution urban pattern data; sampling effort carried as a model offset.</p>
-          </div>
-          <div style="background: #fff; padding: 16px 18px;">
-            <div style="font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: #3f5c46; font-weight: 700; margin-bottom: 7px;">Grid and LCZ</div>
-            <p style="font-size: 12.5px; line-height: 1.5; color: #5b5b57; margin: 0;">Species richness per unit, modelled with Random Forest, negative binomial GLM, and Poisson GAM response curves. Grid grains from 500 to 5000 m; 2000 to 2500 m was the most balanced window.</p>
-          </div>
-          <div style="background: #fff; padding: 16px 18px;">
-            <div style="font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: #3f5c46; font-weight: 700; margin-bottom: 7px;">Buffer</div>
-            <p style="font-size: 12.5px; line-height: 1.5; color: #5b5b57; margin: 0;">Guild occurrence as a binary response against generated background samples, modelled with logistic regression and GAM partial effects.</p>
-          </div>
-          <div style="background: #fff; padding: 16px 18px;">
-            <div style="font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: #3f5c46; font-weight: 700; margin-bottom: 7px;">Fitting</div>
-            <p style="font-size: 12.5px; line-height: 1.5; color: #5b5b57; margin: 0;">GAMs fitted in R with mgcv (Wood, 2017); predictors as smooth terms, coordinates controlling broad-scale spatial structure. Selected by fivefold cross-validation, checked on deviance explained, McFadden R², and residual spatial autocorrelation.</p>
+        <div class="method-layout">
+          <figure class="method-units-figure">
+            <a href="assets/spatial-units-buffer-grid-lcz.png" target="_blank" rel="noreferrer" class="figure-link"><img src="assets/spatial-units-buffer-grid-lcz.png" alt="Comparison of buffer, grid, and Local Climate Zone spatial units for bird observations"></a>
+            <figcaption class="cap">Three spatial representations used in Study two. Buffer units draw a fixed-radius neighbourhood around each bird record and capture immediate surrounding habitat; fixed grids summarize observations and pattern metrics at one consistent grain across the study area; Local Climate Zones group places with similar built and land-cover characteristics. Black points are bird observations, green represents vegetation and grey represents the built environment. <a href="assets/spatial-units-buffer-grid-lcz.png" target="_blank" rel="noreferrer">View full size</a></figcaption>
+          </figure>
+          <div class="method-notes">
+            <section class="method-note">
+              <h3>Data</h3>
+              <p>Singapore citizen-science occurrence records with high-resolution urban pattern data; sampling effort carried as a model offset.</p>
+            </section>
+            <section class="method-note">
+              <h3>Grid and LCZ</h3>
+              <p>Species richness per unit, modelled with Random Forest, negative binomial GLM, and Poisson GAM response curves. Grid grains from 500 to 5000 m; 2000 to 2500 m was the most balanced window.</p>
+            </section>
+            <section class="method-note">
+              <h3>Buffer</h3>
+              <p>Guild occurrence as a binary response against generated background samples, modelled with logistic regression and GAM partial effects.</p>
+            </section>
+            <section class="method-note">
+              <h3>Fitting</h3>
+              <p>GAMs fitted in R with mgcv (Wood, 2017); predictors as smooth terms, coordinates controlling broad-scale spatial structure. Selected by fivefold cross-validation, checked on deviance explained, McFadden R², and residual spatial autocorrelation.</p>
+            </section>
           </div>
         </div>
         <p class="body" style="margin: 26px 0 0; max-width: 96ch;">The direction is robust: fruit-eating birds need tall trees, and all three units say so. What differs is the functional form, and the form is what a planting brief has to commit to. Rising without a ceiling argues for maximising height; a plateau argues for reaching a threshold and spending the rest of the budget elsewhere; a peak near twenty-five metres argues for a target rather than a maximum. All three fits are sound on their own terms, with comparable deviance explained and smooth terms that stay within their confidence bands, so the divergence is not a fitting artefact. It comes from the unit: grid cells average canopy over a fixed footprint, morphological zones group ground that already shares a built character, and buffers weight whatever happens to sit near a sighting. The buffer curve also answers a slightly different question, the probability that the guild is present rather than how many species a unit holds, which is itself part of what the unit decides.</p>
@@ -237,36 +389,115 @@
       </div>
     </section>
 
-    <section class="panel" data-label="Study 2 &middot; representation">
-      <div class="inner" style="max-width: 1400px;">
-        <div style="max-width: 78ch; margin-bottom: 12px;">
-          <div class="num">Study two &middot; spatial representation</div>
-          <h2 class="h2" style="font-size: clamp(22px, 2vw + 0.6vh, 30px);">The unit changes which factors look important</h2>
-          <p class="body" style="margin: 0;">One thing stayed stable across all units: proximity to resources. Distance to water and distance to canopy mattered consistently, because how close a resource is does not depend on how we draw patch boundaries. Outside that stable core, each unit privileged a different kind of metric, and it did so differently for each guild.</p>
+    <section class="panel representation-panel" data-label="Study 2 &middot; representation">
+      <div class="inner">
+        <div class="representation-layout">
+          <aside class="insight-rail">
+            <div class="num">Study two &middot; spatial representation</div>
+            <h2 class="h2">The unit changes which factors look important</h2>
+            <p class="body">One thing stayed stable across all units: proximity to resources. Distance to water and distance to canopy mattered consistently, because how close a resource is does not depend on how we draw patch boundaries.</p>
+            <p class="body">Outside that stable core, each unit privileged a different kind of metric, and it did so differently for each guild.</p>
+            <p class="cap">Each guild is read three times: through buffers, grids, and morphological zones. Blue indicates a positive association, red a negative association, and marker size indicates association strength.</p>
+          </aside>
+          <figure style="margin: 0;">
+            <p class="figure-kicker">Top predictors by feeding guild under each spatial representation. <a href="assets/cross-representation-guild-bubble.png" target="_blank" rel="noreferrer">View full size</a></p>
+            <a href="assets/cross-representation-guild-bubble.png" target="_blank" rel="noreferrer" class="figure-link"><img src="assets/cross-representation-guild-bubble.png" alt="Top predictors by feeding guild under buffer, grid, and Local Climate Zone representations"></a>
+            <figcaption class="cap" style="max-width: none;">Predictor selection across feeding guilds and spatial representations. Each row combines a feeding guild with a buffer, grid or Local Climate Zone model; columns group retained metrics by 3D constitution, 2D composition and 2D configuration. Marker colour indicates the direction of the association and marker area its strength. <strong>B, W and C</strong> denote <strong>built-up, water and canopy</strong>; other landscape-metric abbreviations follow the <a href="https://fragstats.org/index.php/fragstats-metrics/patch-based-metrics" target="_blank" rel="noreferrer">FRAGSTATS metric documentation</a>.</figcaption>
+          </figure>
         </div>
-        <figure style="margin: 0;">
-          <a href="assets/cross-representation-guild-bubble.png" target="_blank" style="display: block; background: #fff; border: 1px solid #e7e1d4; padding: 14px; cursor: zoom-in;"><img src="assets/cross-representation-guild-bubble.png" alt="Top predictors by feeding guild under buffer, grid, and LCZ representations" style="width: 100%; max-height: 54vh; object-fit: contain; display: block;"></a>
-          <figcaption class="cap" style="max-width: none;">Top predictors by feeding guild under each spatial representation. Each guild is read three times, once through buffers, once through grids, once through morphological zones. Blue is a positive association, red negative, and marker size is the strength of the association. <a href="assets/cross-representation-guild-bubble.png" target="_blank" style="color: #3f5c46; border-bottom: 1px solid #3f5c46;">View full size</a></figcaption>
-        </figure>
       </div>
     </section>
 
     <section class="panel" data-label="Study 2 &middot; what it means">
       <div class="inner">
         <div class="num">Study two &middot; what it means</div>
-        <h2 class="h2" style="max-width: 30ch;">Match the unit to the question, and report it with the result</h2>
-        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: start; margin-top: 22px;">
+        <h2 class="h2" style="max-width: 25ch;">Match the unit to the question</h2>
+        <div class="unit-tool" role="table" aria-label="Decision tool for selecting a spatial representation">
+          <div class="unit-tool-head" role="row">
+            <div role="columnheader">If your question is...</div>
+            <div role="columnheader">Use</div>
+            <div role="columnheader">Because</div>
+            <div role="columnheader">Watch for</div>
+          </div>
+          <div class="unit-tool-row" role="row">
+            <div class="unit-question" role="cell">Local habitat use, species occurrence, or scale of effect</div>
+            <div class="unit-choice" role="cell" data-label="Use">Buffer</div>
+            <div role="cell" data-label="Because">Centres the observation and approximates the immediate surroundings that may influence a record.</div>
+            <div role="cell" data-label="Watch for">Large radii smooth local heterogeneity; the selected radius is a modelling choice, not a species trait.</div>
+          </div>
+          <div class="unit-tool-row" role="row">
+            <div class="unit-question" role="cell">Standardised citywide mapping or comparison across sites and cities</div>
+            <div class="unit-choice" role="cell" data-label="Use">Grid</div>
+            <div role="cell" data-label="Because">Equal area and shape give continuous coverage that can be compared directly.</div>
+            <div role="cell" data-label="Watch for">Configuration metrics can shift sharply with grain, even when model fit appears stable.</div>
+          </div>
+          <div class="unit-tool-row" role="row">
+            <div class="unit-question" role="cell">Urban morphology, built-form classes, or planning-relevant interpretation</div>
+            <div class="unit-choice" role="cell" data-label="Use">LCZ</div>
+            <div role="cell" data-label="Because">Combines built form, openness and vegetation to reveal class-level contrasts.</div>
+            <div role="cell" data-label="Watch for">Check classification quality and unequal zone areas before drawing comparisons.</div>
+          </div>
+        </div>
+        <p class="unit-tool-intro">Across all three representations, accessibility to canopy and water remained important; the different units mainly changed which other patterns became visible.</p>
+        <p class="unit-tool-take">Report the unit with the result: each representation measures a different, valid aspect of the same city.</p>
+      </div>
+    </section>
+
+    <section class="panel" data-label="Study 3 · 2 km grid">
+      <div class="inner">
+        <div class="cross-city-layout">
           <div>
-            <div style="font-size: 11.5px; letter-spacing: 0.1em; text-transform: uppercase; color: #a8562f; font-weight: 700; margin-bottom: 10px;">What each unit privileged</div>
-            <p class="body">Buffers elevated immediate resource context, such as the core area and largest patch of water nearby. Grids elevated patch geometry and spacing, such as building fractal dimension and the variation in distances between buildings. Morphological zones retained form-linked measures, such as building cohesion, canopy contiguity, and canopy-height variance. The reshuffling was strongest for carnivores and insectivores, while frugivores kept the most consistent core.</p>
-            <div style="font-size: 11.5px; letter-spacing: 0.1em; text-transform: uppercase; color: #a8562f; font-weight: 700; margin: 22px 0 10px;">For researchers</div>
-            <p class="body" style="margin: 0;">Match the spatial unit to the question. Use a buffer for local habitat use and scale of effect, a grid for standardized citywide mapping and comparison. Reporting the unit becomes as important as reporting the result, because a finding only travels if others know how the city was measured. One reassurance runs through all of this: resource accessibility, how close water and canopy are, stayed important no matter which unit we used, so proximity is a dependable signal to build on.</p>
+            <div class="num">From study two to study three</div>
+            <h2 class="h2">The 2 km grid carries a tested representation into global comparison</h2>
+            <p class="body">Study two showed that spatial representation changes what is measurable and which relationships emerge. For cross-city comparison, a shared 2 km by 2 km grid keeps cell area and geometric rules constant across every city.</p>
+            <p class="body">The 2 km grain was retained from the scale-sensitivity tests because it balanced fine-scale noise reduction, predictive generalizability and stable model convergence. It also aggregates uneven citizen-science reporting sufficiently for grid-cell species-richness models.</p>
+            <p class="take">The grid is not neutral. Here it is a deliberate common denominator that makes 68 cities comparable.</p>
           </div>
           <div>
-            <div style="font-size: 11.5px; letter-spacing: 0.1em; text-transform: uppercase; color: #a8562f; font-weight: 700; margin-bottom: 10px;">For planners and policymakers</div>
-            <p class="body">Morphological units such as Local Climate Zones are the most useful, because they are multidimensional. A single zone combines several spatial characteristics at once, high or low rise, green or grey dominant, compact or open, and its organic, form-following boundaries align well with how administrative and planning areas are actually drawn.</p>
-            <p class="take">This makes the morphological reading easy to carry directly into planning, where decisions are made in terms of urban form rather than abstract metrics.</p>
+            <figure class="workflow-figure">
+              <img src="assets/cross-city-grid-workflow-light.png" alt="Workflow from global city comparison to standardized 2 kilometre grids">
+              <figcaption class="cap">Cross-city workflow. The common 2 km by 2 km grid applies the same cell area and geometric rules in every city, allowing species richness and local pattern metrics to be estimated city by city before their similarities and differences are compared. It carries the tested grid representation from Study two into the global analysis rather than treating scale as an afterthought.</figcaption>
+            </figure>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel" data-label="Study 3 · questions">
+      <div class="inner">
+        <div class="questions-layout">
+          <div>
+            <div class="num">Study three &middot; research questions and hypotheses</div>
+            <h2 class="h2">Which urban patterns travel across cities, and which depend on context?</h2>
+            <p class="body">Using the standardized 2 km grid, Study three separates local pattern-bird relationships from the broader ecological and urban contexts that may modify them.</p>
+            <ol class="rq-list">
+              <li><strong>RQ1 &middot; universal versus city-specific drivers</strong>Which local landscape metrics are consistently associated with grid-cell bird richness, and how much do direction and magnitude vary among cities?</li>
+              <li><strong>RQ2 &middot; added value of vertical structure</strong>Does three-dimensional urban morphology improve explanation beyond two-dimensional pattern metrics alone?</li>
+              <li><strong>RQ3 &middot; context dependence</strong>Can cross-city variation be explained by regional ecological context, urban spatial structure and urban development context?</li>
+            </ol>
+          </div>
+          <figure class="hypothesis-figure">
+            <a href="assets/cross-city-rq-hypotheses.png" target="_blank" rel="noreferrer" class="figure-link"><img src="assets/cross-city-rq-hypotheses.png" alt="Research aims, hypotheses and two-stage within-city and cross-city analysis workflow"></a>
+            <figcaption class="cap" style="max-width: none;">Hypothesis framework for the two-stage analysis. H1 asks whether vertical structure adds explanatory value beyond 2D pattern metrics; H2 tests regional ecological buffering; H3 tests urban spatial structure; and H4 tests urban development context. The upper stage estimates city-specific pattern-richness relationships, and the lower stage asks why their direction and magnitude differ across cities. <a href="assets/cross-city-rq-hypotheses.png" target="_blank" rel="noreferrer">View full size</a></figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel" data-label="Study 3 · cities">
+      <div class="inner">
+        <div class="city-layout">
+          <div>
+            <div class="num">Study three &middot; global sample</div>
+            <h2 class="h2">68 cities, one comparable sampling frame</h2>
+            <p class="body">Cities were retained for broad coverage of climate, biome, geography and development context, while meeting an 80 percent bird-record completeness threshold for grid-level modelling.</p>
+            <p class="body">The sample spans Europe (25 cities), Asia (15), Northern America (10), Latin America and the Caribbean (10), Oceania (5), and Africa (3).</p>
+            <button id="city-list-button" class="city-list-button" type="button" aria-haspopup="dialog">View the 68 study cities <span aria-hidden="true">&rarr;</span></button>
+          </div>
+          <figure class="cities-figure">
+            <img src="assets/study-cities-map-light.png" alt="World map showing the locations of the 68 study cities">
+            <figcaption class="cap" style="max-width: none;">Study-city distribution. The sample contains 68 GHSL Urban Centre Database cities spanning Europe (25), Asia (15), Northern America (10), Latin America and the Caribbean (10), Oceania (5), and Africa (3). Cities were retained only after meeting an 80 percent bird-record completeness threshold, before the standardized 2 km grid analysis.</figcaption>
+          </figure>
         </div>
       </div>
     </section>
@@ -275,18 +506,18 @@
       <div class="inner">
         <div class="num">Study three</div>
         <h2 class="h2" style="max-width: 32ch;">The same ingredients, arranged differently in every city</h2>
-        <div style="display: grid; grid-template-columns: 0.88fr 1.12fr; gap: 44px; align-items: start; margin-top: 20px;">
+        <div style="max-width: 72ch; margin-top: 20px;">
           <div>
             <p class="body">Once every city is measured the same way, a sharper question comes into view. Which links between urban form and bird life hold everywhere, and which depend on where the city is? Across sixty-eight cities placed on equal footing, a handful of features mattered almost everywhere. What differed was how they combined, which was rarely the same from one city to the next.</p>
             <p class="body">A small number of features carried most of the signal: canopy height and cover, building height and footprint, and how close water is. Their presence was consistent, but their behaviour was not.</p>
             <p class="body">Canopy height is a good example. It did not help birds everywhere. In some cities taller canopy went with more bird species, in others with fewer, so its effect changed from one place to another rather than pointing the same way across the world.</p>
             <p class="take">A feature that supported birds in one city could work against them in another.</p>
           </div>
-          <figure style="margin: 0;">
-            <a href="assets/map-canopy-partial-corr.png" target="_blank" class="fig" style="display: block;"><img src="assets/map-canopy-partial-corr.png" alt="Canopy height effect on bird species richness across cities" style="max-height: 62vh;"></a>
-            <figcaption class="cap">The canopy height effect on bird species richness, city by city. <a href="assets/map-canopy-partial-corr.png" target="_blank" style="color: #3f5c46; border-bottom: 1px solid #3f5c46;">View full size</a></figcaption>
-          </figure>
         </div>
+        <figure class="canopy-figure">
+          <a href="assets/map-canopy-partial-corr.png" target="_blank" class="fig" style="display: block;"><img src="assets/map-canopy-partial-corr.png" alt="Canopy height partial correlation with bird species richness across cities"></a>
+          <figcaption class="cap" style="max-width: none;">Canopy-height effect on bird species richness, city by city. Each circle is a study city: blue denotes a positive partial correlation, red a negative partial correlation, and circle size shows the absolute magnitude of that relationship. Pale or small circles indicate little evidence of a canopy-height association; the Europe inset resolves the dense cluster of cities. The map makes the central result visible: canopy height recurs as a driver, but its direction is not universal. <a href="assets/map-canopy-partial-corr.png" target="_blank" style="color: #3f5c46; border-bottom: 1px solid #3f5c46;">View full size</a></figcaption>
+        </figure>
       </div>
     </section>
 
@@ -297,7 +528,7 @@
         <div style="display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 44px; align-items: start; margin-top: 22px;">
           <figure style="margin: 0;">
             <a href="assets/regional-context-3cities.png" target="_blank" class="fig" style="display: block;"><img src="assets/regional-context-3cities.png" alt="Regional green context around three cities" style="max-height: 50vh;"></a>
-            <figcaption class="cap">Vegetation in the surrounding region of three cities, each read out to the same distance beyond its administrative boundary and shown on one shared scale. <a href="assets/regional-context-3cities.png" target="_blank" style="color: #3f5c46; border-bottom: 1px solid #3f5c46;">View full size</a></figcaption>
+            <figcaption class="cap">Regional vegetation context around three example cities. Each panel extends the same distance beyond the administrative boundary and uses one shared scale, so the amount and arrangement of surrounding vegetation can be compared directly. It illustrates why a local green-space metric can mean different things in a city embedded in continuous regional habitat versus one embedded in a sparse or fragmented matrix. <a href="assets/regional-context-3cities.png" target="_blank" style="color: #3f5c46; border-bottom: 1px solid #3f5c46;">View full size</a></figcaption>
           </figure>
           <div>
             <p class="body">Some of this variation was not noise. It followed the wider setting each city sits in. How a city's internal pattern reads for birds depends in part on the regional context around it, not only on what happens inside its boundary. A pattern that looks good in one region cannot be assumed to behave the same way in another.</p>
@@ -309,17 +540,53 @@
 
     <section class="panel synthesis-panel" data-label="Synthesis" style="color: #f6f3ed;">
       <div class="inner" style="display: flex; flex-direction: column; justify-content: center; min-height: 100vh; box-sizing: border-box; padding-bottom: 120px;">
-        <div style="font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: #a9c0a9; font-weight: 700; margin-bottom: 18px;">What it adds up to</div>
+        <div style="font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: #d49a72; font-weight: 700; margin-bottom: 18px;">What it adds up to</div>
         <h2 style="font-size: clamp(30px, 3.4vw, 44px); line-height: 1.14; letter-spacing: -0.025em; font-weight: 700; margin: 0 0 24px; max-width: 32ch;">Urban bird diversity is multidimensional, nonlinear, and context-dependent, not a function of green area</h2>
         <p style="font-size: 17px; line-height: 1.7; color: #dfe6dd; margin: 0 0 16px; max-width: 74ch;">Habitat quality and structural complexity, particularly vertical vegetation structure, plant diversity, and mature or remnant habitat, exert stronger and more consistent effects than habitat area alone. Built environments are not background disturbance but active ecological filters, excluding sensitive species while favouring more adaptable guilds.</p>
         <p style="font-size: 17px; line-height: 1.7; color: #dfe6dd; margin: 0 0 36px; max-width: 74ch;">This supports biodiversity-sensitive planning that moves past planar greening targets, and it points to what urban ecology still needs: three-dimensional metrics, organism-centred scale, matrix interactions, and cities outside the temperate Northern Hemisphere.</p>
         <div style="display: flex; gap: 28px; align-items: baseline;">
-          <a href="index.html#work" style="font-size: 14px; color: #a9c0a9; border-bottom: 1px solid #4c6b52; padding-bottom: 3px;">← All work</a>
+          <a href="index.html#work" style="font-size: 14px; color: #d49a72; border-bottom: 1px solid #d49a72; padding-bottom: 3px;">← All work</a>
           <a href="urban-pattern-database.html" style="font-size: 14px; color: #f6f3ed; border-bottom: 1px solid #f6f3ed; padding-bottom: 3px;">Next: Urban Pattern Database and Explorer</a>
         </div>
       </div>
     </section>
   </div>
+
+  <dialog id="city-dialog" class="city-dialog" aria-labelledby="city-dialog-title">
+    <div class="city-dialog-header">
+      <div>
+        <h2 id="city-dialog-title">68 study cities</h2>
+        <p>Grouped by geographic region for the cross-city comparison.</p>
+      </div>
+      <button id="city-dialog-close" class="dialog-close" type="button" aria-label="Close city list" title="Close">&times;</button>
+    </div>
+    <div class="city-regions">
+      <section class="city-region">
+        <h3>Africa · 3</h3>
+        <p>Cape Town, Johannesburg, Nairobi</p>
+      </section>
+      <section class="city-region">
+        <h3>Asia · 15</h3>
+        <p>Abu Dhabi, Bangalore, Bangkok, Beijing, Dhaka, Hong Kong, Istanbul, Manila, Mumbai, New Delhi, Seoul, Shanghai, Singapore, Taipei, Tokyo</p>
+      </section>
+      <section class="city-region">
+        <h3>Europe · 25</h3>
+        <p>Amsterdam, Athens, Barcelona, Basel, Berlin, Budapest, Copenhagen, Dortmund, Edinburgh, Gothenburg, London, Lyon, Madrid, Manchester, Marseille, Milan, Moscow, Munich, Paris, Prague, Rotterdam, Stockholm, Vienna, Warsaw, Zurich</p>
+      </section>
+      <section class="city-region">
+        <h3>Latin America &amp; Caribbean · 10</h3>
+        <p>Belize City, Bogota, Buenos Aires, Lima, Mexico City, Panama City, Rio de Janeiro, San Jose, Santiago, Sao Paulo</p>
+      </section>
+      <section class="city-region">
+        <h3>Northern America · 10</h3>
+        <p>Chicago, Houston, Los Angeles, Miami, New Orleans, New York, San Francisco, Toronto, Vancouver, Victoria</p>
+      </section>
+      <section class="city-region">
+        <h3>Oceania · 5</h3>
+        <p>Auckland, Brisbane, Melbourne, Sydney, Wellington</p>
+      </section>
+    </div>
+  </dialog>
 </div>
 </x-dc>
 <script type="text/x-dc" data-dc-script>
@@ -327,8 +594,14 @@ class Component extends DCLogic {
   componentDidMount() {
     const track = document.querySelector('.track');
     const dots = document.getElementById('dots');
+    const pageRoot = document.getElementById('page-root');
+    const readingButton = document.getElementById('reading-mode');
+    const cityListButton = document.getElementById('city-list-button');
+    const cityDialog = document.getElementById('city-dialog');
+    const cityDialogClose = document.getElementById('city-dialog-close');
     if (!track || !dots) return;
     const panels = Array.from(track.querySelectorAll('.panel'));
+    this._isReading = false;
 
     dots.innerHTML = '';
     panels.forEach((p, i) => {
@@ -345,6 +618,7 @@ class Component extends DCLogic {
       Array.from(dots.children).forEach((d, k) => d.classList.toggle('on', k === i));
     };
     this._wheel = (e) => {
+      if (this._isReading) return;
       const panel = e.target.closest ? e.target.closest('.panel') : null;
       if (panel && panel.scrollHeight - panel.clientHeight > 8) {
         const atTop = panel.scrollTop <= 0;
@@ -357,12 +631,32 @@ class Component extends DCLogic {
       }
     };
     this._keys = (e) => {
+      if (this._isReading) return;
       if (e.key === 'ArrowRight' || e.key === 'PageDown') { track.scrollLeft += track.clientWidth; e.preventDefault(); }
       if (e.key === 'ArrowLeft' || e.key === 'PageUp') { track.scrollLeft -= track.clientWidth; e.preventDefault(); }
+    };
+    this._toggleReading = () => {
+      this._isReading = !this._isReading;
+      if (pageRoot) pageRoot.classList.toggle('reading-mode', this._isReading);
+      if (readingButton) {
+        readingButton.textContent = this._isReading ? 'Read as slides' : 'Read as one page';
+        readingButton.setAttribute('aria-pressed', String(this._isReading));
+      }
+      if (this._isReading) track.scrollTop = 0;
+      else track.scrollLeft = 0;
+    };
+    this._openCityList = () => {
+      if (cityDialog && !cityDialog.open) cityDialog.showModal();
+    };
+    this._closeCityList = () => {
+      if (cityDialog && cityDialog.open) cityDialog.close();
     };
     track.addEventListener('wheel', this._wheel, { passive: false });
     track.addEventListener('scroll', this._sync);
     window.addEventListener('keydown', this._keys);
+    if (readingButton) readingButton.addEventListener('click', this._toggleReading);
+    if (cityListButton) cityListButton.addEventListener('click', this._openCityList);
+    if (cityDialogClose) cityDialogClose.addEventListener('click', this._closeCityList);
   }
   componentWillUnmount() {
     const track = document.querySelector('.track');
@@ -371,6 +665,12 @@ class Component extends DCLogic {
       if (this._sync) track.removeEventListener('scroll', this._sync);
     }
     if (this._keys) window.removeEventListener('keydown', this._keys);
+    const readingButton = document.getElementById('reading-mode');
+    if (readingButton && this._toggleReading) readingButton.removeEventListener('click', this._toggleReading);
+    const cityListButton = document.getElementById('city-list-button');
+    const cityDialogClose = document.getElementById('city-dialog-close');
+    if (cityListButton && this._openCityList) cityListButton.removeEventListener('click', this._openCityList);
+    if (cityDialogClose && this._closeCityList) cityDialogClose.removeEventListener('click', this._closeCityList);
   }
   renderVals() { return {}; }
 }

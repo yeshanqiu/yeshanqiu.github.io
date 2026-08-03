@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script src="./support.js"></script>
 </head>
-<body>
+<body class="site-dark">
 <x-dc>
 <helmet>
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -27,6 +27,7 @@
     .sec { padding: 110px 0; border-top: 1px solid rgba(236,233,226,.14); }
     .light a { color: #3f5c46; }
   </style>
+  <link rel="stylesheet" href="site.css">
 </helmet>
 
 <div style="background: #0d0f0e;">
@@ -60,11 +61,11 @@
       <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 26px; margin-top: 56px;">
         <figure style="margin: 0;">
           <a href="assets/guilds-diet.png" target="_blank" class="plate"><img src="assets/guilds-diet.png" alt="Effect of nature and urban stress features on bird diet guilds"></a>
-          <figcaption class="cap">(a) Diet guilds.</figcaption>
+          <figcaption class="cap">(a) Diet guilds. Rows are nature or built/stress metrics and columns are feeding guilds; blue circles indicate positive associations, red circles negative associations, and circle area indicates effect magnitude.</figcaption>
         </figure>
         <figure style="margin: 0;">
           <a href="assets/guilds-nesting.png" target="_blank" class="plate"><img src="assets/guilds-nesting.png" alt="Effect of nature and urban stress features on bird nesting guilds"></a>
-          <figcaption class="cap">(b) Nesting guilds, same scale.</figcaption>
+          <figcaption class="cap">(b) Nesting guilds, on the same effect-size scale as panel (a). Rows identify urban nature or built/stress metrics, columns identify nesting guilds, and the colour and size of each circle show direction and magnitude.</figcaption>
         </figure>
       </div>
       <p class="cap" style="margin-top: 14px;">The built environment does not simply push biodiversity down. It sorts it. Glass and dense building help birds that nest on buildings, while the same features stress ground-nesting and forest birds, which noise suppresses further. Built form works as a filter, supporting some guilds and constraining others.</p>
@@ -76,7 +77,7 @@
         </div>
         <figure style="margin: 0;">
           <a href="assets/cec-pooled-effect.png" target="_blank" class="plate"><img src="assets/cec-pooled-effect.png" alt="Pooled effect by greenery dimension"></a>
-          <figcaption class="cap">Pooled effect of each greenery dimension across the reviewed evidence.</figcaption>
+          <figcaption class="cap">Pooled associations for each greenery dimension across the reviewed evidence. Estimates positioned to the right of the zero line are positive and those to the left are negative, showing why vegetation structure matters beyond green-space area.</figcaption>
         </figure>
       </div>
 
@@ -143,11 +144,11 @@
       <p class="lede">Behind these comparisons sits a database. To place sixty-eight cities on equal footing, we compiled a consistent set of urban pattern metrics for each one, covering canopy, built form, water, and land use, all measured the same way. The database is being prepared for open release, and will be made publicly available once the associated study is published, so that others can reuse it for their own urban ecology and planning work.</p>
 
       <div style="display: flex; flex-direction: column; gap: 44px; margin-top: 56px;">
-        <figure style="margin: 0;"><a href="assets/city-richness-montage.png" target="_blank" class="plate"><img src="assets/city-richness-montage.png" alt="Bird species richness across cities"></a><figcaption class="cap">Bird Species Richness (SR) across cities.</figcaption></figure>
-        <figure style="margin: 0;"><a href="assets/city-canopy-height-montage.png" target="_blank" class="plate"><img src="assets/city-canopy-height-montage.png" alt="Canopy height across cities"></a><figcaption class="cap">Canopy Height (CH) across cities.</figcaption></figure>
-        <figure style="margin: 0;"><a href="assets/city-canopy-cover-montage.png" target="_blank" class="plate"><img src="assets/city-canopy-cover-montage.png" alt="Canopy percentage of landscape across cities"></a><figcaption class="cap">Canopy Percentage of Landscape (C_pland) across cities.</figcaption></figure>
-        <figure style="margin: 0;"><a href="assets/city-canopy-iji-montage.png" target="_blank" class="plate"><img src="assets/city-canopy-iji-montage.png" alt="Canopy interspersion and juxtaposition across cities"></a><figcaption class="cap">Canopy Interspersion and Juxtaposition Index (C_iji) across cities.</figcaption></figure>
-        <figure style="margin: 0;"><a href="assets/city-building-volume-montage.png" target="_blank" class="plate"><img src="assets/city-building-volume-montage.png" alt="Building volume across cities"></a><figcaption class="cap">Building Volume (BV) across cities.</figcaption></figure>
+        <figure style="margin: 0;"><a href="assets/city-richness-montage.png" target="_blank" class="plate"><img src="assets/city-richness-montage.png" alt="Bird species richness across cities"></a><figcaption class="cap">Bird Species Richness (SR) across cities. The maps use a common grid-based response layer so the spatial distribution of recorded species can be compared directly before relating it to urban pattern metrics.</figcaption></figure>
+        <figure style="margin: 0;"><a href="assets/city-canopy-height-montage.png" target="_blank" class="plate"><img src="assets/city-canopy-height-montage.png" alt="Canopy height across cities"></a><figcaption class="cap">Canopy Height (CH) across cities. Mean tree height is a vertical-structure layer, allowing the comparison to test whether tall canopy adds information beyond the amount of canopy present.</figcaption></figure>
+        <figure style="margin: 0;"><a href="assets/city-canopy-cover-montage.png" target="_blank" class="plate"><img src="assets/city-canopy-cover-montage.png" alt="Canopy percentage of landscape across cities"></a><figcaption class="cap">Canopy Percentage of Landscape (C_pland) across cities. This layer measures the two-dimensional share of each grid covered by tree canopy, providing the baseline quantity against which its height and configuration can be interpreted.</figcaption></figure>
+        <figure style="margin: 0;"><a href="assets/city-canopy-iji-montage.png" target="_blank" class="plate"><img src="assets/city-canopy-iji-montage.png" alt="Canopy interspersion and juxtaposition across cities"></a><figcaption class="cap">Canopy Interspersion and Juxtaposition Index (C_iji) across cities. The configuration metric shows whether canopy patches are embedded among other urban covers or separated into isolated blocks, not simply how much canopy exists.</figcaption></figure>
+        <figure style="margin: 0;"><a href="assets/city-building-volume-montage.png" target="_blank" class="plate"><img src="assets/city-building-volume-montage.png" alt="Building volume across cities"></a><figcaption class="cap">Building Volume (BV) across cities. Combining building footprints and height captures three-dimensional urban intensity, which may filter habitat access and disturbance independently of land-cover composition.</figcaption></figure>
       </div>
 
       <p class="body" style="margin-top: 44px;">Each panel shows one metric across a set of cities, mapped the same way so cities can be read side by side. Together they turn scattered urban form into a comparable, reusable record: how tall and how continuous the canopy is, how much of the ground it covers and how it is interspersed, and how much built volume a city carries. This is the raw material the comparative study is built on.</p>
@@ -163,7 +164,7 @@
 
       <figure style="margin: 56px 0 0;">
         <a href="assets/eyetrack-site-grid.jpg" target="_blank" class="plate"><img src="assets/eyetrack-site-grid.jpg" alt="Field survey scenes across Shanghai green spaces"></a>
-        <figcaption class="cap">Across fifty-four green spaces in Shanghai, from busy roadsides to quiet wooded paths, we photographed real scenes people encounter every day.</figcaption>
+        <figcaption class="cap">Field scenes sampled across fifty-four Shanghai green spaces, from busy roadsides to quiet wooded paths. The photographs retain known planting structure, maintenance condition and season, providing controlled visual inputs for the perception and eye-tracking analysis.</figcaption>
       </figure>
 
       <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 26px; margin-top: 52px;">
@@ -173,7 +174,7 @@
         </figure>
         <figure style="margin: 0;">
           <a href="assets/eyetrack-heatmap.png" target="_blank" class="plate"><img src="assets/eyetrack-heatmap.png" alt="Gaze heatmap over a green space scene"></a>
-          <figcaption class="cap">Eye-tracking then recorded where people actually looked. Warm areas are where the gaze concentrated. Attention was not spread evenly. It clustered.</figcaption>
+          <figcaption class="cap">Eye-tracking records where visual attention accumulated in the scene. Warmer areas mark concentrated gaze rather than general scene brightness, showing that participants did not inspect all elements equally before forming a perception.</figcaption>
         </figure>
       </div>
 
@@ -219,8 +220,8 @@
       <p class="body" style="margin-top: 44px;">The experiment also showed its limits, and each limit pointed somewhere. A predicted number can narrow imagination as easily as it can open it, so a useful tool has to offer direction and trade-offs rather than a single answer. The questions students asked, why a change helped or hurt birds, showed that prediction alone is not enough without the processes behind it. And a real Hong Kong site is far messier than a standardized grid, which asks for models that can handle specific, complex places. We make no claim that the panel produced better designs. It was an exploratory experiment in how research findings might enter a design process. What it taught me is concrete: to inform design well, a model needs to be more mature, more process-aware, and able to speak to real sites. That is the work I am building toward next.</p>
 
       <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 26px; margin-top: 52px;">
-        <figure style="margin: 0;"><a href="assets/gnn-architecture.png" target="_blank" class="plate"><img src="assets/gnn-architecture.png" alt="From urban space to a graph to a graph neural network"></a><figcaption class="cap">From urban space to a graph, to a graph neural network, to predicted community response. In development.</figcaption></figure>
-        <figure style="margin: 0;"><a href="assets/gnn-dashboard-wireframe.png" target="_blank" class="plate"><img src="assets/gnn-dashboard-wireframe.png" alt="Graph-based multi-city prediction panel"></a><figcaption class="cap">A graph-based, multi-city prediction panel. In development.</figcaption></figure>
+        <figure style="margin: 0;"><a href="assets/gnn-architecture.png" target="_blank" class="plate"><img src="assets/gnn-architecture.png" alt="From urban space to a graph to a graph neural network"></a><figcaption class="cap">Graph-model concept, in development. Urban cells and their green, grey and blue connections are converted into a graph, allowing a graph neural network to predict a community response from both local attributes and spatial connectivity.</figcaption></figure>
+        <figure style="margin: 0;"><a href="assets/gnn-dashboard-wireframe.png" target="_blank" class="plate"><img src="assets/gnn-dashboard-wireframe.png" alt="Graph-based multi-city prediction panel"></a><figcaption class="cap">Graph-based, multi-city prediction interface, in development. The prototype is intended to let users alter a green-space scenario, inspect the resulting connectivity change, and read the predicted richness response by feeding guild.</figcaption></figure>
       </div>
     </div>
   </section>
