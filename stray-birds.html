@@ -16,6 +16,7 @@
     ::selection { background: rgba(255,255,255,.18); }
     .track { scrollbar-width: none; -ms-overflow-style: none; }
     .track::-webkit-scrollbar { display: none; }
+    .plate { min-width: min(300px, 84vw); }
     #dots > * { pointer-events: auto; }
     .dot { width: 7px; height: 7px; border-radius: 50%; background: rgba(242,239,232,.28); border: none; padding: 0; cursor: pointer; transition: background .2s, transform .2s; }
     .dot.on { background: #c3a07f; transform: scale(1.5); }
@@ -154,10 +155,108 @@
       </div>
     </section>
 
+    <section class="plate" style="flex: 0 0 42%; height: 100%; scroll-snap-align: center; position: relative; overflow: hidden;">
+      <img src="assets/bird-starling-washington.jpg" alt="European starling on a chain, Washington DC" style="width: 100%; height: 100%; object-fit: cover; object-position: center; display: block; opacity: .95;">
+      <div class="meta" style="position: absolute; left: 40px; bottom: 48px; max-width: 28ch; text-shadow: 0 2px 24px rgba(0,0,0,.85);">
+        <div style="font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: rgba(242,239,232,.6); margin-bottom: 8px;">Washington, DC</div>
+        <div style="font-size: 26px; font-weight: 300; letter-spacing: -0.02em; line-height: 1.15;">European Starling</div>
+        <div style="font-size: 14px; font-style: italic; color: rgba(242,239,232,.62); margin-top: 4px;">Sturnus vulgaris</div>
+        <p style="font-size: 14px; line-height: 1.65; font-weight: 300; color: rgba(242,239,232,.7); margin: 12px 0 0;">A chain is only another kind of branch when you are looking for a perch.</p>
+      </div>
+    </section>
+
+    <section class="plate" style="flex: 0 0 42%; height: 100%; scroll-snap-align: center; position: relative; overflow: hidden;">
+      <img src="assets/bird-flamingos-bolivia.jpg" alt="Flamingos feeding in a high-altitude lake, Bolivia" style="width: 100%; height: 100%; object-fit: cover; object-position: center; display: block; opacity: .95;">
+      <div class="meta" style="position: absolute; left: 40px; bottom: 48px; max-width: 29ch; text-shadow: 0 2px 24px rgba(0,0,0,.85);">
+        <div style="font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: rgba(242,239,232,.6); margin-bottom: 8px;">Bolivian Altiplano</div>
+        <div style="font-size: 26px; font-weight: 300; letter-spacing: -0.02em; line-height: 1.15;">Flamingos at the salt lake</div>
+        <p style="font-size: 14px; line-height: 1.65; font-weight: 300; color: rgba(242,239,232,.7); margin: 12px 0 0;">Pink points spread through a lake so still that the mountains seem to be feeding there too.</p>
+      </div>
+    </section>
+
+    <section class="plate" style="flex: 0 0 42%; height: 100%; scroll-snap-align: center; position: relative; overflow: hidden;">
+      <img src="assets/bird-kookaburra-australia.jpg" alt="Laughing kookaburra in eucalyptus, Australia" style="width: 100%; height: 100%; object-fit: cover; object-position: center; display: block; opacity: .95;">
+      <div class="meta" style="position: absolute; left: 40px; bottom: 48px; max-width: 28ch; text-shadow: 0 2px 24px rgba(0,0,0,.85);">
+        <div style="font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: rgba(242,239,232,.6); margin-bottom: 8px;">Australia</div>
+        <div style="font-size: 26px; font-weight: 300; letter-spacing: -0.02em; line-height: 1.15;">Laughing Kookaburra</div>
+        <div style="font-size: 14px; font-style: italic; color: rgba(242,239,232,.62); margin-top: 4px;">Dacelo novaeguineae</div>
+        <p style="font-size: 14px; line-height: 1.65; font-weight: 300; color: rgba(242,239,232,.7); margin: 12px 0 0;">Quiet for the photograph, though the whole neighbourhood knows the call.</p>
+      </div>
+    </section>
+
+    <section class="plate" style="flex: 0 0 42%; height: 100%; scroll-snap-align: center; position: relative; overflow: hidden;">
+      <img src="assets/bird-fairywren-australia.jpg" alt="Male superb fairywren on a path, Australia" style="width: 100%; height: 100%; object-fit: cover; object-position: center; display: block; opacity: .96;">
+      <div class="meta" style="position: absolute; left: 40px; bottom: 48px; max-width: 27ch; text-shadow: 0 2px 24px rgba(0,0,0,.85);">
+        <div style="font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: rgba(242,239,232,.6); margin-bottom: 8px;">Australia</div>
+        <div style="font-size: 26px; font-weight: 300; letter-spacing: -0.02em; line-height: 1.15;">Superb Fairywren</div>
+        <div style="font-size: 14px; font-style: italic; color: rgba(242,239,232,.62); margin-top: 4px;">Malurus cyaneus</div>
+        <p style="font-size: 14px; line-height: 1.65; font-weight: 300; color: rgba(242,239,232,.7); margin: 12px 0 0;">A small blue punctuation mark at the edge of the path.</p>
+      </div>
+    </section>
+
+    <section class="plate" style="flex: 0 0 42%; height: 100%; scroll-snap-align: center; position: relative; overflow: hidden;">
+      <img src="assets/bird-macaw-street-australia.jpg" alt="Blue-and-yellow macaw on a person's shoulder in an Australian street" style="width: 100%; height: 100%; object-fit: cover; object-position: 42% center; display: block; opacity: .96;">
+      <div class="meta" style="position: absolute; left: 40px; bottom: 48px; max-width: 28ch; text-shadow: 0 2px 24px rgba(0,0,0,.85);">
+        <div style="font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: rgba(242,239,232,.6); margin-bottom: 8px;">Australia</div>
+        <div style="font-size: 26px; font-weight: 300; letter-spacing: -0.02em; line-height: 1.15;">Street parrot</div>
+        <div style="font-size: 14px; font-style: italic; color: rgba(242,239,232,.62); margin-top: 4px;">Blue-and-yellow Macaw, Ara ararauna</div>
+        <p style="font-size: 14px; line-height: 1.65; font-weight: 300; color: rgba(242,239,232,.7); margin: 12px 0 0;">A flash of tropical blue above the pavement.</p>
+      </div>
+    </section>
+
+    <section class="plate" style="flex: 0 0 42%; height: 100%; scroll-snap-align: center; position: relative; overflow: hidden;">
+      <img src="assets/bird-cape-barren-goose.jpg" alt="Cape Barren goose with a green-yellow bill, Australia" style="width: 100%; height: 100%; object-fit: cover; object-position: center; display: block; opacity: .95;">
+      <div class="meta" style="position: absolute; left: 40px; bottom: 48px; max-width: 29ch; text-shadow: 0 2px 24px rgba(0,0,0,.85);">
+        <div style="font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: rgba(242,239,232,.6); margin-bottom: 8px;">Australia</div>
+        <div style="font-size: 26px; font-weight: 300; letter-spacing: -0.02em; line-height: 1.15;">Cape Barren Goose</div>
+        <div style="font-size: 14px; font-style: italic; color: rgba(242,239,232,.62); margin-top: 4px;">Cereopsis novaehollandiae</div>
+        <p style="font-size: 14px; line-height: 1.65; font-weight: 300; color: rgba(242,239,232,.7); margin: 12px 0 0;">The bright green-yellow bill gives away an Australian goose, not a British duck.</p>
+      </div>
+    </section>
+
+    <section class="plate" style="flex: 0 0 42%; height: 100%; scroll-snap-align: center; position: relative; overflow: hidden;">
+      <img src="assets/bird-glossy-starling-singapore.jpg" alt="Asian glossy starling with a red eye, Singapore" style="width: 100%; height: 100%; object-fit: cover; object-position: center; display: block; opacity: .95;">
+      <div class="meta" style="position: absolute; left: 40px; bottom: 48px; max-width: 28ch; text-shadow: 0 2px 24px rgba(0,0,0,.85);">
+        <div style="font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: rgba(242,239,232,.6); margin-bottom: 8px;">Singapore</div>
+        <div style="font-size: 26px; font-weight: 300; letter-spacing: -0.02em; line-height: 1.15;">Asian Glossy Starling</div>
+        <div style="font-size: 14px; font-style: italic; color: rgba(242,239,232,.62); margin-top: 4px;">Aplonis panayensis</div>
+        <p style="font-size: 14px; line-height: 1.65; font-weight: 300; color: rgba(242,239,232,.7); margin: 12px 0 0;">A red eye and an oil-slick sheen in the understory.</p>
+      </div>
+    </section>
+
+    <section class="plate" style="flex: 0 0 42%; height: 100%; scroll-snap-align: center; position: relative; overflow: hidden;">
+      <img src="assets/bird-owl-indonesia.jpg" alt="Owl perched in Indonesia" style="width: 100%; height: 100%; object-fit: cover; object-position: center; display: block; opacity: .95;">
+      <div class="meta" style="position: absolute; left: 40px; bottom: 48px; max-width: 27ch; text-shadow: 0 2px 24px rgba(0,0,0,.85);">
+        <div style="font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: rgba(242,239,232,.6); margin-bottom: 8px;">Indonesia</div>
+        <div style="font-size: 26px; font-weight: 300; letter-spacing: -0.02em; line-height: 1.15;">Owl on its perch</div>
+        <p style="font-size: 14px; line-height: 1.65; font-weight: 300; color: rgba(242,239,232,.7); margin: 12px 0 0;">The bird watches from the edge of the frame; the forest does the rest.</p>
+      </div>
+    </section>
+
+    <section class="plate" style="flex: 0 0 42%; height: 100%; scroll-snap-align: center; position: relative; overflow: hidden;">
+      <img src="assets/bird-egyptian-goose-hyde-park.jpg" alt="Egyptian goose on grass in Hyde Park, London" style="width: 100%; height: 100%; object-fit: cover; object-position: center; display: block; opacity: .95;">
+      <div class="meta" style="position: absolute; left: 40px; bottom: 48px; max-width: 28ch; text-shadow: 0 2px 24px rgba(0,0,0,.85);">
+        <div style="font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: rgba(242,239,232,.6); margin-bottom: 8px;">Hyde Park, London</div>
+        <div style="font-size: 26px; font-weight: 300; letter-spacing: -0.02em; line-height: 1.15;">Egyptian Goose</div>
+        <div style="font-size: 14px; font-style: italic; color: rgba(242,239,232,.62); margin-top: 4px;">Alopochen aegyptiaca</div>
+        <p style="font-size: 14px; line-height: 1.65; font-weight: 300; color: rgba(242,239,232,.7); margin: 12px 0 0;">A long way from the Nile, completely at ease on an English lawn.</p>
+      </div>
+    </section>
+
+    <section class="plate" style="flex: 0 0 42%; height: 100%; scroll-snap-align: center; position: relative; overflow: hidden;">
+      <img src="assets/bird-pacific-black-duck-sydney.jpg" alt="Pacific black duck by water in Sydney" style="width: 100%; height: 100%; object-fit: cover; object-position: center; display: block; opacity: .95;">
+      <div class="meta" style="position: absolute; left: 40px; bottom: 48px; max-width: 27ch; text-shadow: 0 2px 24px rgba(0,0,0,.85);">
+        <div style="font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: rgba(242,239,232,.6); margin-bottom: 8px;">Sydney, Australia</div>
+        <div style="font-size: 26px; font-weight: 300; letter-spacing: -0.02em; line-height: 1.15;">Pacific Black Duck</div>
+        <div style="font-size: 14px; font-style: italic; color: rgba(242,239,232,.62); margin-top: 4px;">Anas superciliosa</div>
+        <p style="font-size: 14px; line-height: 1.65; font-weight: 300; color: rgba(242,239,232,.7); margin: 12px 0 0;">The waterline, the lawn, a well-worn city route.</p>
+      </div>
+    </section>
+
     <section style="flex: 0 0 60%; height: 100%; scroll-snap-align: center; display: flex; flex-direction: column; justify-content: center; padding: 0 60px; box-sizing: border-box;">
       <div style="max-width: 34ch;">
-        <div style="font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: rgba(242,239,232,.45); margin-bottom: 16px;">Still to come</div>
-        <p style="font-size: 20px; line-height: 1.6; font-weight: 300; color: rgba(242,239,232,.8); margin: 0 0 24px;">Yellow-vented bulbul and the fire-eyed one in Singapore, an owl in Indonesia, street parrots and a small blue bird in Australia, flamingos in Bolivia, a black bird on a Washington sidewalk, and the green-billed ducks in Hyde Park.</p>
+        <div style="font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: rgba(242,239,232,.45); margin-bottom: 16px;">Keep looking</div>
+        <p style="font-size: 20px; line-height: 1.6; font-weight: 300; color: rgba(242,239,232,.8); margin: 0 0 24px;">Every city leaves room for a bird if you look long enough. New sightings get added as I go.</p>
         <a href="index.html" style="font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(242,239,232,.5); border-bottom: 1px solid rgba(242,239,232,.25); padding-bottom: 3px;">← Back to work</a>
       </div>
     </section>
