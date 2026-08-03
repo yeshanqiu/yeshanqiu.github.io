@@ -15,6 +15,13 @@
     a { color: inherit; text-decoration: none; transition: color .15s; }
     a:hover { color: #3f5c46; }
     ::selection { background: #3f5c4633; }
+    .database-city-list { margin: -38px 0 72px; border-bottom: 1px solid #ded6c4; }
+    .database-city-list summary { display: inline-block; padding: 0 0 18px; font-size: 14px; font-weight: 700; cursor: pointer; color: #17181a; }
+    .database-city-list summary:hover { color: #3f5c46; }
+    .database-city-regions { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 22px 34px; padding: 4px 0 28px; }
+    .database-city-region h2 { margin: 0 0 7px; font-size: 13px; line-height: 1.3; }
+    .database-city-region p { margin: 0; color: #5b5b57; font-size: 13px; line-height: 1.6; }
+    @media (max-width: 760px) { .database-meta { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; gap: 20px !important; margin: 48px 0 60px !important; } .database-city-list { margin-top: -28px; } .database-city-regions { grid-template-columns: 1fr; gap: 18px; } }
   </style>
   <script src="lightbox.js"></script>
   <link rel="stylesheet" href="site.css">
@@ -38,12 +45,24 @@
     <p style="font-size: 22px; line-height: 1.55; color: #2b2b28; margin: 0; max-width: 54ch; text-wrap: pretty;">A completed, independent database of urban pattern metrics for cities worldwide, with an interactive explorer for comparing landscape structure and bird biodiversity metrics city by city.</p>
   </header>
 
-  <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 32px; margin: 72px 0 72px; padding: 28px 0; border-top: 1px solid #ded6c4; border-bottom: 1px solid #ded6c4; font-size: 13px; line-height: 1.6;">
+  <div class="database-meta" style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 32px; margin: 72px 0 72px; padding: 28px 0; border-top: 1px solid #ded6c4; border-bottom: 1px solid #ded6c4; font-size: 13px; line-height: 1.6;">
     <div><div style="color: #8a8a84; margin-bottom: 6px;">Coverage</div>Sixty-eight cities worldwide</div>
     <div><div style="color: #8a8a84; margin-bottom: 6px;">Metrics</div>Bird richness and abundance by guild, canopy, building, and water structure</div>
     <div><div style="color: #8a8a84; margin-bottom: 6px;">Project</div>Independent database developed by Dr. Yeshan Qiu</div>
     <div><div style="color: #8a8a84; margin-bottom: 6px;">Status</div>Completed; public release follows the associated article</div>
   </div>
+
+  <details class="database-city-list">
+    <summary>View the 68 study cities by region</summary>
+    <div class="database-city-regions">
+      <section class="database-city-region"><h2>Africa · 3</h2><p>Cape Town, Johannesburg, Nairobi</p></section>
+      <section class="database-city-region"><h2>Asia · 15</h2><p>Abu Dhabi, Bangalore, Bangkok, Beijing, Dhaka, Hong Kong, Istanbul, Manila, Mumbai, New Delhi, Seoul, Shanghai, Singapore, Taipei, Tokyo</p></section>
+      <section class="database-city-region"><h2>Europe · 25</h2><p>Amsterdam, Athens, Barcelona, Basel, Berlin, Budapest, Copenhagen, Dortmund, Edinburgh, Gothenburg, London, Lyon, Madrid, Manchester, Marseille, Milan, Moscow, Munich, Paris, Prague, Rotterdam, Stockholm, Vienna, Warsaw, Zurich</p></section>
+      <section class="database-city-region"><h2>Latin America &amp; Caribbean · 10</h2><p>Belize City, Bogota, Buenos Aires, Lima, Mexico City, Panama City, Rio de Janeiro, San Jose, Santiago, Sao Paulo</p></section>
+      <section class="database-city-region"><h2>Northern America · 10</h2><p>Chicago, Houston, Los Angeles, Miami, New Orleans, New York, San Francisco, Toronto, Vancouver, Victoria</p></section>
+      <section class="database-city-region"><h2>Oceania · 5</h2><p>Auckland, Brisbane, Melbourne, Sydney, Wellington</p></section>
+    </div>
+  </details>
 
   <figure style="margin: 0 0 100px;">
     <a href="assets/explorer-preview.png" target="_blank" style="display: block; background: #faf8f2; border: 1px solid #e7e1d4; padding: 24px; cursor: zoom-in;"><img src="assets/explorer-preview.png" alt="Urban Grid Explorer interface" style="width: 100%; height: auto; display: block;"></a>
